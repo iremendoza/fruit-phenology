@@ -4,97 +4,8 @@ lengthunique=function(x) return(length(unique(x)))
 lengthisna=function(x) return(length(which(is.na(x))))
 
 #### DATASET HANDLING #####
-dat<-read.delim(Mendoza_dat_GPC.txt)
-drivers<-read.delim("drivers.txt")
-
-#### Adding vegetation types from WWF####
-
-#Load the Olson's vegetation data from the WWF site
-# data: http://assets.worldwildlife.org/publications/15/files/original/official_teow.zip
-
-# Create a directory for the data
-localDir <- 'R_GIS_data'
-if (!file.exists(localDir)) {
-  dir.create(localDir)
-}
-
-# Download the 65 Mb file from WWF
-url <- "http://assets.worldwildlife.org/publications/15/files/original/official_teow.zip"
-#http://mazamascience.com/WorkingWithData/?p=1277
-#https://pakillo.github.io/R-GIS-tutorial/
-
-file <- paste(localDir,basename(url),sep='/')
-if (!file.exists(file)) {
-  download.file(url, file)
-  unzip(file,exdir=localDir)
-}
-
-# Show the unzipped files 
-list.files(localDir)
-
-# layerName is the name of the unzipped shapefile without file type extensions 
-layerName <- "wwf_terr_ecos"  
-data_name <- "WWF"
-# Read in the data
-file<-paste(getwd(),localDir,"WWF.RData",sep="/")
-if (!file.exists(file)) {
-data_projected <- readOGR(dsn=paste(getwd(),localDir,"official",sep="/"), layer=layerName) 
-
-# What is this thing and what's in it?
-class(data_projected)
-slotNames(data_projected)
-# It's an S4 "SpatialPolygonsDataFrame" object with the following slots:
-# [1] "data"        "polygons"    "plotOrder"   "bbox"        "proj4string"
-
-# What does the data look like with the default plotting command? 
-plot(data_projected)
-
-# Could use names(data_projected@data) or just:
-names(data_projected)
-
-
-
-# Reproject the data onto a "longlat" projection and assign it to the new name
-assign(data_name,spTransform(data_projected, CRS("+proj=longlat")))
-
-# The WWF dataset is now projected in latitude longitude coordinates as a
-# SpatialPolygonsDataFrame.  We save the converted data as .RData for faster
-# loading in the future.
-save(list=c(data_name),file=paste(getwd(),localDir,"WWF.RData",sep="/"))
-}
-if(file.exists(file)) load(file)
-coordinates(dat)<-c("long","lat")
-crs.geo <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84")  # geographical, datum WGS84
-proj4string(dat) <- crs.geo  # define projection system of our data
-#summary(dat)
-file<-paste(getwd(),localDir,"dat.kml",sep="/")
-if(!file.exists(file)) writeOGR(dat, dsn =paste(getwd(),localDir,"dat.kml" ,sep="/"), layer="dat", driver = "KML")
-
-#plot(dat, pch = 20, col = "steelblue")
-#library(rworldmap)
-
-
-
-#### SAMPLING EFFORT ###############
-## samplingeffort function calculates a ratio p with sampling effort per spp
-
-samplingeffort=function(ests=ests, clongjoin=clongjoin){
-
-sampeff=match(ests$ECO_ID,clongjoin$ECO_ID)
-  
-se=merge(clongjoin, ests,by="ECO_ID",all.x=T)
-test=data.frame(eco_id=se$ECO_ID,olson=se$olson, kier=se$eco_name)
-
-se$p=se$s/se$sp_wfig
-summary(se$p)
-#boxplot(se$p~se$GPC,las=2)
-#plot(se$sp_wfig,se$s)
-#hist(se$p)
-
-return(se)
-}
-
-#se=samplingeffort(ests=ests, clongjoin=clongjoin)  
+dat<-read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 studies reviewed
+drivers<-read.delim("drivers.txt") #environmental drivers of each site
 
 
 #### SOME STATS ABOUT THE DATABASE####
@@ -228,6 +139,26 @@ censtime=function(data=neolong){
   
 }
 
+#### SAMPLING EFFORT ###############
+## samplingeffort function calculates a ratio p with sampling effort per spp
+
+samplingeffort=function(ests=ests, clongjoin=clongjoin){
+  
+  sampeff=match(ests$ECO_ID,clongjoin$ECO_ID)
+  
+  se=merge(clongjoin, ests,by="ECO_ID",all.x=T)
+  test=data.frame(eco_id=se$ECO_ID,olson=se$olson, kier=se$eco_name)
+  
+  se$p=se$s/se$sp_wfig
+  summary(se$p)
+  #boxplot(se$p~se$GPC,las=2)
+  #plot(se$sp_wfig,se$s)
+  #hist(se$p)
+  
+  return(se)
+}
+
+#se=samplingeffort(ests=ests, clongjoin=clongjoin)  
 
 
 #### which are the long-term datasets?####
@@ -245,35 +176,6 @@ biomes=function(data=ecoregions){
 }
 
 ####CLIMATIC DRIVERS####
-####dataset compilation####
-#I construct a dataset for the climatic drivers only called "drivers"
-names(neolong)[grep("climvar",names(neolong))]<-"climvar" #I standarize the name of the variables
-names(neolong)[grep("p.value",names(neolong))]<-"pvalue"
-names(neolong)[grep("r.value",names(neolong))]<-"rcorr"
-names(neolong)[grep("sign",names(neolong))]<-"sign"
-#names(neolong)[grep("N",names(neolong))]<-"N"
-
-climvariable<-rbind(neolong[,c(1,which(names(neolong)=="climvar")[1])],neolong[,c(1,which(names(neolong)=="climvar")[2])],neolong[,c(1,which(names(neolong)=="climvar")[3])],neolong[,c(1,which(names(neolong)=="climvar")[4])])
-pvalue<-c(neolong[,which(names(neolong)=="pvalue")[1]],neolong[,which(names(neolong)=="pvalue")[2]],neolong[,which(names(neolong)=="pvalue")[3]],neolong[,which(names(neolong)=="pvalue")[4]])
-rcorr<-c(neolong[,which(names(neolong)=="rcorr")[1]],neolong[,which(names(neolong)=="rcorr")[2]],neolong[,which(names(neolong)=="rcorr")[3]],neolong[,which(names(neolong)=="rcorr")[4]])
-N<-rep(neolong$studylength,4)
-sign<-as.factor(c(as.character(neolong[,which(names(neolong)=="sign")[1]]),as.character(neolong[,which(names(neolong)=="sign")[2]]),as.character(neolong[,which(names(neolong)=="sign")[3]]),as.character(neolong[,which(names(neolong)=="sign")[4]])))
-typetest<-rep(neolong[,which(names(neolong)=="type.test")],4)
-presencetest<-rep(neolong[,which(names(neolong)=="statistical.test.climatic")],4)
-details<-character(length=length(neolong[,which(names(neolong)=="details.primary.driver")])*4)
-details[1:length(neolong[,which(names(neolong)=="details.primary.driver")])]=as.character(neolong[,which(names(neolong)=="details.primary.driver")])
-
-drivers<-data.frame(climvariable,details=details,signcorr=sign,presencetest,rcorr,N,pvalue,typetest)
-drivers=drivers[-which((drivers$climvar)==""),]
-
-for (i in 1:dim(drivers)[1]){
-  if (drivers$climvar[i]=="maximum temperature") {drivers$climvar[i]="temperature"}
-    if (drivers$climvar[i]=="mean temperature") {drivers$climvar[i]="temperature"}
-      if (drivers$climvar[i]=="minimum temperature") {drivers$climvar[i]="temperature"}
-}
-
-#write.table(drivers, file="drivers.txt",sep="\t",row.names = F)
-
 #frequency of studies without statistical test
 perctest=aggregate(data.frame(nstu=drivers$ID),by=list(presencetest=drivers$presencetest),length)
 perctest2=(perctest$nstu[perctest$presencetest=="no"]/sum(perctest$nstu))*100
@@ -328,14 +230,6 @@ dry=chisq.test(c(positive=9, negative=5,none=1))
 cerrado=chisq.test(c(positive=9, negative=2,none=1))
 grassland=chisq.test(c(positive=4, negative=4,none=3))
 montane=chisq.test(c(positive=5, negative=3,none=1))
-
-#### META-ANALYSES OF CLIMATIC DRIVERS####
-drivers2<-raindriv[which(!is.na(raindriv$rcorr)),]
-es<-escalc(ri=rcorr,ni=N, data=drivers2, measure="ZCOR")
-metamodel<-rma(yi,vi,data=es)
-confint(metamodel)
-#forest(metamodel)
-
 
 #### FIGURES OF THE PAPER #####
 
@@ -451,35 +345,6 @@ figure6b=function(data=se,filename="figure6b.tif"){
   dev.off()
 }
 
-####Figure7: replotting of Whright & Calder?n Fig. 4####
-figure7=function(data="Wright & Calderon_2006_TableS2.txt",startyear=1987,endyear=2003){
-  
-  dat=read.delim(data)
-  years=rep(seq(startyear,endyear,1),dim(dat)[1])
-  seeds=dat[,grep("SEED",names(dat))]
-  for (i in 1:nrow(seeds)){
-   snd= (log(seeds[i,]+1,10)-mean(as.numeric(log(seeds[i,]+1,10))))/sd(as.numeric(log(seeds[i,]+1,10)))
-   if (i ==1) results=snd else results=rbind(results, snd)
-  }  
-  ds=data.frame(years=startyear:endyear,mean=colMeans(results),se=as.numeric(sd(results)/sqrt(nrow(results))))
-  ggplot(ds, aes(x=years,y=mean))+
-    geom_errorbar(aes(ymin=mean-se, ymax=mean+se), colour="black", width=.1,position = "identity")+
-    geom_line() +
-    geom_point(size=2, shape=21, fill="black")+
-    xlab("years") +
-    ylab("Seed production (SND)") +
-      #expand_limits(y=0) +                        # Expand y range
-      scale_y_continuous(breaks=seq(-0.5,0.5,0.1)) +         # Set tick every 4
-    scale_x_continuous(breaks=seq(startyear,endyear,1)) +
-    theme_classic()+
-    theme(text = element_text(size=20),axis.line = element_line(lineend="square"),axis.text.x = element_text(angle=90, vjust=1),axis.ticks.length = unit(.25, "cm"))
-    ggsave("figure7.tiff",width=20, height=15, units="cm")
-  
-  #plot(startyear:endyear,colMeans(results),type="o",ylim=c(-0.4,0.5),bty="l",las=1)  
-  #se= as.numeric(sd(results)/sqrt(nrow(results)))
-  #segments(startyear:endyear, as.numeric(colMeans(results)) - se, startyear:endyear, as.numeric(colMeans(results)) + se, lwd = 1, lend = 3, col = "black")
-  #pr<-stack(dat[,grep("SEED",names(dat))])
- }
 
 
 ####Figure S1: What is the length of studies?####
