@@ -1,0 +1,869 @@
+ECO_ID	eco_id2	eco_name	area	sp_wfig	sp_range	data_sit	comments
+10101	AA0101	Admiralty Islands lowland rain forests	2108	2000	1600-2800	3	
+10102	AA0102	Banda Sea Islands moist deciduous forests	7528	1200	1200-2000	3	
+10103	AA0103	Biak-Numfoor rain forests	2822	1500	1000-2200	3	
+10104	AA0104	Buru rain forests	8624	1700	1000-2200	3	
+10105	AA0105	Central Range montane rain forests	171992	7500	6000-9000	2	
+10106	AA0106	Halmahera rain forests	26865	2000	1600-2400	3	
+10107	AA0107	Huon Peninsula montane rain forests	16522	5500	4500-7000	2	
+10108	AA0108	Japen rain forests	2418	1500	1000-2000	3	
+10109	AA0109	Lord Howe Island subtropical forests	14	210	200-219	1	
+10110	AA0110	Louisiade Archipelago rain forests	1615	3200	3000-4000	2	
+10111	AA0111	New Britain-New Ireland lowland rain forests	35070	2700	2000-5000	3	
+10112	AA0112	New Britain-New Ireland montane rain forests	12134	2500	2300-3500	3	
+10113	AA0113	New Caledonia rain forests	14564	3000	2900-3100	2	
+10114	AA0114	Norfolk Island subtropical forests	42	165	x	1	
+10115	AA0115	Northern New Guinea lowland rain and freshwater swamp forests	135241	4400	3500-5300	3	
+10116	AA0116	Northern New Guinea montane rain forests	23288	3000	2500-4000	3	
+10117	AA0117	Queensland tropical rain forests	32695	4800	4700-5500	2	
+10118	AA0118	Seram rain forests	19363	2100	2000-2500	2	
+10119	AA0119	Solomon Islands rain forests	35851	4800	4400-5200	2	
+10120	AA0120	Southeastern Papuan rain forests	77360	5500	4500-7000	2	
+10121	AA0121	Southern New Guinea freshwater swamp forests	99927	2100	1600-2600	3	
+10122	AA0122	Southern New Guinea lowland rain forests	122874	4000	3000-5000	2	
+10123	AA0123	Sulawesi lowland rain forests	116329	3900	3000-4300	3	
+10124	AA0124	Sulawesi montane rain forests	75814	2200	2000-3500	3	
+10125	AA0125	Trobriand Islands rain forests	4196	2800	2600-3500	3	
+10126	AA0126	Vanuatu rain forests	13204	950	870-1050	2	
+10127	AA0127	Vogelkop montane rain forests	21950	5500	4500-6500	3	
+10128	AA0128	Vogelkop-Aru lowland rain forests	77409	3500	3000-5500	3	
+10201	AA0201	Lesser Sundas deciduous forests	39447	2500	1500-3500	3	
+10202	AA0202	New Caledonia dry forests	4420	430	409-450	1	
+10203	AA0203	Sumba deciduous forests	10765	900	800-1400	3	
+10204	AA0204	Timor and Wetar deciduous forests	33524	1600	1400-2000	3	
+10401	AA0401	Chatham Island temperate forests	804	315	x	1	
+10402	AA0402	Eastern Australian temperate forests	222061	3700	3300-4500	3	
+10403	AA0403	Fiordland temperate forests	11029	750	600-900	3	
+10404	AA0404	Nelson Coast temperate forests	14575	1300	1250-1350	2	
+10405	AA0405	Northland temperate forests	84423	1200	1100-1300	2	
+10406	AA0406	Northland temperate kauri forests	29930	850	800-900	2	
+10407	AA0407	Rakiura Island temperate forests	1690	570	567-580	1	
+10408	AA0408	Richmond temperate forests	13196	1000	800-1200	2	
+10409	AA0409	Southeast Australia temperate forests	272312	2400	1700-3200	3	
+10410	AA0410	Southland temperate forests	11684	650	600-800	3	
+10411	AA0411	Tasmanian Central Highland forests	18701	700	500-900	3	
+10412	AA0412	Tasmanian temperate forests	18211	600	400-800	3	
+10413	AA0413	Tasmanian temperate rain forests	31266	800	600-1000	3	
+10414	AA0414	Westland temperate forests	5277	700	500-900	3	
+10701	AA0701	Arnhem Land tropical savanna	158118	2500	2200-3000	2	
+10702	AA0702	Brigalow tropical savanna	342315	1600	1200-2000	3	
+10703	AA0703	Cape York tropical savanna	116333	3100	2900-3200	2	
+10704	AA0704	Carpentaria tropical savanna	359650	1600	1200-2100	4	
+10705	AA0705	Einasleigh upland savanna	128475	1600	1200-2000	4	
+10706	AA0706	Kimberley tropical savanna	347852	2000	1800-2200	2	
+10707	AA0707	Mitchell grass downs	460746	900	500-1300	4	
+10708	AA0708	Trans Fly savanna and grasslands	26731	2200	1000-3000	3	
+10709	AA0709	Victoria Plains tropical savanna	225637	1200	800-1800	3	
+10801	AA0801	Cantebury-Otago tussock grasslands	53478	800	650-900	3	
+10802	AA0802	Eastern Australia mulga shrublands	253916	800	700-1100	2	
+10803	AA0803	Southeast Australia temperate savanna	322226	900	600-1300	4	
+11001	AA1001	Australian Alps montane grasslands	11995	1000	700-1500	3	
+11002	AA1002	Central Range sub-alpine grasslands	15571	1800	1500-2500	3	
+11003	AA1003	Southland montane grasslands	39929	850	750-950	3	
+11101	AA1101	Antipodes Subantarctic Islands tundra	1679	240	220-250	1	
+11201	AA1201	Coolgardie woodlands	137375	1800	1400-2200	3	
+11202	AA1202	Esperance mallee	115514	2900	2600-3300	3	
+11203	AA1203	Eyre and York mallee	60923	2000	1500-2500	4	
+11204	AA1204	Jarrah-Karri forest and shrublands	10445	2200	1800-2600	2	
+11205	AA1205	Kwongan heathlands (Swan Coastal Plain Scrub and Woodlands)	15227	2300	2000-2600	2	
+11206	AA1206	Mount Lofty woodlands	23785	2000	1500-2500	2	
+11207	AA1207	Murray-Darling woodlands and mallee	197923	1100	600-1600	3	
+11208	AA1208	Naracoorte woodlands	27509	1500	1000-2000	4	
+11209	AA1209	Southwest Australia savanna	168896	1900	1500-2300	3	
+11210	AA1210	Southwest Australia woodlands	46045	2000	1600-2400	3	
+11301	AA1301	Carnarvon xeric shrublands	90487	700	400-1000	4	
+11302	AA1302	Central Ranges xeric scrub	281669	1400	1300-1500	2	
+11303	AA1303	Gibson desert	155870	400	200-600	4	
+11304	AA1304	Great Sandy-Tanami desert	823008	500	400-600	2	
+11305	AA1305	Great Victoria desert	424354	400	200-600	3	
+11306	AA1306	Nullarbor Plains xeric shrublands	195200	200	120-300	3	
+11307	AA1307	Pilbara shrublands	179779	800	500-1200	4	
+11308	AA1308	Simpson desert	584499	800	500-1100	3	
+11309	AA1309	Tirari-Sturt stony desert	376890	800	500-1100	3	
+11310	AA1310	Western Australian Mulga shrublands	460453	900	600-1200	4	
+11401	AA1401	New Guinea mangroves	26827	250	20-400	4	
+21101	AN1101	Marielandia Antarctic tundra	1146479	2	x	1	
+21102	AN1102	Maudlandia Antarctic desert	2115534	0	x	1	
+21103	AN1103	Scotia Sea Island tundra	8468	24	x	1	
+21104	AN1104	Southern Indian Ocean Island tundra	8153	35	29-45	2	
+30101	AT0101	Albertine Rift montane forests	103870	3500	3000-4000	2	
+30102	AT0102	Atlantic Equatorial coastal forests	189665	6000	5500-6800	2	
+30103	AT0103	Cameroonian Highlands forests	38045	3300	3000-4000	4	
+30104	AT0104	Central Congolian lowland forests	414758	3600	3200-4300	2	
+30105	AT0105	Comoros forests	2063	1500	1300-1700	2	
+30106	AT0106	Cross-Niger transition forests	20720	2100	1800-2600	3	
+30107	AT0107	Cross-Sanaga-Bioko coastal forests	52150	4000	3700-4400	2	
+30108	AT0108	East African montane forests	65498	4000	3500-5000	3	
+30109	AT0109	Eastern Arc forests	23658	3200	2900-3600	2	
+30110	AT0110	Eastern Congolian swamp forests	92736	2000	1600-2400	3	
+30111	AT0111	Eastern Guinean forests	189409	3200	3000-3500	2	
+30112	AT0112	Ethiopian montane forests	248762	4000	3000-5000	3	
+30113	AT0113	Granitic Seychelles forests	289	280	260-300	2	
+30114	AT0114	Guinean montane forests	31051	2700	2400-3000	2	
+30115	AT0115	Knysna-Amatole montane forests	3069	1000	600-1800	3	
+30116	AT0116	KwaZulu-Cape coastal forest mosaic	17792	2000	1500-2800	3	
+30117	AT0117	Madagascar lowland forests	112640	6000	5000-7000	2	
+30118	AT0118	Madagascar subhumid forests	199509	3200	2500-4000	3	
+30119	AT0119	Maputaland coastal forest mosaic	30202	2700	2500-3000	2	
+30120	AT0120	Mascarene forests	4946	950	900-1200	2	
+30121	AT0121	Mount Cameroon and Bioko montane forests	1146	3300	3000-3800	3	
+30122	AT0122	Niger Delta swamp forests	14407	1500	1200-1800	3	
+30123	AT0123	Nigerian lowland forests	67263	3000	2800-3200	2	
+30124	AT0124	Northeastern Congolian lowland forests	533473	3600	3200-4300	2	
+30125	AT0125	Northern Zanzibar-Inhambane coastal forest mosaic	111829	3300	2700-4500	3	
+30126	AT0126	Northwestern Congolian lowland forests	434148	4100	3500-5000	3	
+30127	AT0127	Sao Tome and Principe moist lowland forests	1038	950	900-1100	2	
+30128	AT0128	Southern Zanzibar-Inhambane coastal forest mosaic	144779	2800	2400-3500	3	
+30129	AT0129	Western Congolian swamp forests	128643	2100	1700-2500	3	
+30130	AT0130	Western Guinean lowland forests	206688	3300	3100-3600	3	
+30201	AT0201	Cape Verde Islands dry forests	4564	257	x	1	
+30202	AT0202	Madagascar dry deciduous forests	151328	2100	1800-2400	2	
+30203	AT0203	Zambezian Cryptosepalum dry forests	38229	1300	800-1700	4	
+30701	AT0701	Angolan Miombo woodlands	660083	2400	1800-3200	3	
+30702	AT0702	Angolan Mopane woodlands	133462	1100	900-1400	3	
+30703	AT0703	Ascension scrub and grasslands	93	25	x	1	
+30704	AT0704	Central Zambezian Miombo woodlands	1184205	3800	3300-4300	3	
+30705	AT0705	East Sudanian savanna	917581	2300	2000-2700	3	
+30706	AT0706	Eastern Miombo woodlands	483901	2800	2500-3300	3	
+30707	AT0707	Guinean forest-savanna mosaic	673601	2500	2200-3000	3	
+30708	AT0708	Itigi-Sumbu thicket	7843	1000	500-1500	4	
+30709	AT0709	Kalahari Acacia-Baikiaea woodlands	335478	1400	1300-1900	3	
+30710	AT0710	Mandara Plateau mosaic	7509	600	400-800	4	
+30711	AT0711	Northern Acacia-Commiphora bushlands and thickets	325951	1300	1100-1500	2	
+30712	AT0712	Northern Congolian forest-savanna mosaic	708130	2500	2100-2900	3	
+30713	AT0713	Sahelian Acacia savanna	3053217	1300	1200-1400	2	
+30714	AT0714	Serengeti volcanic grasslands	18029	1000	500-1500	4	
+30715	AT0715	Somali Acacia-Commiphora bushlands and thickets	1053347	2600	2300-3000	2	
+30716	AT0716	Southern Acacia-Commiphora bushlands and thickets	227783	2300	1800-2800	3	
+30717	AT0717	Southern Africa bushveld	223106	1500	1000-2000	3	
+30718	AT0718	Southern Congolian forest-savanna mosaic	569692	3000	2700-3500	3	
+30719	AT0719	Southern Miombo woodlands	408257	2200	1800-3000	3	
+30720	AT0720	St. Helena scrub and woodlands	130	60	x	1	
+30721	AT0721	Victoria Basin forest-savanna mosaic	165792	2500	2300-3000	2	
+30722	AT0722	West Sudanian savanna	1638522	2100	1700-2500	2	
+30723	AT0723	Western Congolian forest-savanna mosaic	413492	3300	3000-3700	2	
+30724	AT0724	Western Zambezian grasslands	34016	800	600-1200	4	
+30725	AT0725	Zambezian and Mopane woodlands	473318	2500	2200-3200	3	
+30726	AT0726	Zambezian Baikiaea woodlands	264437	1300	1200-1800	3	
+30801	AT0801	Al Hajar Al Gharbi montane woodlands	25548	700	500-1000	3	
+30802	AT0802	Amsterdam and Saint-Paul Islands temperate grasslands	69	60	55-70	2	
+30803	AT0803	Tristan Da Cunha-Gough Islands shrub and grasslands	167	90	80-100	2	
+30901	AT0901	East African halophytics	2637	80	50-200	4	
+30902	AT0902	Etosha Pan halophytics	7231	80	30-200	3	
+30903	AT0903	Inner Niger Delta flooded savanna	46032	500	300-800	4	
+30904	AT0904	Lake Chad flooded savanna	18833	600	400-800	4	
+30905	AT0905	Saharan flooded grasslands	179722	1300	900-1700	4	
+30906	AT0906	Zambezian coastal flooded savanna	19545	1100	700-1500	4	
+30907	AT0907	Zambezian flooded grasslands	153452	1400	1000-1900	4	
+30908	AT0908	Zambezian halophytics	30371	80	50-200	4	
+31001	AT1001	Angolan montane forest-grassland mosaic	25518	2000	1700-2500	3	
+31002	AT1002	Angolan scarp savanna and woodlands	74358	1500	1000-2000	4	
+31003	AT1003	Drakensberg alti-montane grasslands and woodlands	11908	800	400-1200	3	
+31004	AT1004	Drakensberg montane grasslands, woodlands and forests	202216	3700	3000-4500	2	
+31005	AT1005	East African montane moorlands	3289	400	350-550	3	
+31006	AT1006	Eastern Zimbabwe montane forest-grassland mosaic	7828	1700	1200-2600	3	
+31007	AT1007	Ethiopian montane grasslands and woodlands	245361	2000	1700-2500	3	
+31008	AT1008	Ethiopian montane moorlands	25154	700	600-800	2	
+31009	AT1009	Highveld grasslands	186165	1900	1600-2200	2	
+31010	AT1010	Jos Plateau forest-grassland mosaic	13337	1300	900-1600	3	
+31011	AT1011	Madagascar ericoid thickets	1278	1000	600-1500	4	
+31012	AT1012	Maputaland-Pondoland bushland and thickets	19533	2100	1800-3000	3	
+31013	AT1013	Ruwenzori-Virunga montane moorlands	2673	400	350-550	3	
+31014	AT1014	South Malawi montane forest-grassland mosaic	10228	1900	1500-2800	3	
+31015	AT1015	Southern Rift montane forest-grassland mosaic	33497	1900	1500-2500	3	
+31201	AT1201	Albany thickets	17098	1200	700-2000	3	
+31202	AT1202	Lowland fynbos and renosterveld	32553	3000	2500-3500	3	
+31203	AT1203	Montane fynbos and renosterveld	45780	6300	5500-7000	2	
+31301	AT1301	Aldabra Island xeric scrub	182	180	170-200	2	
+31302	AT1302	Arabian Peninsula coastal fog desert	82969	1000	700-1200	3	
+31303	AT1303	East Saharan montane xeric woodlands	27871	700	600-800	2	
+31304	AT1304	Eritrean coastal desert	4425	100	50-200	4	
+31305	AT1305	Ethiopian xeric grasslands and shrublands	152173	850	700-1000	3	
+31306	AT1306	Gulf of Oman desert and semi-desert	62449	300	200-500	3	
+31307	AT1307	Hobyo grasslands and shrublands	26098	800	600-1000	3	
+31308	AT1308	Ile Europa and Bassas da India xeric scrub	22	80	40-250	4	
+31309	AT1309	Kalahari xeric savanna	588118	700	600-900	2	
+31310	AT1310	Kaokoveld desert	45739	500	300-800	3	
+31311	AT1311	Madagascar spiny thickets	44279	1100	800-1500	3	
+31312	AT1312	Madagascar succulent woodlands	79857	1400	1000-1800	3	
+31313	AT1313	Masai xeric grasslands and shrublands	100960	900	700-1300	4	
+31314	AT1314	Nama Karoo	351112	1100	1000-1300	2	
+31315	AT1315	Namib desert	80874	1000	700-1800	3	
+31316	AT1316	Namibian savanna woodlands	225512	1100	900-1800	3	
+31317	AT1317	Red Sea coastal desert	56323	350	200-500	3	
+31318	AT1318	Socotra Island xeric shrublands	3819	750	500-1000	2	
+31319	AT1319	Somali montane xeric woodlands	62157	1500	1100-1800	2	
+31320	AT1320	Southwestern Arabian foothills savanna	274663	400	200-700	3	
+31321	AT1321	Southwestern Arabian montane woodlands	86917	2000	1500-2200	2	
+31322	AT1322	Succulent Karoo	102658	4850	4800-5000	2	
+31401	AT1401	Central African mangroves	29910	200	20-400	4	
+31402	AT1402	East African mangroves	15137	200	20-400	4	
+31403	AT1403	Guinean mangroves	22762	200	20-400	4	
+31404	AT1404	Madagascar mangroves	5530	200	20-400	4	
+31405	AT1405	Southern Africa mangroves	994	200	20-400	4	
+40101	IM0101	Andaman Islands rain forests	5718	1827	x	1	
+40102	IM0102	Borneo lowland rain forests	427512	10000	8000-15000	3	
+40103	IM0103	Borneo montane rain forests	115599	4000	3000-5500	2	
+40104	IM0104	Borneo peat swamp forests	67474	2500	2000-3000	2	
+40105	IM0105	Brahmaputra Valley semi-evergreen forests	56713	2500	1500-3500	3	
+40106	IM0106	Cardamom Mountains rain forests	44248	3000	2000-4000	3	
+40107	IM0107	Chao Phraya freshwater swamp forests	39001	1100	900-1500	3	
+40108	IM0108	Chao Phraya lowland moist deciduous forests	20414	2000	1500-3000	3	
+40109	IM0109	Chin Hills-Arakan Yoma montane forests	29696	2600	2200-3200	3	
+40110	IM0110	Christmas and Cocos Islands tropical forests	135	220	200-240	2	
+40111	IM0111	Eastern highlands moist deciduous forests	341149	1600	1200-2200	2	
+40112	IM0112	Eastern Java-Bali montane rain forests	15898	1500	1000-2200	3	
+40113	IM0113	Eastern Java-Bali rain forests	53898	2900	2200-3500	3	
+40114	IM0114	Greater Negros-Panay rain forests	34999	3000	2500-3500	3	
+40115	IM0115	Himalayan subtropical broadleaf forests	38187	1800	1500-2500	3	
+40116	IM0116	Irrawaddy freshwater swamp forests	15158	1000	700-2000	3	
+40117	IM0117	Irrawaddy moist deciduous forests	138290	1800	1500-2800	3	
+40118	IM0118	Jian Nan subtropical evergreen forests	663569	5500	4500-7500	2	
+40119	IM0119	Kayah-Karen montane rain forests	119541	4000	3000-5500	3	
+40120	IM0120	Lower Gangetic Plains moist deciduous forests	254061	3500	2500-4500	3	
+40121	IM0121	Luang Prabang montane rain forests	71813	3800	2500-5000	3	
+40122	IM0122	Luzon montane rain forests	8301	1500	1300-2300	3	
+40123	IM0123	Luzon rain forests	95469	5000	4000-6000	3	
+40124	IM0124	Malabar Coast moist forests	35465	1500	1200-2500	3	
+40125	IM0125	Maldives-Lakshadweep-Chagos Archipelago tropical moist forests	292	380	350-450	2	
+40126	IM0126	Meghalaya subtropical forests	41712	3000	1500-4500	3	
+40127	IM0127	Mentawai Islands rain forests	6498	1500	1000-2000	3	
+40128	IM0128	Mindanao montane rain forests	18197	2000	1200-2800	3	
+40129	IM0129	Mindanao-Eastern Visayas rain forests	105113	4300	3500-5000	3	
+40130	IM0130	Mindoro rain forests	10117	2500	2000-3000	3	
+40131	IM0131	Mizoram-Manipur-Kachin rain forests	135558	3800	2800-4500	3	
+40132	IM0132	Myanmar coastal rain forests	66552	2200	1800-3000	3	
+40133	IM0133	Nicobar Islands rain forests	1696	1379	x	1	
+40134	IM0134	North Western Ghats moist deciduous forests	48204	2300	1800-3000	3	
+40135	IM0135	North Western Ghats montane rain forests	30936	2800	2300-3500	3	
+40136	IM0136	Northern Annamites rain forests	47207	3000	2000-4500	3	
+40137	IM0137	Northern Indochina subtropical forests	437007	7000	5000-9000	2	
+40138	IM0138	Northern Khorat Plateau moist deciduous forests	16849	1500	1200-2500	3	
+40139	IM0139	Northern Thailand-Laos moist deciduous forests	42144	2300	1500-3500	3	
+40140	IM0140	Northern Triangle subtropical forests	53874	3500	2500-4500	3	
+40141	IM0141	Northern Vietnam lowland rain forests	22595	2800	2000-4000	3	
+40142	IM0142	Orissa semi-evergreen forests	22293	1400	1200-1900	2	
+40143	IM0143	Palawan rain forests	14334	2700	2500-3000	2	
+40144	IM0144	Peninsular Malaysian montane rain forests	17175	3200	3000-4000	2	
+40145	IM0145	Peninsular Malaysian peat swamp forests	3628	1100	800-1500	3	
+40146	IM0146	Peninsular Malaysian rain forests	125508	7000	6000-8500	2	
+40147	IM0147	Red River freshwater swamp forests	10755	800	600-1200	3	
+40148	IM0148	South China Sea Islands	35	400	200-600	3	
+40149	IM0149	South China-Vietnam subtropical evergreen forests	224306	6500	5000-9000	2	
+40150	IM0150	South Western Ghats moist deciduous forests	23772	2300	1700-3000	3	
+40151	IM0151	South Western Ghats montane rain forests	22637	3300	2800-3800	2	
+40152	IM0152	Southern Annamites montane rain forests	46483	4000	3000-5000	3	
+40153	IM0153	Southwest Borneo freshwater swamp forests	36769	1400	1000-1800	3	
+40154	IM0154	Sri Lanka lowland rain forests	12555	2000	1700-2600	3	
+40155	IM0155	Sri Lanka montane rain forests	3079	2200	1800-2800	3	
+40156	IM0156	Sulu Archipelago rain forests	2334	1400	1000-1800	3	
+40157	IM0157	Sumatran freshwater swamp forests	18076	1600	1200-2000	3	
+40158	IM0158	Sumatran lowland rain forests	259455	7500	6000-8500	2	
+40159	IM0159	Sumatran montane rain forests	72946	3500	2800-4500	2	
+40160	IM0160	Sumatran peat swamp forests	87517	2000	1000-2500	3	
+40161	IM0161	Sundaland heath forests	76553	1600	1200-2200	3	
+40162	IM0162	Sundarbans freshwater swamp forests	14561	800	700-1500	3	
+40163	IM0163	Tenasserim-South Thailand semi-evergreen rain forests	97322	4000	3000-6000	3	
+40164	IM0164	Tonle Sap freshwater swamp forests	26029	800	500-1300	3	
+40165	IM0165	Tonle Sap-Mekong peat swamp forests	29381	700	400-1100	3	
+40166	IM0166	Upper Gangetic Plains moist deciduous forests	263099	2100	1500-2500	3	
+40167	IM0167	Western Java montane rain forests	26285	2000	1500-2500	3	
+40168	IM0168	Western Java rain forests	41662	3500	2500-4200	3	
+40169	IM0169	Hainan Island monsoon rain forests	15536	3000	2200-3800	3	
+40170	IM0170	Nansei Islands subtropical evergreen forests	4068	2000	1500-3000	3	
+40171	IM0171	South Taiwan monsoon rain forests	2577	2700	1500-3500	3	
+40172	IM0172	Taiwan subtropical evergreen forests	33400	3000	2200-4000	3	
+40201	IM0201	Central Deccan Plateau dry deciduous forests	240159	1800	1300-2500	2	
+40202	IM0202	Central Indochina dry forests	320077	3000	2000-4000	3	
+40203	IM0203	Chhota-Nagpur dry deciduous forests	122423	1200	1000-2200	3	
+40204	IM0204	East Deccan dry-evergreen forests	25533	1200	1000-2000	3	
+40205	IM0205	Irrawaddy dry forests	35087	1000	700-1600	3	
+40206	IM0206	Khathiar-Gir dry deciduous forests	266975	1400	1200-1900	2	
+40207	IM0207	Narmada Valley dry deciduous forests	169883	1000	800-1600	3	
+40208	IM0208	Northern dry deciduous forests	58322	1000	800-1800	3	
+40209	IM0209	South Deccan Plateau dry deciduous forests	82253	2000	1500-3000	3	
+40210	IM0210	Southeastern Indochina dry evergreen forests	124260	4000	3000-6000	3	
+40211	IM0211	Southern Vietnam lowland dry forests	35038	1700	1500-2500	3	
+40212	IM0212	Sri Lanka dry-zone dry evergreen forests	48421	1200	900-1800	3	
+40301	IM0301	Himalayan subtropical pine forests	76203	1000	800-1800	3	
+40302	IM0302	Luzon tropical pine forests	7076	1300	1000-2000	3	
+40303	IM0303	Northeast India-Myanmar pine forests	9705	1000	700-1800	3	
+40304	IM0304	Sumatran tropical pine forests	2761	1000	500-1500	3	
+40401	IM0401	Eastern Himalayan broadleaf forests	83050	4500	3500-5500	3	
+40402	IM0402	Northern Triangle temperate forests	10727	2500	1500-3500	3	
+40403	IM0403	Western Himalayan broadleaf forests	55862	1200	1000-2000	3	
+40501	IM0501	Eastern Himalayan subalpine conifer forests	27480	2000	1500-3000	3	
+40502	IM0502	Western Himalayan subalpine conifer forests	39676	1000	800-1800	3	
+40701	IM0701	Terai-Duar savanna and grasslands	34580	1000	600-1400	3	
+40901	IM0901	Rann of Kutch seasonal salt marsh	27904	800	200-1200	3	
+41001	IM1001	Kinabalu montane alpine meadows	4339	3800	3000-4500	2	
+41301	IM1301	Deccan thorn scrub forests	340260	1300	1000-2000	2	
+41302	IM1302	Indus Valley desert	19497	400	300-500	4	
+41303	IM1303	Northwestern thorn scrub forests	488301	1000	800-1200	2	
+41304	IM1304	Thar desert	238654	650	550-750	2	
+41401	IM1401	Godavari-Krishna mangroves	7004	200	20-400	4	
+41402	IM1402	Indochina mangroves	26869	200	20-400	4	
+41403	IM1403	Indus River Delta-Arabian Sea mangroves	5793	200	20-400	4	
+41404	IM1404	Myanamar Coast mangroves	21315	200	20-400	4	
+41405	IM1405	Sunda Shelf mangroves	37448	250	20-400	3	
+41406	IM1406	Sundarbans mangroves	20436	350	300-600	2	
+50201	NA0201	Sonoran-Sinaloan transition subtropical dry forest	50983	1700	1500-2100	4	
+50301	NA0301	Bermuda subtropical conifer forests	38	167	x	1	
+50302	NA0302	Sierra Madre Occidental pine-oak forests	222740	4400	3800-4800	2	
+50303	NA0303	Sierra Madre Oriental pine-oak forests	65633	3300	2500-4500	4	
+50401	NA0401	Allegheny Highlands forests	83881	1883	x	1	
+50402	NA0402	Appalachian mixed mesophytic forests	192152	2487	x	1	
+50403	NA0403	Appalachian/Blue Ridge forests	159266	2398	x	1	
+50404	NA0404	Central U.S. hardwood forests	296019	2332	x	1	
+50405	NA0405	East Central Texas forests	52637	1553	x	1	
+50406	NA0406	Eastern forest/boreal transition	347681	1228	x	1	
+50407	NA0407	Eastern Great Lakes lowland forests	116417	1381	x	1	
+50408	NA0408	Gulf of St. Lawrence lowland forests	39415	1033	x	1	
+50409	NA0409	Mississippi lowland forests	112284	1468	x	1	
+50410	NA0410	New England/Acadian forests	237594	1496	x	1	
+50411	NA0411	Northeastern coastal forests	89644	1695	x	1	
+50412	NA0412	Ozark Mountain forests	62011	1743	x	1	
+50413	NA0413	Southeastern mixed forests	347798	3363	x	1	
+50414	NA0414	Southern Great Lakes forests	244469	2243	x	1	
+50415	NA0415	Upper Midwest Forest/Savanna transition zone	166123	1420	x	1	
+50416	NA0416	Western Great Lakes forests	273951	1459	x	1	
+50417	NA0417	Willamette Valley forests	14850	1067	x	1	
+50501	NA0501	Alberta Mountain forests	39769	660	x	1	
+50502	NA0502	Alberta/British Columbia foothills forests	120460	740	x	1	
+50503	NA0503	Arizona Mountains forests	109079	2204	x	1	
+50504	NA0504	Atlantic coastal pine barrens	8962	632	x	1	
+50505	NA0505	Blue Mountains forests	64701	1134	x	1	
+50506	NA0506	British Columbia mainland coastal forests	137212	1325	x	1	
+50507	NA0507	Cascade Mountains leeward forests	46293	1328	x	1	
+50508	NA0508	Central and Southern Cascades forests	44850	1296	x	1	
+50509	NA0509	Central British Columbia Mountain forests	71747	909	x	1	
+50510	NA0510	Central Pacific coastal forests	73656	1109	x	1	
+50511	NA0511	Colorado Rockies forests	132739	1626	x	1	
+50512	NA0512	Eastern Cascades forests	55200	1224	x	1	
+50513	NA0513	Florida sand pine scrub	3886	951	x	1	
+50514	NA0514	Fraser Plateau and Basin complex	137055	1012	x	1	
+50515	NA0515	Great Basin montane forests	5786	1043	x	1	
+50516	NA0516	Klamath-Siskiyou forests	50299	1859	x	1	
+50517	NA0517	Middle Atlantic coastal forests	133606	1488	x	1	
+50518	NA0518	North Central Rockies forests	245687	1695	x	1	
+50519	NA0519	Northern California coastal forests	13273	1212	x	1	
+50520	NA0520	Northern Pacific coastal forests	60437	615	x	1	
+50521	NA0521	Northern transitional alpine forests	25658	876	x	1	
+50522	NA0522	Okanogan dry forests	53314	1355	x	1	
+50523	NA0523	Piney Woods forests	140892	1729	x	1	
+50524	NA0524	Puget lowland forests	22540	1100	x	1	
+50525	NA0525	Queen Charlotte Islands	9955	459	x	1	
+50526	NA0526	Sierra Juarez & San Pedro Martir pine-oak forests	4005	1200	900-1600	4	
+50527	NA0527	Sierra Nevada forests	52832	2373	x	1	
+50528	NA0528	South Central Rockies forests	159347	1933	x	1	
+50529	NA0529	Southeastern conifer forests	236608	3095	x	1	
+50530	NA0530	Wasatch and Uinta montane forests	41465	1109	x	1	
+50601	NA0601	Alaska Peninsula montane taiga	47803	510	x	1	
+50602	NA0602	Central Canadian Shield forests	461695	1246	x	1	
+50603	NA0603	Cook Inlet taiga	27849	738	x	1	
+50604	NA0604	Copper Plateau taiga	17170	407	x	1	
+50605	NA0605	Eastern Canadian forests	486866	1140	x	1	
+50606	NA0606	Eastern Canadian Shield taiga	753777	925	x	1	
+50607	NA0607	Interior Alaska/Yukon lowland taiga	443328	810	x	1	
+50608	NA0608	Mid-Continental Canadian forests	367875	613	x	1	
+50609	NA0609	Midwestern Canadian Shield forests	545896	797	x	1	
+50610	NA0610	Muskwa/Slave Lake forests	262295	722	x	1	
+50611	NA0611	Newfoundland Highland forests	16338	473	x	1	
+50612	NA0612	Northern Canadian Shield taiga	613665	720	x	1	
+50613	NA0613	Northern Cordillera forests	262780	823	x	1	
+50614	NA0614	Northwest Territories taiga	345833	576	x	1	
+50615	NA0615	South Avalon-Burin oceanic barrens	2030	258	x	1	
+50616	NA0616	Southern Hudson Bay taiga	373725	1178	x	1	
+50617	NA0617	Yukon Interior dry forests	62370	692	x	1	
+50701	NA0701	Western Gulf coastal grasslands	80624	2180	2150-2250	1	
+50801	NA0801	California Central Valley grasslands	55056	1682	x	1	
+50802	NA0802	Canadian Aspen forests and parklands	397393	1464	x	1	
+50803	NA0803	Central and Southern mixed grasslands	282139	2081	x	1	
+50804	NA0804	Central forest/grasslands transition zone	406988	2124	x	1	
+50805	NA0805	Central tall grasslands	248437	1779	x	1	
+50806	NA0806	Edwards Plateau savanna	61800	2361	x	1	
+50807	NA0807	Flint Hills tall grasslands	29612	1174	x	1	
+50808	NA0808	Montana Valley and Foothill grasslands	81704	1197	x	1	
+50809	NA0809	Nebraska Sand Hills mixed grasslands	61117	1185	x	1	
+50810	NA0810	Northern mixed grasslands	218936	1595	x	1	
+50811	NA0811	Northern short grasslands	638370	1867	x	1	
+50812	NA0812	Northern tall grasslands	76019	1055	x	1	
+50813	NA0813	Palouse grasslands	46868	1290	x	1	
+50814	NA0814	Texas blackland prairies	50256	1531	x	1	
+50815	NA0815	Western short grasslands	435154	2359	x	1	
+51101	NA1101	Alaska/St. Elias Range tundra	151790	747	x	1	
+51102	NA1102	Aleutian Islands tundra	5465	388	x	1	
+51103	NA1103	Arctic coastal tundra	98164	539	x	1	
+51104	NA1104	Arctic foothills tundra	129078	580	x	1	
+51105	NA1105	Baffin coastal tundra	9104	135	x	1	
+51106	NA1106	Beringia lowland tundra	150932	553	x	1	
+51107	NA1107	Beringia upland tundra	97348	538	x	1	
+51108	NA1108	Brooks/British Range tundra	159491	593	x	1	
+51109	NA1109	Davis Highlands tundra	87876	216	x	1	
+51110	NA1110	High Arctic tundra	463687	245	x	1	
+51111	NA1111	Interior Yukon/Alaska alpine tundra	232624	617	x	1	
+51112	NA1112	Kalaallit Nunaat high arctic tundra	303600	200	100-300	3	
+51113	NA1113	Kalaallit Nunaat low arctic tundra	171020	480	450-520	3	
+51114	NA1114	Low Arctic tundra	796523	497	x	1	
+51115	NA1115	Middle Arctic tundra	1032794	371	x	1	
+51116	NA1116	Ogilvie/MacKenzie alpine tundra	208448	589	x	1	
+51117	NA1117	Pacific Coastal Mountain icefields and tundra	106769	792	x	1	
+51118	NA1118	Torngat Mountain tundra	32287	286	x	1	
+51201	NA1201	California coastal sage and chaparral	36269	1650	1550-1750	2	
+51202	NA1202	California interior chaparral and woodlands	64599	2105	x	1	
+51203	NA1203	California montane chaparral and woodlands	20408	2075	x	1	
+51301	NA1301	Baja California desert	77712	1900	1500-2200	3	
+51302	NA1302	Central Mexican matorral	59357	3200	2500-4500	3	
+51303	NA1303	Chihuahuan desert	509507	3500	3300-3600	1	
+51304	NA1304	Colorado Plateau shrublands	326390	2556	x	1	
+51305	NA1305	Great Basin shrub steppe	335868	2519	x	1	
+51306	NA1306	Gulf of California xeric scrub	23579	1300	900-1900	3	
+51307	NA1307	Meseta Central matorral	125268	3500	3000-4500	4	
+51308	NA1308	Mojave desert	130634	2490	x	1	
+51309	NA1309	Snake/Columbia shrub steppe	218112	2169	x	1	
+51310	NA1310	Sonoran desert	223009	2700	2600-3000	1	
+51311	NA1311	Tamaulipan matorral	16271	1900	1500-2500	3	
+51312	NA1312	Tamaulipan mezquital	141472	1900	1700-2500	3	
+51313	NA1313	Wyoming Basin shrub steppe	132362	1557	x	1	
+51401	NA1401	Northwest Mexican Coast mangroves	4985	200	20-400	4	
+60101	NT0101	Araucaria moist forests	216073	4500	4000-5000	2	
+60102	NT0102	Atlantic Coast restingas	7870	1500	700-2500	4	
+60103	NT0103	Bahia coastal forests	109677	5000	4000-6000	3	
+60104	NT0104	Bahia interior forests	229976	6000	5000-7500	3	
+60105	NT0105	Bolivian Yungas	90549	6000	5000-8000	2	
+60106	NT0106	Caatinga Enclaves moist forests	4797	1500	1000-2200	3	
+60107	NT0107	Caqueta moist forests	184193	9000	7000-11000	3	
+60108	NT0108	Catatumbo moist forests	8060	1900	1500-2500	3	
+60109	NT0109	Cauca Valley montane forests	32057	4500	4000-6000	4	
+60110	NT0110	Cayos Miskitos-San Andres & Providencia moist forests	96	350	150-550	4	
+60111	NT0111	Central American Atlantic moist forests	89471	4100	3000-5000	3	
+60112	NT0112	Central American montane forests	13298	3500	2900-4500	3	
+60113	NT0113	Chiapas montane forests	5778	3800	3000-4500	3	
+60114	NT0114	Chimalapas montane forests	2084	2500	2000-3000	3	
+60115	NT0115	Choco-Darien moist forests	73629	9000	7000-10000	2	
+60116	NT0116	Cocos Island moist forests	25	320	250-400	1	
+60117	NT0117	Cordillera La Costa montane forests	14342	3700	3000-4500	2	
+60118	NT0118	Cordillera Oriental montane forests	67873	5500	4000-7000	3	
+60119	NT0119	Costa Rican seasonal moist forests	10696	3300	2500-4500	4	
+60120	NT0120	Cuban moist forests	21395	3500	2500-4000	3	
+60121	NT0121	Eastern Cordillera real montane forests	102497	6500	5500-8000	2	
+60122	NT0122	Eastern Panamanian montane forests	3044	3300	2500-4000	3	
+60123	NT0123	Fernanda de Noronha-Atol das Rocas moist forests	19	80	40-150	3	
+60124	NT0124	Guayanan Highlands moist forests	337587	8000	6500-9000	2	
+60125	NT0125	Guianan moist forests	512888	8000	7500-9000	1	
+60126	NT0126	Gurupa varzea	9926	2500	1800-4000	4	
+60127	NT0127	Hispaniolan moist forests	45954	3800	3300-4300	3	
+60128	NT0128	Iquitos varzea	115037	3200	2700-4500	2	
+60129	NT0129	Isthmian-Atlantic moist forests	58912	8000	5000-11000	3	
+60130	NT0130	Isthmian-Pacific moist forests	29301	6500	5000-8000	3	
+60131	NT0131	Jamaican moist forests	8296	2800	2500-3100	3	
+60132	NT0132	Japura-Solimoes-Negro moist forests	269665	8000	5000-10000	3	
+60133	NT0133	Jurua-Purus moist forests	242564	5000	4000-6500	4	
+60134	NT0134	Leeward Islands moist forests	989	1500	1400-1900	3	
+60135	NT0135	Madeira-Tapajos moist forests	719692	6000	4500-7000	4	
+60136	NT0136	Magdalena Valley montane forests	105061	5500	4000-7000	4	
+60137	NT0137	Magdalena-Uraba moist forests	76767	4500	3500-5500	4	
+60138	NT0138	Marajo Varzea forests	88707	3500	2500-4000	4	
+60139	NT0139	Maranhao Babacu forests	142270	3200	2500-4000	4	
+60140	NT0140	Mato Grosso tropical dry forests	414005	4000	3500-5000	4	
+60141	NT0141	Monte Alegre varzea	66803	4500	3000-5000	3	
+60142	NT0142	Napo moist forests	251729	7000	6000-10000	2	
+60143	NT0143	Negro-Branco moist forests	212856	6500	5000-8000	3	
+60144	NT0144	Northeastern Brazil restingas	10056	1000	500-1500	4	
+60145	NT0145	Northwestern Andean montane forests	81168	6500	5500-7000	2	
+60146	NT0146	Oaxacan montane forests	7600	3200	2500-3700	3	
+60147	NT0147	Orinoco Delta swamp forests	28147	1700	1500-2300	4	
+60148	NT0148	Pantanos de Centla	17209	1900	1500-3000	2	
+60149	NT0149	Paramaribo swamp forests	7724	700	500-1000	2	
+60150	NT0150	Parana-Paraiba interior forests	483830	6500	4500-8000	3	
+60151	NT0151	Pernambuco coastal forests	17576	3000	1500-4000	4	
+60152	NT0152	Pernambuco interior forests	22693	2500	1500-3500	4	
+60153	NT0153	Peruvian Yungas	186717	6500	5000-8000	2	
+60154	NT0154	Peten-Veracruz moist forests	149095	6500	5000-8000	2	
+60155	NT0155	Puerto Rican moist forests	7528	1800	1700-2100	2	
+60156	NT0156	Purus varzea	177549	5000	3500-6000	4	
+60157	NT0157	Purus-Madeira moist forests	174016	5000	3500-6500	4	
+60158	NT0158	Rio Negro campinarana	80864	3000	2500-5000	4	
+60159	NT0159	Santa Marta montane forests	4785	1600	900-1900	2	
+60160	NT0160	Serra do Mar coastal forests	104839	9000	6000-11000	2	
+60161	NT0161	Sierra de los Tuxtlas	3903	2750	2400-3500	1	
+60162	NT0162	Sierra Madre de Chiapas moist forest	11259	4100	3500-4700	4	
+60163	NT0163	Solimoes-Japura moist forest	167659	7000	5500-11000	2	
+60164	NT0164	South Florida rocklands	2075	1034	x	1	
+60165	NT0165	Southern Andean Yungas	61126	3500	2500-4000	3	
+60166	NT0166	Southwest Amazon moist forests	749747	8500	6000-9000	2	
+60167	NT0167	Talamancan montane forests	16341	8500	6000-11000	2	
+60168	NT0168	Tapajos-Xingu moist forests	336575	5000	4000-6000	4	
+60169	NT0169	Tepuis	48844	2900	2300-4000	1	
+60170	NT0170	Tocantins-Araguaia-Maranhao moist forests	193637	4500	3500-5000	4	
+60171	NT0171	Trinidad and Tobago moist forests	4742	2100	2000-2300	2	
+60172	NT0172	Trinidade-Martin Vaz Islands tropical forests	11	120	30-200	4	
+60173	NT0173	Uatuma-Trombetas moist forests	473119	6500	5500-8000	3	
+60174	NT0174	Ucayali moist forests	114937	4050	3500-6000	2	
+60175	NT0175	Venezuelan Andes montane forests	29391	4500	3500-5500	2	
+60176	NT0176	Veracruz moist forests	69129	6000	4500-7000	3	
+60177	NT0177	Veracruz montane forests	4957	2700	2200-3500	4	
+60178	NT0178	Western Ecuador moist forests	34108	5300	4500-7000	1	
+60179	NT0179	Windward Islands moist forests	2019	1600	1400-1900	2	
+60180	NT0180	Xingu-Tocantins-Araguaia moist forests	266242	5000	4000-6000	4	
+60181	NT0181	Yucatan moist forests	69696	1600	1300-1900	2	
+60182		Guianan piedmont and lowland moist forest	229836	6500			estimated
+60201	NT0201	Apure-Villavicencio dry forests	68544	1800	1200-2500	4	
+60202	NT0202	Atlantic dry forests	115108	2000	1000-3500	4	
+60203	NT0203	Bahamian dry forests	4796	900	700-1000	2	
+60204	NT0204	Bajío dry forests	37388	4200	2900-5000	3	
+60205	NT0205	Balsas dry forests	62445	4300	2500-5100	3	
+60206	NT0206	Bolivian montane dry forests	80330	900	600-1500	2	
+60207	NT0207	Cauca Valley dry forests	7345	1000	500-1500	4	
+60208	NT0208	Cayman Islands dry forests	133	480	400-520	2	
+60209	NT0209	Central American dry forests	68033	3300	2800-4000	3	
+60210	NT0210	Chaco	609552	990	900-1200	2	
+60211	NT0211	Chiapas Depression dry forests	14022	2100	1500-3500	3	
+60212	NT0212	Chiquitano dry forests	230571	1200	800-1500	2	
+60213	NT0213	Cuban dry forests	65789	2500	1500-4000	3	
+60214	NT0214	Ecuadorian dry forests	21284	1250	1000-2500	2	
+60215	NT0215	Hispaniolan dry forests	15494	1500	1000-2000	3	
+60216	NT0216	Islas Revillagigedo dry forests	214	110	100-120	1	
+60217	NT0217	Jalisco dry forests	26130	1500	1000-2500	2	
+60218	NT0218	Jamaican dry forests	2318	1100	800-1500	3	
+60219	NT0219	Lara-Falcon dry forests	16939	900	700-1500	3	
+60220	NT0220	Leeward Islands dry forests	149	200	150-250	3	
+60221	NT0221	Magdalena Valley dry forests	19637	1300	1000-1900	4	
+60222	NT0222	Maracaibo dry forests	44999	1500	800-1800	4	
+60223	NT0223	Maranon dry forests	11372	1400	1000-2000	3	
+60224	NT0224	Panamanian dry forests	5109	1900	1000-3000	4	
+60225	NT0225	Patia Valley dry forests	2271	900	500-1500	4	
+60226	NT0226	Puerto Rican dry forests	1277	900	800-950	2	
+60227	NT0227	Sierra de la Laguna dry forests	3984	550	500-1000	1	
+60228	NT0228	Sinaloan dry forests	77534	2100	1700-2500	2	
+60229	NT0229	Sinu Valley dry forests	24983	1100	1000-1500	4	
+60230	NT0230	Southern Pacific dry forests	42427	4000	2500-5100	3	
+60231	NT0231	Trinidad and Tobago dry forests	271	600	300-1000	3	
+60232	NT0232	Tumbes-Piura dry forests	41283	800	600-1000	2	
+60233	NT0233	Veracruz dry forests	6636	1100	900-2000	4	
+60234	NT0234	Windward Islands dry forests	491	450	250-650	3	
+60235	NT0235	Yucatan dry forests	49767	1150	1000-1300	2	
+60301	NT0301	Bahamian pine forests	2090	750	500-900	3	
+60302	NT0302	Belizian pine forests	2832	1500	1000-2500	4	
+60303	NT0303	Central American pine-oak forests	111351	4900	4000-6000	3	
+60304	NT0304	Cuban pine forests	6423	1500	800-2200	4	
+60305	NT0305	Hispaniolan pine forests	11596	2200	1800-2800	3	
+60306	NT0306	Miskito pine forests	18912	1800	1400-2500	4	
+60307	NT0307	Sierra de la Laguna pine-oak forests	1064	800	700-1200	1	
+60308	NT0308	Sierra Madre de Oaxaca pine-oak forests	14346	3100	2500-3700	2	
+60309	NT0309	Sierra Madre del Sur pine-oak forests	61175	4200	3600-5000	3	
+60310	NT0310	Trans-Mexican Volcanic Belt pine-oak forests	91823	4900	4000-6000	3	
+60401	NT0401	Juan Fernandez Islands temperate forests	146	225	212-225	1	
+60402	NT0402	Magellanic subpolar forests	147247	450	400-650	3	
+60403	NT0403	San Felix-San Ambrosio Islands temperate forests	6	22	22-23	1	
+60404	NT0404	Valdivian temperate forests	248087	800	600-1000	2	
+60701	NT0701	Arid Chaco	98857	600	500-800	3	
+60702	NT0702	Beni savanna	126065	1500	1500-5000	1	
+60703	NT0703	Campos Rupestres montane savanna	26395	1500	1000-2000	3	
+60704	NT0704	Cerrado	1916881	6500	6500-8000	1	
+60705	NT0705	Clipperton Island shrub and grasslands	7	30	15-31	1	
+60706	NT0706	Cordoba montane savanna	58153	400	200-600	3	
+60707	NT0707	Guyanan savanna	104356	1200	700-2000	4	
+60708	NT0708	Humid Chaco	334751	1100	800-1500	3	
+60709	NT0709	Llanos	388998	2600	2000-3000	2	
+60710	NT0710	Uruguayan savanna	355674	2500	2000-2700	2	
+60801	NT0801	Argentine Espinal	108810	700	500-1000	4	
+60802	NT0802	Argentine Monte	409038	700	500-1000	1	
+60803	NT0803	Humid Pampas	240794	1750	1500-2000	2	
+60804	NT0804	Patagonian grasslands	63165	550	450-700	2	
+60805	NT0805	Patagonian steppe	487249	1200	1100-1200	2	
+60806	NT0806	Semi-arid Pampas	327010	1300	1000-1800	2	
+60901	NT0901	Central Mexican wetlands	280	300	100-600	4	
+60902	NT0902	Cuban wetlands	5663	900	600-1500	4	
+60903	NT0903	Enriquillo wetlands	630	400	200-700	4	
+60904	NT0904	Everglades	20066	1362	x	1	
+60905	NT0905	Guayaquil flooded grasslands	2937	1050	800-1400	3	
+60906	NT0906	Orinoco wetlands	6013	1100	900-1600	3	
+60907	NT0907	Pantanal	171054	1700	1500-2000	1	
+60908	NT0908	Parana flooded savanna	38868	1400	1200-1600	4	
+60909	NT0909	Southern Cone Mesopotamian savanna	77634	1400	1200-2000	4	
+61001	NT1001	Central Andean dry puna	307377	1100	900-1400	4	
+61002	NT1002	Central Andean puna	161410	1200	1000-1500	2	
+61003	NT1003	Central Andean wet puna	117318	1300	1100-1500	2	
+61004	NT1004	Cordillera Central paramo	12174	1500	1000-2000	2	
+61005	NT1005	Cordillera de Merida paramo	2810	700	400-1000	3	
+61006	NT1006	Northern Andean paramo	29969	2500	2000-3500	2	
+61007	NT1007	Santa Marta paramo	1244	800	400-1000	2	
+61008	NT1008	Southern Andean steppe	178235	800	600-1200	4	
+61009	NT1009	Zacatonal	302	200	150-500	1	
+61201	NT1201	Chilean matorral	148509	2600	2300-3000	2	
+61301	NT1301	Araya and Paria xeric scrub	5283	1400	1200-2000	2	
+61302	NT1302	Aruba-Curacao-Bonaire cactus scrub	458	450	400-800	2	
+61303	NT1303	Atacama desert	105174	800	600-1000	2	
+61304	NT1304	Caatinga	734406	1500	1200-2000	1	
+61305	NT1305	Cayman Islands xeric scrub	23	320	100-400	3	
+61306	NT1306	Cuban cactus scrub	3265	900	500-1300	4	
+61307	NT1307	Galapagos Islands xeric scrub	8014	541	541	1	
+61308	NT1308	Guajira-Barranquilla xeric scrub	31605	900	500-1500	3	
+61309	NT1309	La Costa xeric shrublands	68465	1700	1500-2000	3	
+61310	NT1310	Leeward Islands xeric scrub	1644	800	600-1000	2	
+61311	NT1311	Malpelo Island xeric scrub	8	80	20-300	4	
+61312	NT1312	Motagua Valley thornscrub	2337	1400	600-1800	4	
+61313	NT1313	Paraguana xeric scrub	15974	1200	800-1500	4	
+61314	NT1314	San Lucan xeric scrub	3877	550	400-800	4	
+61315	NT1315	Sechura desert	184915	1050	600-1200	2	
+61316	NT1316	Tehuacan Valley matorral	9892	2700	2500-3100	2	
+61317	NT1317	Windward Islands xeric scrub	1028	650	600-800	2	
+61318	NT1318	St. Peter and St. Paul rocks	8	0	x	1	
+61401	NT1401	Alvarado mangroves	4546	200	20-400	4	
+61402	NT1402	Amapa mangroves	1562	200	20-400	4	
+61403	NT1403	Bahamian mangroves	6615		20-400	4	
+61404	NT1404	Bahia mangroves	2119	200	20-400	4	
+61405	NT1405	Belizean Coast mangroves	2795	200	20-400	4	
+61406	NT1406	Belizean Reef mangroves	236		20-400	4	
+61407	NT1407	Bocas del Toro-San Bastimentos Island-San Blas mangroves	541	200	20-400	4	
+61408	NT1408	Coastal Venezuelan mangroves	5845	200	20-400	4	
+61409	NT1409	Esmeraldes-Pacific Colombia mangroves	6518	200	20-400	4	
+61410	NT1410	Greater Antilles mangroves	10645	200	20-400	4	
+61411	NT1411	Guianan mangroves	14570	200	20-400	4	
+61412	NT1412	Gulf of Fonseca mangroves	1624	200	20-400	4	
+61413	NT1413	Gulf of Guayaquil-Tumbes mangroves	3314	200	20-400	4	
+61414	NT1414	Gulf of Panama mangroves	2424	200	20-400	4	
+61415	NT1415	Ilha Grande mangroves	3206	200	20-400	4	
+61416	NT1416	Lesser Antilles mangroves	651	200	20-400	4	
+61417	NT1417	Magdalena-Santa Marta mangroves	3195	200	20-400	4	
+61418	NT1418	Manabi mangroves	1149	200	20-400	4	
+61419	NT1419	Maranhao mangroves	11309	200	20-400	4	
+61420	NT1420	Marismas Nacionales-San Blas mangroves	2040	200	20-400	4	
+61421	NT1421	Mayan Corridor mangroves	4091	200	20-400	4	
+61422	NT1422	Mexican South Pacific Coast mangroves	1173	200	20-400	4	
+61423	NT1423	Moist Pacific Coast mangroves	1598	200	20-400	4	
+61424	NT1424	Mosquita-Nicaraguan Caribbean Coast mangroves	4437	200	20-400	4	
+61425	NT1425	Northern Dry Pacific Coast mangroves	1057	200	20-400	4	
+61426	NT1426	Northern Honduras mangroves	1054	200	20-400	4	
+61427	NT1427	Para mangroves	4413	200	20-400	4	
+61428	NT1428	Petenes mangroves	1977	200	20-400	4	
+61429	NT1429	Piura mangroves	117	200	20-400	4	
+61430	NT1430	Rio Lagartos mangroves	3466	200	20-400	4	
+61431	NT1431	Rio Negro-Rio San Sun mangroves	478	200	20-400	4	
+61432	NT1432	Rio Piranhas mangroves	2114	200	20-400	4	
+61433	NT1433	Rio Sao Francisco mangroves	2617	200	20-400	4	
+61434	NT1434	Southern Dry Pacific Coast mangroves	906	200	20-400	4	
+61435	NT1435	Tehuantepec-El Manchon mangroves	2695	200	20-400	4	
+61436	NT1436	Trinidad mangroves	187	200	20-400	4	
+61437	NT1437	Usumacinta mangroves	3130	200	20-400	4	
+70101	OC0101	Carolines tropical moist forests	575	1150	1100-1200	2	
+70102	OC0102	Central Polynesian tropical moist forests	614	50	40-60	2	
+70103	OC0103	Cook Islands tropical moist forests	214	130	120-280	2	
+70104	OC0104	Eastern Micronesia tropical moist forests	515	110	90-150	2	
+70105	OC0105	Fiji tropical moist forests	11621	1450	1400-1600	2	
+70106	OC0106	Hawaii tropical moist forests	6737	935	x	1	
+70107	OC0107	Kermadec Islands subtropical moist forests	34	113	x	1	
+70108	OC0108	Marquesas tropical moist forests	1077	318	x	1	
+70109	OC0109	Ogasawara subtropical moist forests	96	500	450-550	2	
+70110	OC0110	Palau tropical moist forests	464	175	x	1	
+70111	OC0111	Rapa Nui - Sala-y-Gomez subtropical broadleaf forests	178	30	29-33	1	
+70112	OC0112	Samoan tropical moist forests	3093	775	775	1	
+70113	OC0113	Society Islands tropical moist forests	1624	623	x	1	
+70114	OC0114	Tongan tropical moist forests	933	480	450-520	2	
+70115	OC0115	Tuamotu tropical moist forests	948	140	120-160	2	
+70116	OC0116	Tubuai tropical moist forests	144	150	120-300	2	
+70117	OC0117	Western Polynesian tropical moist forests	93	50	44-60	2	
+70201	OC0201	Fiji tropical dry forests	6913	500	420-700	3	
+70202	OC0202	Hawaii tropical dry forests	6633	659	x	1	
+70203	OC0203	Marianas tropical dry forests	1036	400	340-500	2	
+70204	OC0204	Yap tropical dry forests	101	120	50-250	3	
+70701	OC0701	Hawaii tropical high shrublands	1852	124	x	1	
+70702	OC0702	Hawaii tropical low shrublands	1521	384	x	1	
+70703	OC0703	Northwestern Hawaii scrub	15	30	15-80	3	
+80101	PA0101	Gizhou Plateau broadleaf and mixed forests	269541	3500	2500-5000	3	
+80102	PA0102	Yunnan Plateau subtropical evergreen forests	240343	6000	5300-8000	2	
+80401	PA0401	Appenine deciduous montane forests	16120	2500	2200-2800	3	
+80402	PA0402	Atlantic mixed forests	399124	1900	1700-2200	3	
+80403	PA0403	Azores temperate mixed forests	2615	510	490-600	2	
+80404	PA0404	Balkan mixed forests	224367	3500	3200-4000	3	
+80405	PA0405	Baltic mixed forests	116579	1700	1500-2000	2	
+80406	PA0406	Cantabrian mixed forests	79710	2000	1800-2200	2	
+80407	PA0407	Caspian Hyrcanian mixed forests	55107	2000	1300-3000	3	
+80408	PA0408	Caucasus mixed forests	170277	5000	4700-5300	2	
+80409	PA0409	Celtic broadleaf forests	209130	1600	1300-1900	2	
+80410	PA0410	Central Anatolian deciduous forests	101412	2000	1200-2800	3	
+80411	PA0411	Central China loess plateau mixed forests	359624	3100	2800-3400	3	
+80412	PA0412	Central European mixed forests	731222	2300	1800-2800	3	
+80413	PA0413	Central Korean deciduous forests	104558	2000	1700-2500	3	
+80414	PA0414	Changbai Mountains mixed forests	93298	2500	2200-2800	2	
+80415	PA0415	Changjiang Plain evergreen forests	438022	3000	2500-4000	3	
+80416	PA0416	Crimean Submediterranean forest complex	30149	2600	2300-3000	2	
+80417	PA0417	Daba Mountains evergreen forests	168303	4500	3500-6000	3	
+80418	PA0418	Dinaric Mountains mixed forests	58166	3700	3200-4200	3	
+80419	PA0419	East European forest steppe	727155	1900	1600-2200	2	
+80420	PA0420	Eastern Anatolian deciduous forests	81564	2800	2400-3200	3	
+80421	PA0421	English Lowlands beech forests	45596	1300	1250-1400	2	
+80422	PA0422	Euxine-Colchic deciduous forests	74412	3200	2800-3600	3	
+80423	PA0423	Hokkaido deciduous forests	25535	1200	800-1800	4	
+80424	PA0424	Huang He Plain mixed forests	434199	2800	2300-3300	2	
+80425	PA0425	Madeira evergreen forests	815	760	x	1	
+80426	PA0426	Manchurian mixed forests	504011	2200	2000-2500	2	
+80427	PA0427	Nihonkai evergreen forests	21632	1700	1000-2500	4	
+80428	PA0428	Nihonkai montane deciduous forests	82301	2500	2000-3000	3	
+80429	PA0429	North Atlantic moist mixed forests	38650	600	400-800	3	
+80430	PA0430	Northeast China Plain deciduous forests	232452	1800	1500-2200	3	
+80431	PA0431	Pannonian mixed forests	306893	2700	2400-3000	2	
+80432	PA0432	Po Basin mixed forests	42363	1200	800-1600	4	
+80433	PA0433	Pyrenees conifer and mixed forests	25886	3300	3000-3500	2	
+80434	PA0434	Qin Ling Mountains deciduous forests	123327	3400	3100-3700	2	
+80435	PA0435	Rodope montane mixed forests	31635	3000	2500-3500	2	
+80436	PA0436	Sarmatic mixed forests	846110	1800	1500-2100	2	
+80437	PA0437	Sichuan Basin evergreen broadleaf forests	98117	3000	2000-5000	3	
+80438	PA0438	South Sakhalin-Kurile mixed forests	12532	1000	900-1100	2	
+80439	PA0439	Southern Korea evergreen forests	14726	2300	1900-2600	3	
+80440	PA0440	Taiheiyo evergreen forests	138298	3000	2400-4000	4	
+80441	PA0441	Taiheiyo montane deciduous forests	41905	2700	2000-3400	4	
+80442	PA0442	Tarim Basin deciduous forests and steppe	54472	600	400-900	4	
+80443	PA0443	Ussuri broadleaf and mixed forests	197427	1800	1500-2100	2	
+80444	PA0444	West Siberian broadleaf and mixed forests	223406	1200	900-1500	3	
+80445	PA0445	Western European broadleaf forests	492329	2900	2500-3300	2	
+80446	PA0446	Zagros Mountains forest steppe	397761	1800	1200-2500	3	
+80501	PA0501	Alps conifer and mixed forests	149481	5000	4500-5500	2	
+80502	PA0502	Altai montane forest and forest steppe	142445	2000	1700-2300	3	
+80503	PA0503	Caledon conifer forests	22000	500	300-800	3	
+80504	PA0504	Carpathian montane conifer forests	124964	2700	2500-3000	2	
+80505	PA0505	Da Hinggan-Dzhagdy Mountains conifer forests	248308	800	700-1000	2	
+80506	PA0506	East Afghan montane conifer forests	20084	1300	800-1800	4	
+80507	PA0507	Elburz Range forest steppe	63265	700	500-1000	4	
+80508	PA0508	Helanshan montane conifer forests	24685	700	600-800	3	
+80509	PA0509	Hengduan Mountains subalpine conifer forests	99421	3000	2000-4000	3	
+80510	PA0510	Hokkaido montane conifer forests	45765	1400	1000-2000	3	
+80511	PA0511	Honshu alpine conifer forests	11495	1300	800-2000	3	
+80512	PA0512	Khangai Mountains conifer forests	2893	1200	1000-1400	2	
+80513	PA0513	Mediterranean conifer and mixed forests	23358	2300	1800-2800	3	
+80514	PA0514	Northeastern Himalayan subalpine conifer forests	46277	2500	1800-3500	3	
+80515	PA0515	Northern Anatolian conifer and deciduous forests	101290	2200	1500-3000	3	
+80516	PA0516	Nujiang Langcang Gorge alpine conifer and mixed forests	82809	3500	2500-5000	3	
+80517	PA0517	Qilian Mountains conifer forests	16652	1500	1000-2000	3	
+80518	PA0518	Qionglai-Minshan conifer forests	80216	5000	4000-6000	3	
+80519	PA0519	Sayan montane conifer forests	357394	1200	1000-1600	2	
+80520	PA0520	Scandinavian coastal conifer forests	19283	600	400-1000	3	
+80521	PA0521	Tian Shan montane conifer forests	27519	1500	1000-2000	3	
+80601	PA0601	East Siberian taiga	3899749	1400	1200-1600	2	
+80602	PA0602	Iceland boreal birch forests and alpine tundra	91464	377	377	1	
+80603	PA0603	Kamchatka-Kurile meadows and sparse forests	146380	700	600-800	3	
+80604	PA0604	Kamchatka-Kurile taiga	15220	500	400-700	3	
+80605	PA0605	Northeast Siberian taiga	1125724	800	650-900	2	
+80606	PA0606	Okhotsk-Manchurian taiga	401936	1100	900-1300	3	
+80607	PA0607	Sakhalin Island taiga	68697	600	500-800	3	
+80608	PA0608	Scandinavian and Russian taiga	2156918	1400	1200-1600	2	
+80609	PA0609	Trans-Baikal conifer forests	200451	1000	900-1200	2	
+80610	PA0610	Urals montane tundra and taiga	174588	1600	1400-1800	2	
+80611	PA0611	West Siberian taiga	1670381	900	700-1200	2	
+80801	PA0801	Alai-Western Tian Shan steppe	127516	2100	2000-2400	2	
+80802	PA0802	Altai steppe and semi-desert	82935	1200	800-1600	4	
+80803	PA0803	Central Anatolian steppe	24914	1000	500-1500	4	
+80804	PA0804	Daurian forest steppe	208918	1200	900-1500	3	
+80805	PA0805	Eastern Anatolian montane steppe	168246	2500	2300-3000	3	
+80806	PA0806	Emin Valley steppe	64968	1500	1000-2000	4	
+80807	PA0807	Faroe Islands boreal grasslands	1447	327	x	1	
+80808	PA0808	Gissaro-Alai open woodlands	167988	3500	2800-4000	2	
+80809	PA0809	Kazakh forest steppe	420460	1200	1100-1300	2	
+80810	PA0810	Kazakh steppe	804451	1800	1500-2000	2	
+80811	PA0811	Kazakh upland	71947	1000	800-1300	3	
+80812	PA0812	Middle East steppe	132292	1400	800-2000	4	
+80813	PA0813	Mongolian-Manchurian grassland	887292	1200	1000-1400	2	
+80814	PA0814	Pontic steppe	994014	2800	2600-3200	2	
+80815	PA0815	Sayan Intermontane steppe	33929	700	400-1000	3	
+80816	PA0816	Selenge-Orkhon forest steppe	227636	1000	700-1400	4	
+80817	PA0817	South Siberian forest steppe	161858	1300	1100-1600	2	
+80818	PA0818	Tian Shan foothill arid steppe	128992	1700	1200-2500	3	
+80901	PA0901	Amur meadow steppe	123234	900	600-1400	4	
+80902	PA0902	Bohai Sea saline meadow	11557	300	100-500	4	
+80903	PA0903	Nenjiang River grassland	23199	600	400-1000	4	
+80904	PA0904	Nile Delta flooded savanna	50524	800	500-1100	3	
+80905	PA0905	Saharan halophytics	53950	100	50-200	3	
+80906	PA0906	Tigris-Euphrates alluvial salt marsh	35602	400	200-700	4	
+80907	PA0907	Ussuri-Wusuli meadow and forest meadow	33759	1000	600-1400	3	
+80908	PA0908	Yellow Sea saline meadow	5322	300	100-500	4	
+81001	PA1001	Altai alpine meadow and tundra	90151	1800	1300-2300	3	
+81002	PA1002	Central Tibetan Plateau alpine steppe	629464	1000	700-1300	3	
+81003	PA1003	Eastern Himalayan alpine shrub and meadows	121186	1500	1000-2000	4	
+81004	PA1004	Ghorat-Hazarajat alpine meadow	66495	1200	800-1500	4	
+81005	PA1005	Hindu Kush alpine meadow	28261	800	500-1100	3	
+81006	PA1006	Karakoram-West Tibetan Plateau alpine steppe	143281	1500	1200-1700	2	
+81007	PA1007	Khangai Mountains alpine meadow	37062	500	300-800	3	
+81008	PA1008	Kopet Dag woodlands and forest steppe	58285	1800	1700-2000	2	
+81009	PA1009	Kuhrud-Kohbanan Mountains forest steppe	126342	1500	1000-2000	4	
+81010	PA1010	Mediterranean High Atlas juniper steppe	6332	1000	800-1200	2	
+81011	PA1011	North Tibetan Plateau-Kunlun Mountains alpine desert	374427	800	600-1000	3	
+81012	PA1012	Northwestern Himalayan alpine shrub and meadows	49405	1500	1200-1700	3	
+81013	PA1013	Ordos Plateau steppe	215466	1100	900-1300	3	
+81014	PA1014	Pamir alpine desert and tundra	117989	900	700-1100	2	
+81015	PA1015	Qilian Mountains subalpine meadow	73229	900	500-1400	4	
+81016	PA1016	Sayan Alpine meadow and tundra	80898	1000	600-1500	3	
+81017	PA1017	Southeast Tibet shrublands and meadow	460818	2500	1500-4000	3	
+81018	PA1018	Sulaiman Range alpine meadows	23869	800	400-1200	3	
+81019	PA1019	Tian Shan montane steppe and meadow	280130	3000	2500-3500	2	
+81020	PA1020	Tibetan Plateau alpine shrublands and meadows	272121	1400	900-1800	3	
+81021	PA1021	Western Himalayan alpine shrub and Meadows	70164	1500	1000-2000	3	
+81022	PA1022	Yarlung Zambo arid steppe	59459	1000	500-1700	4	
+81101	PA1101	Arctic desert	161431	200	160-230	2	
+81102	PA1102	Bering tundra	474246	950	850-1100	2	
+81103	PA1103	Cherskii-Kolyma mountain tundra	556708	450	350-600	3	
+81104	PA1104	Chukchi Peninsula tundra	298361	950	800-1100	2	
+81105	PA1105	Kamchatka Mountain tundra and forest tundra	119299	300	200-500	3	
+81106	PA1106	Kola Peninsula tundra	58758	500	400-600	3	
+81107	PA1107	Northeast Siberian coastal tundra	222579	550	500-650	2	
+81108	PA1108	Northwest Russian-Novaya Zemlya tundra	284227	550	450-650	2	
+81109	PA1109	Novosibirsk Islands arctic desert	36943	120	100-150	2	
+81110	PA1110	Scandinavian Montane Birch forest and grasslands	243238	1000	800-1200	3	
+81111	PA1111	Taimyr-Central Siberian tundra	954703	650	550-750	2	
+81112	PA1112	Trans-Baikal Bald Mountain tundra	217566	500	300-700	3	
+81113	PA1113	Wrangel Island arctic desert	7542	387	387	1	
+81114	PA1114	Yamalagydanskaja tundra	412099	450	350-550	2	
+81201	PA1201	Aegean & Western Turkey sclerophyllous and mixed forests	133458	2500	2000-3000	3	
+81202	PA1202	Anatolian conifer and deciduous mixed forests	86319	2400	1800-3000	3	
+81203	PA1203	Canary Islands dry woodlands and forests	4973	1130	1050-1200	2	
+81204	PA1204	Corsican montane broadleaf and mixed forests	3628	1800	1600-2100	3	
+81205	PA1205	Crete Mediterranean forests	8193	1600	1500-1700	2	
+81206	PA1206	Cyprus Mediterranean forests	9273	1500	1000-1700	2	
+81207	PA1207	Eastern Mediterranean conifer-sclerophyllous-broadleaf forests	143838	3200	2700-3800	3	
+81208	PA1208	Iberian conifer forests	34424	3200	3000-3500	3	
+81209	PA1209	Iberian sclerophyllous and semi-deciduous forests	297650	2500	2100-2900	2	
+81210	PA1210	Illyrian deciduous forests	40573	2800	2200-3500	3	
+81211	PA1211	Italian sclerophyllous and semi-deciduous forests	102047	3300	3000-3600	3	
+81212	PA1212	Mediterranean acacia-argania dry woodlands and succulent thickets	100524	1600	1200-2000	3	
+81213	PA1213	Mediterranean dry woodlands and steppe	291667	1200	900-1400	3	
+81214	PA1214	Mediterranean woodlands and forests	357943	1500	1000-2000	3	
+81215	PA1215	Northeastern Spain & Southern France Mediterranean forests	90697	2800	2200-3400	3	
+81216	PA1216	Northwest Iberian montane forests	57322	1400	1000-1800	4	
+81217	PA1217	Pindus Mountains mixed forests	39538	4000	3200-4500	3	
+81218	PA1218	South Appenine mixed montane forests	13083	2100	1700-2500	4	
+81219	PA1219	Southeastern Iberian shrubs and woodlands	2867	400	300-700	3	
+81220	PA1220	Southern Anatolian montane conifer and deciduous forests	76450	4000	3500-4500	2	
+81221	PA1221	Southwest Iberian Mediterranean sclerophyllous and mixed forests	71077	2600	2300-2900	2	
+81222	PA1222	Tyrrhenian-Adriatic Sclerophyllous and mixed forests	85000	3300	3000-3600	3	
+81301	PA1301	Afghan Mountains semi-desert	13683	600	400-1000	4	
+81302	PA1302	Alashan Plateau semi-desert	673397	700	500-900	2	
+81303	PA1303	Arabian Desert and East Sahero-Arabian xeric shrublands	1851340	900	600-1200	3	
+81304	PA1304	Atlantic coastal desert	39891	300	200-500	3	
+81305	PA1305	Azerbaijan shrub desert and steppe	64015	1500	1000-2000	3	
+81306	PA1306	Badkhiz-Karabil semi-desert	133607	1100	1000-1300	2	
+81307	PA1307	Baluchistan xeric woodlands	288749	2000	1500-2700	3	
+81308	PA1308	Caspian lowland desert	267291	700	500-1000	3	
+81309	PA1309	Central Afghan Mountains xeric woodlands	139397	1700	1000-2400	3	
+81310	PA1310	Central Asian northern desert	662391	800	700-1000	3	
+81311	PA1311	Central Asian riparian woodlands	88631	900	700-1200	2	
+81312	PA1312	Central Asian southern desert	566691	900	800-1100	2	
+81313	PA1313	Central Persian desert basins	580892	1300	1100-1500	2	
+81314	PA1314	Eastern Gobi desert steppe	281806	400	200-700	3	
+81315	PA1315	Gobi Lakes Valley desert steppe	139384	400	200-700	4	
+81316	PA1316	Great Lakes Basin desert steppe	157209	600	550-900	3	
+81317	PA1317	Junggar Basin semi-desert	304203	1200	700-1700	4	
+81318	PA1318	Kazakh semi-desert	678389	800	600-1200	3	
+81319	PA1319	Kopet Dag semi-desert	26268	700	500-1000	4	
+81320	PA1320	Mesopotamian shrub desert	210974	1100	800-1500	3	
+81321	PA1321	North Saharan steppe and woodlands	1675268	1150	1100-1200	1	
+81322	PA1322	Paropamisus xeric woodlands	92594	1300	800-1800	3	
+81323	PA1323	Persian Gulf desert and semi-desert	72640	350	300-400	2	
+81324	PA1324	Qaidam Basin semi-desert	192042	250	200-500	2	
+81325	PA1325	Red Sea Nubo-Sindian tropical desert and semi-desert	651263	900	700-1100	3	
+81326	PA1326	Registan-North Pakistan sandy desert	277298	700	400-1000	4	
+81327	PA1327	Sahara desert	4639920	500	450-550	1	
+81328	PA1328	South Iran Nubo-Sindian desert and semi-desert	351453	900	500-1300	4	
+81329	PA1329	South Saharan steppe and woodlands	1101734	500	400-700	3	
+81330	PA1330	Taklimakan desert	741857	400	200-800	3	
+81331	PA1331	Tibesti-Jebel Uweinat montane xeric woodlands	82237	580	570-620	2	
+81332	PA1332	West Saharan montane xeric woodlands	258071	550	500-700	2	
