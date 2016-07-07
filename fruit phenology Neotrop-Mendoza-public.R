@@ -3,14 +3,44 @@
 lengthunique=function(x) return(length(unique(x)))
 lengthisna=function(x) return(length(which(is.na(x))))
 
-#### DATASET HANDLING #####
-dat<-read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 studies reviewed
-drivers<-read.delim("drivers.txt") #environmental drivers of each site
+##########
+# draw.tropics
+# draws lines (in the sea only) for the tropic of cancer and capricorn based on units of lat and long
 
+draw.tropics = function(color = "grey", ltype = 2, lwidth = 0, ...){
+  lines(c(-180, -106.5), c(23.5, 23.5), col = color, lty = ltype, lwd = lwidth) # tropic of cancer
+  lines(c(-98, -16), c(23.5, 23.5), col = color, lty = ltype, lwd = lwidth)
+  lines(c(59, 68), c(23.5, 23.5), col = color, lty = ltype, lwd = lwidth) 
+  lines(c(117, 180), c(23.5, 23.5), col = color, lty = ltype, lwd = lwidth)
+  lines(c(-180, -71), c(-23.5, -23.5), col = color, lty = ltype, lwd = lwidth) 	# tropic of capricorn
+  lines(c(-47, 15), c(-23.5, -23.5), col = color, lty = ltype, lwd = lwidth)
+  lines(c(36, 113), c(-23.5, -23.5), col = color, lty = ltype, lwd = lwidth) 
+  lines(c(151, 180), c(-23.5, -23.5), col = color, lty = ltype, lwd = lwidth)
+}
+
+
+#### DATASETS #####
+neolong<-read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 studies reviewed
+drivers<-read.delim("drivers.txt") #environmental drivers of each site
+ests<-read.delim(file="nb spp kier.txt") ## appendix of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
 #### SOME STATS ABOUT THE DATABASE####
 
-####How many species were studied?####
+#How many studies does our dataset have?
+uniquestudy=lengthunique(neolong$ID)
+
+#What is the spatial distribution of studies?#
+#pointsmap(dataset=neolong,circcex=1.5,bg="gray90")
+pointsmap=function(dataset=neolong,circcex=1.5,bg="gray90",...){
+  
+  par(mfrow = c(1,1), pty = "m", ask = TRUE, mar = c(3,3,3,2))
+  lwd.var <- 6  #value of lwd arguments for maps
+  
+  map('world', interior = FALSE,fill = FALSE, col = "gray75", lwd = lwd.var, xlim = c(-110, -30), ylim = c(-55, 35))
+  draw.tropics(lwidth = lwd.var*0.75)
+  points(x = dataset$long, y = dataset$lat, pch=21, bg =bg, cex = circcex)   #draw circles for labels  
+}
+#How many species were studied?####
 
 #spsampling(data=neolong, filename="hist number of species.tif",cex=2)
 spsampling=function(data=neolong, filename="hist number of species.tif",cex=2,...){
@@ -46,27 +76,11 @@ bubble<-function (x,y,r,bubble.size,xscale,yscale)
 }
 
 
-#How many studies does our dataset have?
-uniquestudy=function(dataset=neo){
-  le=length(unique(dataset$Endnote))
-  return(le)
-}
 
 
 
 
-####How many unique study sites do we have in our datasets? Which are the most studied ones?####
-#this function is not working
-#pointsmap(dataset=neolong,circcex=1.5,bg="gray90")
-pointsmap=function(dataset=neolong,circcex=1.5,bg="gray90",...){
-  
-  par(mfrow = c(1,1), pty = "m", ask = TRUE, mar = c(3,3,3,2))
-  lwd.var <- 6  #value of lwd arguments for maps
-  
-  map('world', interior = FALSE,fill = FALSE, col = "gray75", lwd = lwd.var, xlim = c(-110, -30), ylim = c(-55, 35))
-  draw.tropics(lwidth = lwd.var*0.75)
-  points(x = dataset$long, y = dataset$lat, pch=21, bg =bg, cex = circcex)   #draw circles for labels  
-  }
+
 
 ### map with vegetation types
 #mapveg(dataset=cresults2,circcex=1,bg=c("gray90","black"))
@@ -107,19 +121,19 @@ bubble.map=function(dataset=neo){
 ####what is the studied variable?####
 
 studyvar=function(neo=neo,...){
-par(mar=c(4,3,3,3))
-nbspp=length(which(neo$sppnb=="yes")) 
-indnb=length(which(neo$indnb=="yes")) 
-biomass=length(which(neo$biomass=="yes"))
-Fournier=length(which(neo$Fournier=="yes"))
-nbfruits=length(which(neo$nbfruits=="yes"))
-month=length(which(neo$month=="yes"))
-summaryvar=data.frame(var=c("# species", "# indiv","# fruits", "fruit biomass", "Fournier"),freq=c(sum(nbspp+month),indnb, nbfruits, biomass, Fournier))  
-summaryvar$per=(summaryvar$freq/sum(summaryvar$freq))*100
-print(summaryvar)
-par(mar=c(3,5,3,1),...)
-barplot(summaryvar$freq, names.arg=summaryvar$var, las=1, ylim=c(0,120),ylab="",cex.axis=1.5,cex=2) 
-mtext(side=2,text="number of study sites",cex=2,line=3.5)
+  par(mar=c(4,3,3,3))
+  nbspp=length(which(neo$sppnb=="yes")) 
+  indnb=length(which(neo$indnb=="yes")) 
+  biomass=length(which(neo$biomass=="yes"))
+  Fournier=length(which(neo$Fournier=="yes"))
+  nbfruits=length(which(neo$nbfruits=="yes"))
+  month=length(which(neo$month=="yes"))
+  summaryvar=data.frame(var=c("# species", "# indiv","# fruits", "fruit biomass", "Fournier"),freq=c(sum(nbspp+month),indnb, nbfruits, biomass, Fournier))  
+  summaryvar$per=(summaryvar$freq/sum(summaryvar$freq))*100
+  print(summaryvar)
+  par(mar=c(3,5,3,1),...)
+  barplot(summaryvar$freq, names.arg=summaryvar$var, las=1, ylim=c(0,120),ylab="",cex.axis=1.5,cex=2) 
+  mtext(side=2,text="number of study sites",cex=2,line=3.5)
 }
 
 ####what are the censuring frequency times?####
@@ -142,7 +156,7 @@ censtime=function(data=neolong){
 #### SAMPLING EFFORT ###############
 ## samplingeffort function calculates a ratio p with sampling effort per spp
 
-samplingeffort=function(ests=ests, clongjoin=clongjoin){
+samplingeffort=function(ests=ests, data=neolong){
   
   sampeff=match(ests$ECO_ID,clongjoin$ECO_ID)
   
@@ -163,7 +177,7 @@ samplingeffort=function(ests=ests, clongjoin=clongjoin){
 
 #### which are the long-term datasets?####
 longterm=neolong[which(neolong$studylength>=120),]
-data.frame(ID=longterm$ID,author=longterm$author, locality=longterm$locality,length=longterm$studylength, Endnote=longterm$Endnote)
+longtermtable=data.frame(ID=longterm$ID,author=longterm$ref, locality=longterm$locality,length=longterm$studylength, DOI=longterm$DOI)
 
 #### what is the surface of each Olson's biomes####
 
@@ -174,6 +188,58 @@ biomes=function(data=ecoregions){
   biomenumber=aggregate(data.frame(bnumber=wwf$BIOME),by=list(biome=wwf$BIOME_NAME),unique)
   
 }
+
+#### FIGURES OF THE PAPER #####
+
+#### Figure1: bibliographic analysis of the number of papers including the term "phenology", "phenology + tropic" and "phenology +tropic +fruit" in Scopus####
+
+figure1=function(filename="figure1.tif"){
+  
+  pheno=read.delim("Scopus-phenolog.txt") #this query was done on the 24/04/2016 using the term "phenolog*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
+  phenotrop=read.delim("Scopus-phenolog AND trop.txt") #this query was done on the 24/04/2016 using the term "phenolog* AND trop*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
+  phenotropfr=read.delim("Scopus-phenolog AND trop AND fruit.txt") #this query was done on the 24/04/2016 using the term "phenolog* AND trop* AND fruit*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
+  totalpub=read.delim("Scopus-totalpub.txt") #this query was done on the 24/04/2016 using the terms Ecology OR Biometeorology OR Evolution for ALL document types and fields "TITLE-ABS-KEY" in Scopus
+  scyear1=merge(pheno,phenotrop,by="YEAR", all.x=T)
+  scyear2=merge(scyear1,phenotropfr,by="YEAR", all.x=T)
+  scyear3=merge(scyear2,totalpub,by="YEAR", all.x=T)[-c(1:91),] #we exclude datasets before 1970
+  scyear96=rbind(data.frame(YEAR=1995,pheno=sum(scyear3$pheno[scyear3$YEAR<1996]),phenotrop=sum(scyear3$phenotrop[scyear3$YEAR<1996],na.rm=T),phenotropfr=sum(scyear3$phenotropfr[scyear3$YEAR<1996],na.rm=T),totalpub=sum(scyear3$totalpub[scyear3$YEAR<1996],na.rm=T)),scyear3[scyear3$YEAR>=1996,])
+  
+  tiff(filename=filename,height=1000,width=2100,pointsize=24)
+  par(mar=c(8,6,2,6))
+  counts=t(as.matrix(scyear3[,2:4],beside=TRUE))
+  counts2=t(as.matrix(scyear3[,2:4]/scyear3$totalpub,beside=TRUE)) #we standarized by the total amount of publications in ecological fields
+  barplot(counts,las=2,ylim=c(0,2500),names.arg=as.character(scyear3$YEAR),col=c("grey80","darkblue","red"),cex.axis=1.15,cex=1.15)
+  #barplot(counts2,las=2,ylim=c(0,0.5),names.arg=as.character(scyear3$YEAR),col=c("grey80","darkblue","red"),cex.axis=1.15,cex=1.15)
+  mtext(side=2,text="number of publications in topics of this review",line=4.5,cex=1.5,las=0)
+  mtext(side=1,text="year of addition to Scopus database",line=5,cex=1.5)
+  legend(1,2500,legend=c("phenolog*", "phenolog* + tropic*","phenolog* + tropic* + fruit*"),bty="n",border=rep("black",3),cex=1.5,fill=c("grey80","darkblue","red"))
+  legend(1,2000,legend=c("Ecology, Biometeorology or Evolution publications"),bty="n",lty=2,cex=1.5,col=c("grey40"),lwd=2)
+  
+  lm1=lm(log(scyear3$pheno)~scyear3$YEAR)# exponential least square fit for the number of publications as function of the publication year
+  summary(lm1) #very good adjustement to an exponential fit
+  
+  lm2=lm(log(scyear3$pheno[scyear3$YEAR>=1996])~scyear3$YEAR[scyear3$YEAR>=1996])# exponential least square fit for the number of publications as function of the publication year (since 1996)
+  summary(lm2) 
+  #test of the exponential fit
+  #plot(scyear3$YEAR,scyear3$pheno) 
+  #lines(scyear3$YEAR, exp(predict(lm1,list(scyear3$YEAR))),col="blue")
+  #lines(scyear3$YEAR[scyear3$YEAR>=1996], exp(predict(lm2,list(scyear3$YEAR[scyear3$YEAR>=1996]))),col="red")
+  
+  
+  par(new=T)
+  plot(scyear3$YEAR, scyear3$totalpub/40,col="grey40",ylim=c(0,2100),lty=2,lwd=2,type="l",axes=F,xlab="",ylab="")
+  axis(side=4, at=seq(0,2000,500),labels=seq(0,2000,500)*40,col="grey40",las=1,cex.axis=1.15,col.axis="grey40")
+  mtext(side=4,text="number of publications in ecological fields",line=4.5,cex=1.5,las=0)
+  
+  #plot(scyear$YEAR[scyear>=1996], scyear$pheno[scyear>=1996],type="l",xlab="",ylab="",las=1,bty="l",lwd=2)
+  #lines(scyear$YEAR, scyear$tropicpheno,col="blue",lwd=2)
+  #
+  dev.off()
+}
+
+
+
+
 
 ####CLIMATIC DRIVERS####
 #frequency of studies without statistical test
@@ -213,7 +279,7 @@ nbstudies[order(nbstudies$nbvar,decreasing=T),]
 table(nbstudies$nbvar)
 
 #link each study to its vegetation type and explore its seasonality regarding precipitation
-driv<-merge(drivers,clong, by="ID",all.x=TRUE) #we include vegetation type in the drivers' dataset
+driv<-merge(drivers,neolong, by="ID",all.x=TRUE) #we include vegetation type in the drivers' dataset
 raindriv=driv[driv$climvar=="rainfall",]
 signrain=factor(levels=c("positive","negative","none","ambiguous"))
 for (i in 1:length(raindriv$signcorr))
@@ -222,62 +288,15 @@ for (i in 1:length(raindriv$signcorr))
    else signrain[i]= "ambiguous"
   }
 raindriv=data.frame(raindriv,signrain)
-signrainveg=aggregate(data.frame(nstu=raindriv$ID),by=list(signcorr=raindriv$signrain,vegtype=raindriv$GPC),length)
-tt=table(raindriv$GPC, raindriv$signrain)
-rainforest=chisq.test(c(positive=22, negative=18,none=17))
-desert=chisq.test(c(positive=6, negative=2,none=1))
-dry=chisq.test(c(positive=9, negative=5,none=1))
-cerrado=chisq.test(c(positive=9, negative=2,none=1))
-grassland=chisq.test(c(positive=4, negative=4,none=3))
-montane=chisq.test(c(positive=5, negative=3,none=1))
+signrainveg=aggregate(data.frame(nstu=raindriv$ID),by=list(signcorr=raindriv$signcorr,vegtype=raindriv$vegetation),length)
+tt=table(raindriv$vegetation, raindriv$signrain)
+rainforest=chisq.test(c(positive=24, negative=19,none=19))
+#desert=chisq.test(c(positive=6, negative=2,none=1))
+#dry=chisq.test(c(positive=9, negative=5,none=1))
+#cerrado=chisq.test(c(positive=6, negative=2,none=3))
+#grassland=chisq.test(c(positive=4, negative=4,none=3))
+#montane=chisq.test(c(positive=5, negative=3,none=1))
 
-#### FIGURES OF THE PAPER #####
-
-#### Figure1: bibliographic analysis of the number of papers including the term "phenology", "phenology + tropic" and "phenology +tropic +fruit" in Scopus####
-
-figure1=function(filename="figure1.tif"){
-  
-  pheno=read.delim("Scopus-phenolog2.txt") #this query was done on the 24/04/2016 using the term "phenolog*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
-  phenotrop=read.delim("Scopus-phenolog AND tropic2.txt") #this query was done on the 24/04/2016 using the term "phenolog* AND trop*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
-  phenotropfr=read.delim("Scopus-phenolog AND tropic AND fruit2.txt") #this query was done on the 24/04/2016 using the term "phenolog* AND trop* AND fruit*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
-  totalpub=read.delim("Scopus-totalpub.txt") #this query was done on the 24/04/2016 using the terms Ecology OR Biometeorology OR Evolution for ALL document types and fields "TITLE-ABS-KEY" in Scopus
-  scyear1=merge(pheno,phenotrop,by="YEAR", all.x=T)
-  scyear2=merge(scyear1,phenotropfr,by="YEAR", all.x=T)
-  scyear3=merge(scyear2,totalpub,by="YEAR", all.x=T)[-c(1:91),] #we exclude datasets before 1970
-  scyear96=rbind(data.frame(YEAR=1995,pheno=sum(scyear3$pheno[scyear3$YEAR<1996]),phenotrop=sum(scyear3$phenotrop[scyear3$YEAR<1996],na.rm=T),phenotropfr=sum(scyear3$phenotropfr[scyear3$YEAR<1996],na.rm=T),totalpub=sum(scyear3$totalpub[scyear3$YEAR<1996],na.rm=T)),scyear3[scyear3$YEAR>=1996,])
-  
-  tiff(filename=filename,height=1000,width=2100,pointsize=24)
-  par(mar=c(8,6,2,6))
-  counts=t(as.matrix(scyear3[,2:4],beside=TRUE))
-  counts2=t(as.matrix(scyear3[,2:4]/scyear3$totalpub,beside=TRUE)) #we standarized by the total amount of publications in ecological fields
-  barplot(counts,las=2,ylim=c(0,2500),names.arg=as.character(scyear3$YEAR),col=c("grey80","darkblue","red"),cex.axis=1.15,cex=1.15)
-  #barplot(counts2,las=2,ylim=c(0,0.5),names.arg=as.character(scyear3$YEAR),col=c("grey80","darkblue","red"),cex.axis=1.15,cex=1.15)
-  mtext(side=2,text="number of publications in topics of this review",line=4.5,cex=1.5,las=0)
-  mtext(side=1,text="year of addition to Scopus database",line=5,cex=1.5)
-  legend(1,2500,legend=c("phenolog*", "phenolog* + tropic*","phenolog* + tropic* + fruit*"),bty="n",border=rep("black",3),cex=1.5,fill=c("grey80","darkblue","red"))
-  legend(1,2000,legend=c("Ecology, Biometeorology or Evolution publications"),bty="n",lty=2,cex=1.5,col=c("grey40"),lwd=2)
-
-  lm1=lm(log(scyear3$pheno)~scyear3$YEAR)# exponential least square fit for the number of publications as function of the publication year
-  summary(lm1) #very good adjustement to an exponential fit
-  
-  lm2=lm(log(scyear3$pheno[scyear3$YEAR>=1996])~scyear3$YEAR[scyear3$YEAR>=1996])# exponential least square fit for the number of publications as function of the publication year (since 1996)
-  summary(lm2) 
-  #test of the exponential fit
-  #plot(scyear3$YEAR,scyear3$pheno) 
-  #lines(scyear3$YEAR, exp(predict(lm1,list(scyear3$YEAR))),col="blue")
-  #lines(scyear3$YEAR[scyear3$YEAR>=1996], exp(predict(lm2,list(scyear3$YEAR[scyear3$YEAR>=1996]))),col="red")
-  
- 
-  par(new=T)
-  plot(scyear3$YEAR, scyear3$totalpub/40,col="grey40",ylim=c(0,2100),lty=2,lwd=2,type="l",axes=F,xlab="",ylab="")
-  axis(side=4, at=seq(0,2000,500),labels=seq(0,2000,500)*40,col="grey40",las=1,cex.axis=1.15,col.axis="grey40")
-  mtext(side=4,text="number of publications in ecological fields",line=4.5,cex=1.5,las=0)
-    
-  #plot(scyear$YEAR[scyear>=1996], scyear$pheno[scyear>=1996],type="l",xlab="",ylab="",las=1,bty="l",lwd=2)
-  #lines(scyear$YEAR, scyear$tropicpheno,col="blue",lwd=2)
-  #
-  dev.off()
-}
 
 ####Figure 3: How many countries do we have in our dataset?####
 
@@ -318,10 +337,10 @@ figure4=function(data=neolong,filename="figure4.tif"){
 
 ####Figure6: how many  species were studied by vegetation type?####
 
-figure6=function(data=clong,filename="figure6.tif"){
+figure6=function(neolong=neolong,filename="figure6.tif"){
   tiff(filename=filename,height=700,width=1100,pointsize=24)
   par(mar=c(12,6,2,2))
-  boxplot(clong$s~clong$GPC,las=2,col=c("deeppink","bisque","brown","green1","red","orange","purple","blue1","darkgreen"))
+  boxplot(neolong$s~neolong$GPC,las=2,col=c("deeppink","bisque","brown","green1","red","orange","purple","blue1","darkgreen"))
   mtext(side=2,"number of species sampled",line=4)
   dev.off()
 }
