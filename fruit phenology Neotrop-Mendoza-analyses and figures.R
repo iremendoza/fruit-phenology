@@ -5,7 +5,8 @@ drivers<-read.delim("drivers.txt") #environmental drivers of each site
 ests<-read.delim(file="nb spp kier.txt") ## appendix of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
 #### SOME STATS ABOUT THE DATABASE####
-#How many studies does our dataset have?
+#How many studies does our dataset have
+
 uniquestudy=lengthunique(neolong$ID)
 
 #What is the spatial distribution of studies?#
