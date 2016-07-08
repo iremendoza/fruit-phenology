@@ -1,31 +1,10 @@
 
-#some simple functions for internal operations
-lengthunique=function(x) return(length(unique(x)))
-lengthisna=function(x) return(length(which(is.na(x))))
-
-##########
-# draw.tropics
-# draws lines (in the sea only) for the tropic of cancer and capricorn based on units of lat and long
-
-draw.tropics = function(color = "grey", ltype = 2, lwidth = 0, ...){
-  lines(c(-180, -106.5), c(23.5, 23.5), col = color, lty = ltype, lwd = lwidth) # tropic of cancer
-  lines(c(-98, -16), c(23.5, 23.5), col = color, lty = ltype, lwd = lwidth)
-  lines(c(59, 68), c(23.5, 23.5), col = color, lty = ltype, lwd = lwidth) 
-  lines(c(117, 180), c(23.5, 23.5), col = color, lty = ltype, lwd = lwidth)
-  lines(c(-180, -71), c(-23.5, -23.5), col = color, lty = ltype, lwd = lwidth) 	# tropic of capricorn
-  lines(c(-47, 15), c(-23.5, -23.5), col = color, lty = ltype, lwd = lwidth)
-  lines(c(36, 113), c(-23.5, -23.5), col = color, lty = ltype, lwd = lwidth) 
-  lines(c(151, 180), c(-23.5, -23.5), col = color, lty = ltype, lwd = lwidth)
-}
-
-
 #### DATASETS #####
 neolong<-read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 studies reviewed
 drivers<-read.delim("drivers.txt") #environmental drivers of each site
 ests<-read.delim(file="nb spp kier.txt") ## appendix of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
 #### SOME STATS ABOUT THE DATABASE####
-
 #How many studies does our dataset have?
 uniquestudy=lengthunique(neolong$ID)
 
@@ -40,8 +19,8 @@ pointsmap=function(dataset=neolong,circcex=1.5,bg="gray90",...){
   draw.tropics(lwidth = lwd.var*0.75)
   points(x = dataset$long, y = dataset$lat, pch=21, bg =bg, cex = circcex)   #draw circles for labels  
 }
-#How many species were studied?####
 
+#How many species were studied?####
 #spsampling(data=neolong, filename="hist number of species.tif",cex=2)
 spsampling=function(data=neolong, filename="hist number of species.tif",cex=2,...){
   par(mar=c(10,5,2,2),oma=c(1,4,4,4),cex=cex, ...)
@@ -56,31 +35,6 @@ spsampling=function(data=neolong, filename="hist number of species.tif",cex=2,..
   print(summarylength)
   dev.off()  
 }
-
-#plot(sort(neolong$species),xlab="number of studies", ylab="number of species")
-
-#this function is copied from R book for illustrating variation across different locations in the x-y plane
-bubble.plot<-function(xv,yv,rv,bs=0.1,maint,...)
-{
-  r<-rv/max(rv)
-  yscale<-max(yv,na.rm=T)-min(yv,na.rm=T)
-  xscale<-max(xv,na.rm=T)-min(xv,na.rm=T)
-  plot(xv,yv,type="n",main=maint,...)
-  for (i in 1:length(xv)) bubble(xv[i],yv[i],r[i],bs,xscale,yscale) }
-bubble<-function (x,y,r,bubble.size,xscale,yscale) 
-{
-  theta<-seq(0,2*pi,pi/200)
-  yv<-r*sin(theta)*bubble.size*yscale
-  xv<-r*cos(theta)* bubble.size*xscale
-  lines(x+xv,y+yv) 
-}
-
-
-
-
-
-
-
 
 ### map with vegetation types
 #mapveg(dataset=cresults2,circcex=1,bg=c("gray90","black"))
@@ -189,6 +143,64 @@ biomes=function(data=ecoregions){
   
 }
 
+
+####CLIMATIC DRIVERS####
+#frequency of studies without statistical test
+perctest=aggregate(data.frame(nstu=drivers$ID),by=list(presencetest=drivers$presencetest),length)
+perctest2=(perctest$nstu[perctest$presencetest=="no"]/sum(perctest$nstu))*100
+
+#First, I calculate the number of datasets related to each environmental variable
+freqdriv1=aggregate(data.frame(nstu=drivers$ID),by=list(climvar=drivers$climvar),length)
+freqdriv1[order(freqdriv1$nstu,decreasing=T),] #ordering drivers according to their importance
+
+#Second, I explore datasets without statistical analyses
+driversnotest<-drivers[drivers$presencetest=="no",]
+freqdriv2=aggregate(data.frame(nstu=driversnotest$ID),by=list(climvar=driversnotest$climvar),length)
+freqdriv2[order(freqdriv2$nstu,decreasing=T),] #ordering drivers according to their importance
+
+#Third, I explore datasets with statistical analyses
+driverstest<-drivers[drivers$presencetest=="yes",]
+freqdriv3=aggregate(data.frame(nstu=driverstest$ID),by=list(climvar=driverstest$climvar),length)
+freqdriv3[order(freqdriv3$nstu,decreasing=T),] #ordering drivers according to their importance
+#frequency of each type of statistical test
+freqtest=aggregate(data.frame(nstu=driverstest$ID),by=list(test=driverstest$typetest),lengthunique)
+
+#sign of correlations
+signrain=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="rainfall",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="rainfall",]$signcorr),length)
+signtemp=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="temperature",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="temperature",]$signcorr),length)
+signdl=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="daylength",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="daylength",]$signcorr),length)
+signflooding=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="flooding"|driverstest$climvar=="tide levels",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="flooding"|driverstest$climvar=="tide levels",]$signcorr),length)
+signirradiance=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="irradiance"|driverstest$climvar=="solar radiation",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="irradiance"|driverstest$climvar=="solar radiation",]$signcorr),length)
+signENSO=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="ENSO",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="ENSO",]$signcorr),length)
+signhumid=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="air humidity",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="air humidity",]$signcorr),length)
+evapo=driverstest[driverstest$climvar=="evaporation",]
+
+
+#how many drivers were included in each study?
+nbstudies=aggregate(data.frame(nbvar=drivers$climvar), by=list(ID=drivers$ID),lengthunique)
+nbstudies[order(nbstudies$nbvar,decreasing=T),]
+table(nbstudies$nbvar)
+
+#link each study to its vegetation type and explore its seasonality regarding precipitation
+driv<-merge(drivers,neolong, by="ID",all.x=TRUE) #we include vegetation type in the drivers' dataset
+raindriv=driv[driv$climvar=="rainfall",]
+signrain=factor(levels=c("positive","negative","none","ambiguous"))
+for (i in 1:length(raindriv$signcorr))
+{
+  if (raindriv$signcor[i]=="positive"|raindriv$signcorr[i]=="negative"|raindriv$signcorr[i]=="none") signrain[i]=raindriv$signcorr[i]
+  else signrain[i]= "ambiguous"
+}
+raindriv=data.frame(raindriv,signrain)
+signrainveg=aggregate(data.frame(nstu=raindriv$ID),by=list(signcorr=raindriv$signcorr,vegtype=raindriv$vegetation),length)
+tt=table(raindriv$vegetation, raindriv$signrain)
+rainforest=chisq.test(c(positive=24, negative=19,none=19))
+#desert=chisq.test(c(positive=6, negative=2,none=1))
+#dry=chisq.test(c(positive=9, negative=5,none=1))
+#cerrado=chisq.test(c(positive=6, negative=2,none=3))
+#grassland=chisq.test(c(positive=4, negative=4,none=3))
+#montane=chisq.test(c(positive=5, negative=3,none=1))
+
+
 #### FIGURES OF THE PAPER #####
 
 #### Figure1: bibliographic analysis of the number of papers including the term "phenology", "phenology + tropic" and "phenology +tropic +fruit" in Scopus####
@@ -237,71 +249,9 @@ figure1=function(filename="figure1.tif"){
   dev.off()
 }
 
+####Figure 3A: How many countries do we have in our dataset?####
 
-
-
-
-####CLIMATIC DRIVERS####
-#frequency of studies without statistical test
-perctest=aggregate(data.frame(nstu=drivers$ID),by=list(presencetest=drivers$presencetest),length)
-perctest2=(perctest$nstu[perctest$presencetest=="no"]/sum(perctest$nstu))*100
-
-#First, I calculate the number of datasets related to each environmental variable
-freqdriv1=aggregate(data.frame(nstu=drivers$ID),by=list(climvar=drivers$climvar),length)
-freqdriv1[order(freqdriv1$nstu,decreasing=T),] #ordering drivers according to their importance
-
-#Second, I explore datasets without statistical analyses
-driversnotest<-drivers[drivers$presencetest=="no",]
-freqdriv2=aggregate(data.frame(nstu=driversnotest$ID),by=list(climvar=driversnotest$climvar),length)
-freqdriv2[order(freqdriv2$nstu,decreasing=T),] #ordering drivers according to their importance
-
-#Third, I explore datasets with statistical analyses
-driverstest<-drivers[drivers$presencetest=="yes",]
-freqdriv3=aggregate(data.frame(nstu=driverstest$ID),by=list(climvar=driverstest$climvar),length)
-freqdriv3[order(freqdriv3$nstu,decreasing=T),] #ordering drivers according to their importance
-#frequency of each type of statistical test
-freqtest=aggregate(data.frame(nstu=driverstest$ID),by=list(test=driverstest$typetest),lengthunique)
-
-#sign of correlations
-signrain=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="rainfall",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="rainfall",]$signcorr),length)
-signtemp=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="temperature",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="temperature",]$signcorr),length)
-signdl=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="daylength",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="daylength",]$signcorr),length)
-signflooding=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="flooding"|driverstest$climvar=="tide levels",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="flooding"|driverstest$climvar=="tide levels",]$signcorr),length)
-signirradiance=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="irradiance"|driverstest$climvar=="solar radiation",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="irradiance"|driverstest$climvar=="solar radiation",]$signcorr),length)
-signENSO=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="ENSO",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="ENSO",]$signcorr),length)
-signhumid=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="air humidity",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="air humidity",]$signcorr),length)
-evapo=driverstest[driverstest$climvar=="evaporation",]
-
-
-#how many drivers were included in each study?
-nbstudies=aggregate(data.frame(nbvar=drivers$climvar), by=list(ID=drivers$ID),lengthunique)
-nbstudies[order(nbstudies$nbvar,decreasing=T),]
-table(nbstudies$nbvar)
-
-#link each study to its vegetation type and explore its seasonality regarding precipitation
-driv<-merge(drivers,neolong, by="ID",all.x=TRUE) #we include vegetation type in the drivers' dataset
-raindriv=driv[driv$climvar=="rainfall",]
-signrain=factor(levels=c("positive","negative","none","ambiguous"))
-for (i in 1:length(raindriv$signcorr))
-  {
-   if (raindriv$signcor[i]=="positive"|raindriv$signcorr[i]=="negative"|raindriv$signcorr[i]=="none") signrain[i]=raindriv$signcorr[i]
-   else signrain[i]= "ambiguous"
-  }
-raindriv=data.frame(raindriv,signrain)
-signrainveg=aggregate(data.frame(nstu=raindriv$ID),by=list(signcorr=raindriv$signcorr,vegtype=raindriv$vegetation),length)
-tt=table(raindriv$vegetation, raindriv$signrain)
-rainforest=chisq.test(c(positive=24, negative=19,none=19))
-#desert=chisq.test(c(positive=6, negative=2,none=1))
-#dry=chisq.test(c(positive=9, negative=5,none=1))
-#cerrado=chisq.test(c(positive=6, negative=2,none=3))
-#grassland=chisq.test(c(positive=4, negative=4,none=3))
-#montane=chisq.test(c(positive=5, negative=3,none=1))
-
-
-####Figure 3: How many countries do we have in our dataset?####
-
-#countrybarplot(data=neolong,cex=2, filename="figure3.tif")
-countrybarplot=function(data=neolong,cex=2, filename="barplot countries.tif",...){
+figure3A=function(data=neolong,cex=2, filename="figure3A.tif",...){
   
   tiff(filename=filename,height=1600,width=2500,pointsize=24) #
   par(mar=c(12,5,5,1),cex=cex)
@@ -309,12 +259,12 @@ countrybarplot=function(data=neolong,cex=2, filename="barplot countries.tif",...
   data$country=as.character(data$country)
   lengthunique(data$country) #number of study sites
   barplot(sort(table(data$country), decreasing=T),names.arg=names(sort(table(data$country), decreasing=T)), las=2, ylim=c(0,120), ylab="") 
-  mtext(side=2,text="number of study sites",line=3,cex=3)
+  mtext(side=2,text="number of studies",line=3,cex=3)
   dev.off()
 }
 
-####Figure 4: which type of methods did authors use for studying phenology?####
-figure4=function(data=neolong,filename="figure4.tif"){
+####Figure 3B: which type of methods did authors use for studying phenology?####
+figure3B=function(data=neolong,filename="figure3B.tif"){
   lt=length(which(data$LT=="yes")) 
   mean(data$Trap.surface,na.rm=T) #mean surface of seed traps
   sd(data,na.rm=T) #sd surface of seed traps
