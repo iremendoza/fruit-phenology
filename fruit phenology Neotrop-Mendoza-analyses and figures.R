@@ -168,26 +168,6 @@ censtime=function(data=neolong){
   
 }
 
-#### SAMPLING EFFORT ###############
-## samplingeffort function calculates a ratio p with sampling effort per spp
-
-samplingeffort=function(ests=ests, data=neolong){
-  
-  sampeff=match(ests$ECO_ID,data$ID)
-  
-  se=merge(clongjoin, ests,by="ECO_ID",all.x=T)
-  test=data.frame(eco_id=se$ECO_ID,olson=se$olson, kier=se$eco_name)
-  
-  se$p=se$s/se$sp_wfig
-  summary(se$p)
-  #boxplot(se$p~se$GPC,las=2)
-  #plot(se$sp_wfig,se$s)
-  #hist(se$p)
-  
-  return(se)
-}
-
-#se=samplingeffort(ests=ests, clongjoin=clongjoin)  
 
 
 #### which are the long-term datasets?####
@@ -356,9 +336,15 @@ figure5=function(neolong=neolong,filename="figure6.tif"){
   dev.off()
 }
 
-figure6b=function(data=se,filename="figure6b.tif"){
+figure6b=function(data=spjoin,filename="figure6b.tif"){
   tiff(filename=filename,height=900,width=1100,pointsize=24)
   par(mar=c(4,16,1,2),mfrow=c(2,1))
+  ##SAMPLING EFFORT  "se" calculates a ratio p with sampling effort per spp
+
+    se=merge(data, ests,by="ECO_ID",all.x=T) ##I need to check to points without spatial information
+    se$p=se$species/se$sp_wfig
+    summary(se$p)
+   
   meanratio=aggregate(data.frame(ratio=se$p), by=list(vegetation=se$GPC), mean,na.rm=T)
   meansp=aggregate(data.frame(nbspp=se$s), by=list(vegetation=se$GPC), median,na.rm=T)
   sdratio=aggregate(data.frame(ratio=se$p), by=list(vegetation=se$GPC), sd,na.rm=T)
