@@ -1,40 +1,100 @@
+source(".\\fruit phenology Neotrop-Mendoza-functions.R")
+
+library(sp)
+library(raster)
+library(rgdal)
+library(maps)
+library(mapdata)
+library(spatialEco)
 
 #### DATASETS #####
 neolong<-read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 studies reviewed
 drivers<-read.delim("drivers.txt") #environmental drivers of each site
 ests<-read.delim(file="nb spp kier.txt") ## appendix of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
-#### SOME STATS ABOUT THE DATABASE####
-#How many studies does our dataset have
+####SPATIAL ANALYSES####
+##Adding vegetation types from WWF##
 
-uniquestudy=lengthunique(neolong$ID)
-
-#What is the spatial distribution of studies?#
-#pointsmap(dataset=neolong,circcex=1.5,bg="gray90")
-pointsmap=function(dataset=neolong,circcex=1.5,bg="gray90",...){
-  
-  par(mfrow = c(1,1), pty = "m", ask = TRUE, mar = c(3,3,3,2))
-  lwd.var <- 6  #value of lwd arguments for maps
-  
-  map('world', interior = FALSE,fill = FALSE, col = "gray75", lwd = lwd.var, xlim = c(-110, -30), ylim = c(-55, 35))
-  draw.tropics(lwidth = lwd.var*0.75)
-  points(x = dataset$long, y = dataset$lat, pch=21, bg =bg, cex = circcex)   #draw circles for labels  
+# Create a directory for the data
+localDir <- 'R_GIS_data'
+if (!file.exists(localDir)) {
+  dir.create(localDir)
 }
 
-#How many species were studied?####
-#spsampling(data=neolong, filename="hist number of species.tif",cex=2)
-spsampling=function(data=neolong, filename="hist number of species.tif",cex=2,...){
-  par(mar=c(10,5,2,2),oma=c(1,4,4,4),cex=cex, ...)
-  tiff(filename=filename,height=900,width=1200,pointsize=24)
-  meansampling=hist(log(data$species,10),las=1,breaks=c(0,1,2,3,4),axes=F,main="",ylab="",xlab="")
-  axis(side=2,las=1)
-  axis(side=1, at=c(0,1,2,3,4),labels=c("0","10","100","1000","more than 1000"))
-  mtext(1, text="number of species (log)",line=2)
-  mtext(2, text="frequency of studies",line=3)
-  summarylength=data.frame(logsp=meansampling$breaks[-1],freq=meansampling$counts)
-  summarylength$perc=(summarylength$freq/sum(summarylength$freq))*100
-  print(summarylength)
-  dev.off()  
+#Load the Olson's vegetation data from the WWF site (65 Mb)
+url <- "http://assets.worldwildlife.org/publications/15/files/original/official_teow.zip"
+
+file <- paste(localDir,basename(url),sep='/')
+if (!file.exists(file)) {
+  download.file(url, file)
+  unzip(file,exdir=localDir)
+}
+
+# Show the unzipped files 
+list.files(localDir)
+
+# layerName is the name of the unzipped shapefile without file type extensions 
+layerName <- "wwf_terr_ecos"  
+data_name <- "WWF"
+# Read in the data
+file<-paste(getwd(),localDir,"WWF.RData",sep="/")
+if (!file.exists(file)) {
+  data_projected <- readOGR(dsn=paste(getwd(),localDir,"official",sep="/"), layer=layerName) 
+  
+  # What is this thing and what's in it?
+  class(data_projected)
+  slotNames(data_projected)
+  # It's an S4 "SpatialPolygonsDataFrame" object with the following slots:
+  # [1] "data"        "polygons"    "plotOrder"   "bbox"        "proj4string"
+  
+  # What does the data look like with the default plotting command? 
+  #plot(data_projected)
+  
+  # Could use names(data_projected@data) or just:
+  names(data_projected)
+  
+  
+  # Reproject the data onto a "longlat" projection and assign it to the new name
+  assign(data_name,spTransform(data_projected, CRS("+proj=longlat")))
+  
+  # The WWF dataset is now projected in latitude longitude coordinates as a
+  # SpatialPolygonsDataFrame.  We save the converted data as .RData for faster
+  # loading in the future.
+  save(list=c(data_name),file=paste(getwd(),localDir,"WWF.RData",sep="/"))
+}
+if(!file.exists(paste(getwd(),localDir,"spjoin.RData",sep="/"))) {load(file)
+loc=data.frame(x=neolong$long,y=neolong$lat,ID=neolong$ID,locality=neolong$locality,vegetation=neolong$vegetation, biome=neolong$biome,species=neolong$species,Nindiv=neolong$Nindiv,studylength=neolong$studylength)
+coordinates(loc)<-c("x","y")
+crs.geo <- CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 ")  # geographical, datum WGS84
+proj4string(loc) <- crs.geo  # define projection system of our data
+summary(loc)
+class(loc)
+
+#spatial join between polygons (data_projected) and points (loc)
+pts.poly <-over(loc, data_projected)
+spjoin<-data.frame(loc,pts.poly)
+save(spjoin,file=paste(getwd(),localDir,"spjoin.RData",sep="/"))}
+load(paste(getwd(),localDir,"spjoin.RData",sep="/"))
+
+#kml file for neolong
+file<-paste(getwd(),localDir,"dat.kml",sep="/") 
+if(!file.exists(file)) writeOGR(loc, dsn =paste(getwd(),localDir,"dat.kml" ,sep="/"), layer="neolong", driver = "KML") #kml file created (for interactive map)
+
+
+#### SOME STATS ABOUT THE DATABASE####
+
+####How many studies does our dataset have####
+uniquestudy=lengthunique(neolong$ID)
+
+####What is the spatial distribution of studies?####
+#pointsmap(dataset=neolong,circcex=1.5,bg="gray90")
+pointsmap=function(dataset=neolong,circcex=1.5,bg="gray90",...){
+  par(mfrow = c(1,1), pty = "m", ask = TRUE, mar = c(3,3,3,2))
+  lwd.var <- 6  #value of lwd arguments for maps
+  map('world', interior = FALSE,fill = FALSE, col = "gray75", lwd = lwd.var, xlim = c(-110, -30), ylim = c(-55, 35))
+  draw.tropics(lwidth = lwd.var*0.75)
+  points(neolong, pch = 20, col = "steelblue",bg =bg, cex = circcex)
+  
 }
 
 ### map with vegetation types
@@ -113,7 +173,7 @@ censtime=function(data=neolong){
 
 samplingeffort=function(ests=ests, data=neolong){
   
-  sampeff=match(ests$ECO_ID,clongjoin$ECO_ID)
+  sampeff=match(ests$ECO_ID,data$ID)
   
   se=merge(clongjoin, ests,by="ECO_ID",all.x=T)
   test=data.frame(eco_id=se$ECO_ID,olson=se$olson, kier=se$eco_name)
@@ -264,16 +324,16 @@ figure3A=function(data=neolong,cex=2, filename="figure3A.tif",...){
   dev.off()
 }
 
-####Figure 3B: which type of methods did authors use for studying phenology?####
+####Figure 3B: which type of methods did authors use for studying phenology?#### ## needs to be amended
 figure3B=function(data=neolong,filename="figure3B.tif"){
   lt=length(which(data$LT=="yes")) 
-  mean(data$Trap.surface,na.rm=T) #mean surface of seed traps
-  sd(data,na.rm=T) #sd surface of seed traps
+  mean(data$trapsurface,na.rm=T) #mean surface of seed traps
+  sd(data$trapsurface,na.rm=T) #sd surface of seed traps
   range(data$Ntraps,na.rm=T) #range of number of traps
   mean(data$Ntraps,na.rm=T) #range of number of traps
   sd(data$Ntraps,na.rm=T) #range of number of traps
   
-  co=length(which(data$CO=="yes"|data$transects=="yes")) 
+  co=length(which(data$DO=="yes")) 
   survey=length(which(data$floristic.survey=="yes"))
   #transects=length(which(data$transects=="yes"))
   herbarium=length(which(data$herbarium=="yes"))
@@ -288,7 +348,7 @@ figure3B=function(data=neolong,filename="figure3B.tif"){
 
 ####Figure6: how many  species were studied by vegetation type?####
 
-figure6=function(neolong=neolong,filename="figure6.tif"){
+figure5=function(neolong=neolong,filename="figure6.tif"){
   tiff(filename=filename,height=700,width=1100,pointsize=24)
   par(mar=c(12,6,2,2))
   boxplot(neolong$s~neolong$GPC,las=2,col=c("deeppink","bisque","brown","green1","red","orange","purple","blue1","darkgreen"))
@@ -334,5 +394,24 @@ lengthneo=function(data=neolong, filename="barplot study length.tif",cex=2,...){
   par(mar=c(10,5,2,2),oma=c(1,4,4,4),cex=cex, ...)
   tiff(filename=filename,height=900,width=1200,pointsize=24)
   barplot(summarylength$perc, names.arg=summarylength$time, las=1, ylim=c(0,60),ylab="percentage of studies (%)") 
+  dev.off()  
+}
+
+####Figure S2:
+#figureS2(data=neolong, filename="figureS2.tif")
+figureS2=function(data=neolong, filename="figureS2.tif",cex=2,...){
+  
+  tiff(filename=filename,height=700,width=1000,pointsize=12) #
+  par(mar=c(4,4,4,4),cex=cex)
+  plot(sort(neolong$Nindiv[which(!is.na(data$Nindiv))]/neolong$species[which(!is.na(data$Nindiv))],decreasing=T),axes=F,ylab="",xlab="",xlim=c(0,120),pch=20)
+  #plot(sort(log(neolong$Nindiv[which(!is.na(data$Nindiv))]/sum(neolong$Nindiv[which(!is.na(data$Nindiv))])+1),decreasing=T))
+  abline(h=15,lty=2)
+  axis(side=1,at=seq(0,120,20),labels=seq(0,120,20))
+  mtext(side=1, text="Studies rank",line=3,cex=cex)
+  axis(side=2,at=seq(0,100,20),labels=seq(0,100,20),las=2)
+  mtext(side=2, text="number of individuals/number of species",line=3,cex=cex)
+  #proportion of studies with at least 15 individuals sampled per species
+  length(which(neolong$Nindiv[which(!is.na(data$Nindiv))]/neolong$species[which(!is.na(data$Nindiv))]>=15))/length(neolong$Nindiv[which(!is.na(data$Nindiv))])
+  
   dev.off()  
 }
