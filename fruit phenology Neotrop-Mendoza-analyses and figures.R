@@ -379,9 +379,8 @@ figure6b=function(data=se,filename="figure6b.tif"){
 
 ####Figure S1: What is the length of studies?####
 
-#lengthneo plots a barplot with the frequency of studies according to their sampling length
-#lengthneo(data=neolong, filename="Figure S1.tif",cex=2)
-lengthneo=function(data=neolong, filename="barplot study length.tif",cex=2,...){
+#figureS1 plots a barplot with the frequency of studies according to their sampling length
+figureS1=function(data=neolong, filename="figureS1.tif",cex=2,...){
   meansampling=mean(data$studylength,na.rm=T)
   oneyear=which(data$studylength<=12)  
   twoyear=which(data$studylength<=24& data$studylength>12)
