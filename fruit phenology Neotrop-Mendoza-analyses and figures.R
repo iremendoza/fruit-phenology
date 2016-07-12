@@ -306,23 +306,31 @@ figure3A=function(data=neolong,cex=2, filename="figure3A.tif",...){
 
 ####Figure 3B: which type of methods did authors use for studying phenology?#### ## needs to be amended
 figure3B=function(data=neolong,filename="figure3B.tif"){
+  direct=aggregate(data.frame(nstu=data$ID), by=list(direct=data$Direct.Observation, marked=data$Individuals),length)
+  indirect=aggregate(data.frame(nstu=data$ID),by=list(LT=data$LT,herbarium=data$herbarium, feces=data$feces),length)
+  
+  marked=length(which(data$Individuals=="marked"))
+  unmarked=length(which(data$Individuals=="unmarked"))
   lt=length(which(data$LT=="yes")) 
-  mean(data$trapsurface,na.rm=T) #mean surface of seed traps
-  sd(data$trapsurface,na.rm=T) #sd surface of seed traps
+  mean(data$Trap.surface,na.rm=T) #mean surface of seed traps
+  sd(data$Trap.surface,na.rm=T) #sd surface of seed traps
   range(data$Ntraps,na.rm=T) #range of number of traps
   mean(data$Ntraps,na.rm=T) #range of number of traps
   sd(data$Ntraps,na.rm=T) #range of number of traps
   
-  co=length(which(data$DO=="yes")) 
-  survey=length(which(data$floristic.survey=="yes"))
-  #transects=length(which(data$transects=="yes"))
   herbarium=length(which(data$herbarium=="yes"))
+  feces=length(which(data$feces=="yes"))
+  ground=length(which(data$ground.survey=="yes"))
   
-  summaryvar=data.frame(var=c("crown observ", "traps","surveys", "herbarium"),freq=c(co,lt, survey, herbarium))  
-  summaryvar$per=(summaryvar$freq/sum(summaryvar$freq))*100
-  tiff(filename=filename,height=700,width=1100,pointsize=24)
+  summaryvar=matrix(ncol=2,nrow=6, dimnames = list(c("marked","unmarked" ,"traps", "herbarium","feces","ground surveys"),c("direct","indirect")))
+  summaryvar[,1]=c(marked,unmarked,0,0,0,0)
+  summaryvar[,2]=c(0,0,lt, herbarium,feces,ground)
+  percentages=(summaryvar/lengthunique(neolong$ID))*100
+  
+  tiff(filename=filename,height=700,width=900,pointsize=24)
   par(mar=c(3,5,3,1), cex=1.25)
-  barplot(summaryvar$freq, names.arg=summaryvar$var, las=1, ylim=c(0,180),ylab="number of study sites")
+  barplot(summaryvar, las=1, ylim=c(0,200),ylab="number of study sites",col=c("violet","violetred4","darkorange","moccasin","tan","tan4"),width=c(10,10),legend=rownames(summaryvar),args.legend=list(bty="n"))
+  
   dev.off()
 }
 
