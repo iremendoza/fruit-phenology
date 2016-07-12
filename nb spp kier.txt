@@ -511,7 +511,7 @@ ECO_ID	eco_id2	eco_name	area	sp_wfig	sp_range	data_sit	comments
 60201	NT0201	Apure-Villavicencio dry forests	68544	1800	1200-2500	4	
 60202	NT0202	Atlantic dry forests	115108	2000	1000-3500	4	
 60203	NT0203	Bahamian dry forests	4796	900	700-1000	2	
-60204	NT0204	Bajío dry forests	37388	4200	2900-5000	3	
+60204	NT0204	BajÝo dry forests	37388	4200	2900-5000	3	
 60205	NT0205	Balsas dry forests	62445	4300	2500-5100	3	
 60206	NT0206	Bolivian montane dry forests	80330	900	600-1500	2	
 60207	NT0207	Cauca Valley dry forests	7345	1000	500-1500	4	
@@ -612,10 +612,10 @@ ECO_ID	eco_id2	eco_name	area	sp_wfig	sp_range	data_sit	comments
 61318	NT1318	St. Peter and St. Paul rocks	8	0	x	1	
 61401	NT1401	Alvarado mangroves	4546	200	20-400	4	
 61402	NT1402	Amapa mangroves	1562	200	20-400	4	
-61403	NT1403	Bahamian mangroves	6615		20-400	4	
+61403	NT1403	Bahamian mangroves	6615	200	20-400	4	
 61404	NT1404	Bahia mangroves	2119	200	20-400	4	
 61405	NT1405	Belizean Coast mangroves	2795	200	20-400	4	
-61406	NT1406	Belizean Reef mangroves	236		20-400	4	
+61406	NT1406	Belizean Reef mangroves	236	200	20-400	4	
 61407	NT1407	Bocas del Toro-San Bastimentos Island-San Blas mangroves	541	200	20-400	4	
 61408	NT1408	Coastal Venezuelan mangroves	5845	200	20-400	4	
 61409	NT1409	Esmeraldes-Pacific Colombia mangroves	6518	200	20-400	4	
