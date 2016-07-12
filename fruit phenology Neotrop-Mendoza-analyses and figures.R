@@ -10,7 +10,7 @@ library(spatialEco)
 #### DATASETS #####
 neolong<-read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 studies reviewed
 drivers<-read.delim("drivers.txt") #environmental drivers of each site
-ests<-read.delim(file="nb spp kier.txt") ## appendix of Kier et al. 2005 JBiogeograph with the estimated number of spp
+ests<-read.delim(file="nb spp kier.txt") ## appendix 2 of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
 ####SPATIAL ANALYSES####
 ##Adding vegetation types from WWF##
@@ -304,7 +304,7 @@ figure3A=function(data=neolong,cex=2, filename="figure3A.tif",...){
   dev.off()
 }
 
-####Figure 3B: which type of methods did authors use for studying phenology?#### ## needs to be amended
+####Figure 3B: which type of methods did authors use for studying phenology?###
 figure3B=function(data=neolong,filename="figure3B.tif"){
   direct=aggregate(data.frame(nstu=data$ID), by=list(direct=data$DO, marked=data$marked),length)
   indirect=aggregate(data.frame(nstu=data$ID),by=list(LT=data$LT,herbarium=data$herbarium, feces=data$feces,ground=data$ground.survey),length)
@@ -334,37 +334,29 @@ figure3B=function(data=neolong,filename="figure3B.tif"){
   dev.off()
 }
 
-####Figure6: how many  species were studied by vegetation type?####
+####Figure5: how many  species were studied by vegetation type?####
 
-figure5=function(neolong=neolong,filename="figure6.tif"){
-  tiff(filename=filename,height=700,width=1100,pointsize=24)
-  par(mar=c(12,6,2,2))
-  boxplot(neolong$s~neolong$GPC,las=2,col=c("deeppink","bisque","brown","green1","red","orange","purple","blue1","darkgreen"))
-  mtext(side=2,"number of species sampled",line=4)
-  dev.off()
-}
-
-figure6b=function(data=spjoin,filename="figure6b.tif"){
+figure5=function(data=spjoin,ests=ests,filename="figure5.tif"){
   tiff(filename=filename,height=900,width=1100,pointsize=24)
   par(mar=c(4,16,1,2),mfrow=c(2,1))
   ##SAMPLING EFFORT  "se" calculates a ratio p with sampling effort per spp
 
-    se=merge(data, ests,by="ECO_ID",all.x=T) ##I need to check to points without spatial information
+    se=merge(data, ests,by="ECO_ID",all.x=T) 
     se$p=se$species/se$sp_wfig
     summary(se$p)
    
-  meanratio=aggregate(data.frame(ratio=se$p), by=list(vegetation=se$GPC), mean,na.rm=T)
-  meansp=aggregate(data.frame(nbspp=se$s), by=list(vegetation=se$GPC), median,na.rm=T)
-  sdratio=aggregate(data.frame(ratio=se$p), by=list(vegetation=se$GPC), sd,na.rm=T)
-  medianratio=aggregate(data.frame(ratio=se$p), by=list(vegetation=se$GPC), median,na.rm=T)
+  meanratio=aggregate(data.frame(ratio=se$p), by=list(vegetation=se$vegetation), mean,na.rm=T)
+  meansp=aggregate(data.frame(nbspp=se$species), by=list(vegetation=se$vegetation), median,na.rm=T)
+  sdratio=aggregate(data.frame(ratio=se$species), by=list(vegetation=se$vegetation), sd,na.rm=T)
+  medianratio=aggregate(data.frame(ratio=se$p), by=list(vegetation=se$vegetation), median,na.rm=T)
   veg=meanratio$vegetatio[order(meanratio$ratio)]
   veg2=medianratio$vegetatio[order(medianratio$ratio)]
-  se$newGPC=factor(as.character(se$GPC),levels=as.character(medianratio$vegetation[order(medianratio$ratio)]))
-  b=boxplot(se$p~se$newGPC,las=1,col=c("deeppink","brown","darkgreen","red","blue1","purple","orange","green1","bisque"),horizontal=T,cex.axis=1)
+  se$newveg=factor(as.character(se$vegetation),levels=as.character(medianratio$vegetation[order(medianratio$ratio)]))
+  b=boxplot(se$p~se$newveg,las=1,col=c("deeppink","brown","darkgreen","red","blue1","purple","orange","green1","bisque"),horizontal=T,cex.axis=1)
   mtext(side=1,"sampling effort ratio",line=2.5,cex=1.3)
-  se$sppGPC=factor(as.character(se$GPC),levels=as.character(meansp$vegetation[order(meansp$nbspp)]))
+  se$sppveg=factor(as.character(se$vegetation),levels=as.character(meansp$vegetation[order(meansp$nbspp)]))
   #b=boxplot(se$s~se$sppGPC,las=1,col=c("brown","bisque","darkgreen","deeppink","purple","green1","blue1","red","orange"),horizontal=T,cex.axis=1)
-  b2=boxplot(se$s~se$newGPC,las=1,col=c("deeppink","brown","darkgreen","red","blue1","purple","orange","green1","bisque"),horizontal=T,cex.axis=1)
+  b2=boxplot(se$species~se$newveg,las=1,col=c("deeppink","brown","darkgreen","red","blue1","purple","orange","green1","bisque"),horizontal=T,cex.axis=1)
   mtext(side=1,"number of species sampled",line=2.5,cex=1.3)
   dev.off()
 }
