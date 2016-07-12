@@ -306,14 +306,14 @@ figure3A=function(data=neolong,cex=2, filename="figure3A.tif",...){
 
 ####Figure 3B: which type of methods did authors use for studying phenology?#### ## needs to be amended
 figure3B=function(data=neolong,filename="figure3B.tif"){
-  direct=aggregate(data.frame(nstu=data$ID), by=list(direct=data$Direct.Observation, marked=data$Individuals),length)
-  indirect=aggregate(data.frame(nstu=data$ID),by=list(LT=data$LT,herbarium=data$herbarium, feces=data$feces),length)
+  direct=aggregate(data.frame(nstu=data$ID), by=list(direct=data$DO, marked=data$marked),length)
+  indirect=aggregate(data.frame(nstu=data$ID),by=list(LT=data$LT,herbarium=data$herbarium, feces=data$feces,ground=data$ground.survey),length)
   
-  marked=length(which(data$Individuals=="marked"))
-  unmarked=length(which(data$Individuals=="unmarked"))
+  marked=length(which(data$marked=="marked"))
+  unmarked=length(which(data$marked=="unmarked"))
   lt=length(which(data$LT=="yes")) 
-  mean(data$Trap.surface,na.rm=T) #mean surface of seed traps
-  sd(data$Trap.surface,na.rm=T) #sd surface of seed traps
+  mean(data$trapsurface,na.rm=T) #mean surface of seed traps
+  sd(data$trapsurface,na.rm=T) #sd surface of seed traps
   range(data$Ntraps,na.rm=T) #range of number of traps
   mean(data$Ntraps,na.rm=T) #range of number of traps
   sd(data$Ntraps,na.rm=T) #range of number of traps
