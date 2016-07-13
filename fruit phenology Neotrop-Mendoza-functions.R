@@ -1,4 +1,6 @@
 ####FUNCTIONS FOR MENDOZA et al. REVIEW FRUITING PHENOLOGY NEOTROPICS####
+
+library(rworldmap)
 #some simple functions for internal operations
 lengthunique=function(x) return(length(unique(x)))
 lengthisna=function(x) return(length(which(is.na(x))))
@@ -35,3 +37,15 @@ bubble<-function (x,y,r,bubble.size,xscale,yscale)
   lines(x+xv,y+yv) 
 }
 
+####pointsmap function prints a map of the Neotropics with the study localities####
+#pointsmap(dataset=neolong,circcex=1.5,bg="gray90")
+pointsmap=function(dataset=loc,circcex=1.5,col="steelblue",bg="grey90",...){
+  
+  par(mfrow = c(1,1), pty = "m", ask = TRUE, mar = c(3,3,3,2))
+  lwd.var <- 6  #value of lwd arguments for maps
+  plot(dataset, pch=20, col=col, cex = circcex)   #draw circles for labels  
+  data(coastsCoarse)
+  plot(coastsCoarse, add = T)
+  draw.tropics(lwidth = lwd.var*0.75)
+  
+}
