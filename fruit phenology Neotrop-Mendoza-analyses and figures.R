@@ -62,13 +62,17 @@ if (!file.exists(file)) {
   # loading in the future.
   save(list=c(data_name),file=paste(getwd(),localDir,"WWF.RData",sep="/"))
 }
-if(!file.exists(paste(getwd(),localDir,"spjoin.RData",sep="/"))) {load(file)
+
 loc=data.frame(x=neolong$long,y=neolong$lat,ID=neolong$ID,locality=neolong$locality,vegetation=neolong$vegetation, biome=neolong$biome,species=neolong$species,Nindiv=neolong$Nindiv,studylength=neolong$studylength)
 coordinates(loc)<-c("x","y")
 crs.geo <- CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 ")  # geographical, datum WGS84
-proj4string(loc) <- crs.geo  # define projection system of our data
-summary(loc)
-class(loc)
+proj4string(loc) <- crs.geo  # define projection system of our study locations
+#summary(loc)
+#class(loc)
+
+#Spatial join between our study locations (loc) and the polygons with the vegetation types
+if(!file.exists(paste(getwd(),localDir,"spjoin.RData",sep="/"))) { 
+load(file)
 
 #spatial join between polygons (data_projected) and points (loc)
 pts.poly <-over(loc, data_projected)
@@ -76,7 +80,7 @@ spjoin<-data.frame(loc,pts.poly)
 save(spjoin,file=paste(getwd(),localDir,"spjoin.RData",sep="/"))}
 load(paste(getwd(),localDir,"spjoin.RData",sep="/"))
 
-#kml file for neolong
+#kml file for neolong (used for interactive map)
 file<-paste(getwd(),localDir,"dat.kml",sep="/") 
 if(!file.exists(file)) writeOGR(loc, dsn =paste(getwd(),localDir,"dat.kml" ,sep="/"), layer="neolong", driver = "KML") #kml file created (for interactive map)
 
@@ -97,33 +101,14 @@ pointsmap=function(dataset=neolong,circcex=1.5,bg="gray90",...){
   
 }
 
-### map with vegetation types
-#mapveg(dataset=cresults2,circcex=1,bg=c("gray90","black"))
-mapveg=function(dataset=cresults2,circcex=1,bg=c("gray90","black"),...){
-  
-  par(mfrow = c(1,1), pty = "m", ask = TRUE, mar = c(3,3,3,2))
-  lwd.var <- 6  #value of lwd arguments for maps
-  
-  map('world', interior = FALSE,fill = FALSE, col = "gray75", lwd = lwd.var, xlim = c(-110, -30), ylim = c(-55, 35))
-  draw.tropics(lwidth = lwd.var*0.75)
-  points(x = dataset$long[dataset$vegmalhi=="rainforest"], y = dataset$lat[dataset$vegmalhi=="rainforest"], pch=21, bg =bg[1], cex = circcex)   #draw circles for labels  
-  points(x = dataset$long[dataset$vegmalhi=="dry"], y = dataset$lat[dataset$vegmalhi=="dry"], pch=21, bg =bg[2], cex = circcex)  
-  legend(-60,40, pch=21,pt.bg=bg,legend=c("rainforest","dry forest"),bty="n")
-}
-
-
-## exploring the repitition of study sites
-
-#coord=coordinates[order(coordinates$lat),]
-
 #bubble plot according to the number of species
 #bubble plot according to the study length
-bubble.map=function(dataset=neo){
+bubble.map=function(dataset=loc){
   par(mfrow=c(3,1),mar=c(0,2,0.5,1), bty="o", oma=c(0,1,0,1))
   pointsmap(dataset,type="p",ylab="",xlab="", axes=F, main="studies' positions")
   axis(side=1, labels=FALSE)
   axis(side=2, las=2, cex=1)
-  bubble.plot(xv=dataset$long[which(is.na(dataset$S)==F)], yv=dataset$lat[which(is.na(dataset$S)==F)], rv=dataset$S[which(is.na(dataset$S)==F)], maint="number of species",axes=F,ylab="", xlab="")
+  bubble.plot(xv=dataset$x[which(is.na(dataset$species)==F)], yv=dataset$y[which(is.na(dataset$species)==F)], rv=dataset$species[which(is.na(dataset$species)==F)], maint="number of species",axes=F,ylab="", xlab="")
   mtext(text="latitude", side=2, line=3, cex=1.5 )
   axis(side=1, labels=FALSE)
   axis(side=2, las=2, cex=1)
