@@ -90,16 +90,6 @@ if(!file.exists(file)) writeOGR(loc, dsn =paste(getwd(),localDir,"dat.kml" ,sep=
 ####How many studies does our dataset have####
 uniquestudy=lengthunique(neolong$ID)
 
-####What is the spatial distribution of studies?####
-#pointsmap(dataset=neolong,circcex=1.5,bg="gray90")
-pointsmap=function(dataset=neolong,circcex=1.5,bg="gray90",...){
-  par(mfrow = c(1,1), pty = "m", ask = TRUE, mar = c(3,3,3,2))
-  lwd.var <- 6  #value of lwd arguments for maps
-  map('world', interior = FALSE,fill = FALSE, col = "gray75", lwd = lwd.var, xlim = c(-110, -30), ylim = c(-55, 35))
-  draw.tropics(lwidth = lwd.var*0.75)
-  points(neolong, pch = 20, col = "steelblue",bg =bg, cex = circcex)
-  
-}
 
 #bubble plot according to the number of species
 #bubble plot according to the study length
@@ -109,44 +99,31 @@ bubble.map=function(dataset=loc){
   axis(side=1, labels=FALSE)
   axis(side=2, las=2, cex=1)
   bubble.plot(xv=dataset$x[which(is.na(dataset$species)==F)], yv=dataset$y[which(is.na(dataset$species)==F)], rv=dataset$species[which(is.na(dataset$species)==F)], maint="number of species",axes=F,ylab="", xlab="")
+  data(coastsCoarse)
+  plot(coastsCoarse, add = T)
   mtext(text="latitude", side=2, line=3, cex=1.5 )
   axis(side=1, labels=FALSE)
   axis(side=2, las=2, cex=1)
   bubble.plot(xv=dataset$long[which(is.na(dataset$studylength)==F)], yv=dataset$lat[which(is.na(dataset$studylength)==F)], rv=dataset$studylength[which(is.na(dataset$studylength)==F)], maint="study length",ylab="", xlab="",axes=F)
+  plot(coastsCoarse, add = T)
   axis(side=1, cex=1)
   axis(side=2, las=2, cex=1)
   mtext(text="longitude", side=1, line=3.5, cex=1.5 )
 }
 
-####what is the studied variable?####
 
-studyvar=function(neo=neo,...){
-  par(mar=c(4,3,3,3))
-  nbspp=length(which(neo$sppnb=="yes")) 
-  indnb=length(which(neo$indnb=="yes")) 
-  biomass=length(which(neo$biomass=="yes"))
-  Fournier=length(which(neo$Fournier=="yes"))
-  nbfruits=length(which(neo$nbfruits=="yes"))
-  month=length(which(neo$month=="yes"))
-  summaryvar=data.frame(var=c("# species", "# indiv","# fruits", "fruit biomass", "Fournier"),freq=c(sum(nbspp+month),indnb, nbfruits, biomass, Fournier))  
-  summaryvar$per=(summaryvar$freq/sum(summaryvar$freq))*100
-  print(summaryvar)
-  par(mar=c(3,5,3,1),...)
-  barplot(summaryvar$freq, names.arg=summaryvar$var, las=1, ylim=c(0,120),ylab="",cex.axis=1.5,cex=2) 
-  mtext(side=2,text="number of study sites",cex=2,line=3.5)
-}
 
 ####what are the censuring frequency times?####
 censtime=function(data=neolong){
   
   freqcens=numeric()## we transform the qualitative variable in a quantitative one
-  weekly=length(which(data$census.frequency=="weekly"|data$census.frequency=="dayly" )) 
-  biweekly=length(grep("biweekly",data$census.frequency))
-  monthly=length(grep("monthly",data$census.frequency))-length(which(data$census.frequency=="bimonthly")) 
-  day20=length(which(data$census.frequency=="20-day"|data$census.frequency=="every six weeks"))
-  bimonthly=length(which(data$census.frequency=="bimonthly"))
-  sporadic=length(grep("sporadic",data$census.frequency))+length(grep("irregular",data$census.frequency))
-  unespecified=length(grep("unespecified",data$census.frequency))+length(grep("herbarium",data$census.frequency))
+  weekly=length(which(data$frequency=="weekly"|data$frequency=="dayly" )) 
+  biweekly=length(grep("biweekly",data$frequency))
+  monthly=length(grep("monthly",data$frequency))-length(which(data$frequency=="bimonthly")) 
+  day20=length(which(data$frequency=="20-day"|data$frequency=="every six weeks"))
+  bimonthly=length(which(data$frequency=="bimonthly"))
+  sporadic=length(grep("sporadic",data$frequency))+length(grep("irregular",data$frequency))
+  unespecified=length(grep("unespecified",data$frequency))+length(grep("herbarium",data$frequency))
   
   summaryvar=data.frame(var=c("weekly", "biweekly","monthly", "day20","bimonthly","sporadic","unespecified"),freq=c(weekly,biweekly, monthly, day20,bimonthly,sporadic,unespecified))  
   summaryvar$per=(summaryvar$freq/sum(summaryvar$freq))*100
@@ -158,16 +135,6 @@ censtime=function(data=neolong){
 #### which are the long-term datasets?####
 longterm=neolong[which(neolong$studylength>=120),]
 longtermtable=data.frame(ID=longterm$ID,author=longterm$ref, locality=longterm$locality,length=longterm$studylength, DOI=longterm$DOI)
-
-#### what is the surface of each Olson's biomes####
-
-biomes=function(data=ecoregions){
-  surface=aggregate(data.frame(area=data$AREA),by=list(biome=data$BIOME),sum)
-  surface[order(surface$area),]
-  surface$percentage=(surface$area/sum(surface$area))*100
-  biomenumber=aggregate(data.frame(bnumber=wwf$BIOME),by=list(biome=wwf$BIOME_NAME),unique)
-  
-}
 
 
 ####CLIMATIC DRIVERS####
