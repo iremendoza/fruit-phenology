@@ -92,7 +92,8 @@ uniquestudy = lengthunique(neolong$ID) #214
 
 ####How many unique references does our dataset have?####
 uniqueref = lengthunique(neolong$ref) #177
-
+tt <-table(sort(neolong$ref))
+length(which(tt>1)) ## not unique references
 
 #bubble plot according to the number of species
 #bubble plot according to the study length
