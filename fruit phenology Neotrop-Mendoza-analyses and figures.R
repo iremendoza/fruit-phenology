@@ -8,9 +8,9 @@ library(mapdata)
 library(spatialEco)
 
 #### DATASETS #####
-neolong<-read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 studies reviewed
-drivers<-read.delim("drivers.txt") #environmental drivers of each site
-ests<-read.delim(file="nb spp kier.txt") ## appendix 2 of Kier et al. 2005 JBiogeograph with the estimated number of spp
+neolong <- read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 study sites reviewed
+drivers <- read.delim("drivers.txt") #environmental drivers of each site
+ests <- read.delim(file="nb spp kier.txt") ## appendix 2 of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
 ####SPATIAL ANALYSES####
 ##Adding vegetation types from WWF##
@@ -87,13 +87,16 @@ if(!file.exists(file)) writeOGR(loc, dsn =paste(getwd(),localDir,"dat.kml" ,sep=
 
 #### SOME STATS ABOUT THE DATABASE####
 
-####How many studies does our dataset have####
-uniquestudy=lengthunique(neolong$ID)
+####How many study sites does our dataset have?####
+uniquestudy = lengthunique(neolong$ID) #214
+
+####How many unique references does our dataset have?####
+uniqueref = lengthunique(neolong$ref) #177
 
 
 #bubble plot according to the number of species
 #bubble plot according to the study length
-bubble.map=function(dataset=loc){
+bubble.map = function(dataset=loc){
   par(mfrow=c(3,1),mar=c(0,2,0.5,1), bty="o", oma=c(0,1,0,1))
   pointsmap(dataset,type="p",ylab="",xlab="", axes=F, main="studies' positions")
   axis(side=1, labels=FALSE)
@@ -114,7 +117,7 @@ bubble.map=function(dataset=loc){
 
 
 ####what are the censuring frequency times?####
-censtime=function(data=neolong){
+censtime = function(data=neolong){
   
   freqcens=numeric()## we transform the qualitative variable in a quantitative one
   weekly=length(which(data$frequency=="weekly"|data$frequency=="dayly" )) 
