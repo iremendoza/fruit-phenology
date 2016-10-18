@@ -8,7 +8,7 @@ library(mapdata)
 library(spatialEco)
 
 #### DATASETS #####
-neolong <- read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 study sites reviewed
+neolong <- read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 studies reviewed
 drivers <- read.delim("drivers.txt") #environmental drivers of each site
 ests <- read.delim(file="nb spp kier.txt") ## appendix 2 of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
@@ -246,9 +246,9 @@ figure1=function(filename="figure1.tif"){
   dev.off()
 }
 
-####Figure 3A: How many countries do we have in our dataset?####
+####Figure 3: How many countries do we have in our dataset?####
 
-figure3A=function(data=neolong,cex=2, filename="figure3A.tif",...){
+figure3 = function(data=neolong,cex=2, filename="figure3.tif",...){
   
   tiff(filename=filename,height=1600,width=2500,pointsize=24) #
   par(mar=c(12,5,5,1),cex=cex)
@@ -256,12 +256,12 @@ figure3A=function(data=neolong,cex=2, filename="figure3A.tif",...){
   data$country=as.character(data$country)
   lengthunique(data$country) #number of study sites
   barplot(sort(table(data$country), decreasing=T),names.arg=names(sort(table(data$country), decreasing=T)), las=2, ylim=c(0,120), ylab="") 
-  mtext(side=2,text="number of studies",line=3,cex=3)
+  mtext(side=2,text="number of datasets",line=3,cex=3)
   dev.off()
 }
 
-####Figure 3B: which type of methods did authors use for studying phenology?###
-figure3B=function(data=neolong,filename="figure3B.tif"){
+####Figure 4: which type of methods did authors use for studying phenology?###
+figure4 = function(data=neolong,filename="figure4.tif"){
   direct=aggregate(data.frame(nstu=data$ID), by=list(direct=data$DO, marked=data$marked),length)
   indirect=aggregate(data.frame(nstu=data$ID),by=list(LT=data$LT,herbarium=data$herbarium, feces=data$feces,ground=data$ground.survey),length)
   
