@@ -204,9 +204,9 @@ rainforest=chisq.test(c(positive=24, negative=19,none=19))
 
 figure1=function(filename="figure1.tif"){
   
-  pheno=read.delim("Scopus-phenolog.txt") #this query was done on the 24/04/2016 using the term "phenolog*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
-  phenotrop=read.delim("Scopus-phenolog AND trop.txt") #this query was done on the 24/04/2016 using the term "phenolog* AND trop*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
-  phenotropfr=read.delim("Scopus-phenolog AND trop AND fruit.txt") #this query was done on the 24/04/2016 using the term "phenolog* AND trop* AND fruit*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
+  pheno = read.delim("Scopus-phenolog.txt") #this query was done on the 24/04/2016 using the term "phenolog*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
+  phenotrop = read.delim("Scopus-phenolog AND trop.txt") #this query was done on the 24/04/2016 using the term "phenolog* AND trop*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
+  phenotropfr = read.delim("Scopus-phenolog AND trop AND fruit.txt") #this query was done on the 24/04/2016 using the term "phenolog* AND trop* AND fruit*" for ALL document types and fields "TITLE-ABS-KEY" in Scopus
   totalpub=read.delim("Scopus-totalpub.txt") #this query was done on the 24/04/2016 using the terms Ecology OR Biometeorology OR Evolution for ALL document types and fields "TITLE-ABS-KEY" in Scopus
   scyear1=merge(pheno,phenotrop,by="YEAR", all.x=T)
   scyear2=merge(scyear1,phenotropfr,by="YEAR", all.x=T)
@@ -261,31 +261,31 @@ figure3 = function(data=neolong,cex=2, filename="figure3.tif",...){
 }
 
 ####Figure 4: which type of methods did authors use for studying phenology?###
-figure4 = function(data=neolong,filename="figure4.tif"){
-  direct=aggregate(data.frame(nstu=data$ID), by=list(direct=data$DO, marked=data$marked),length)
-  indirect=aggregate(data.frame(nstu=data$ID),by=list(LT=data$LT,herbarium=data$herbarium, feces=data$feces,ground=data$ground.survey),length)
+figure4 = function(data=neolong, filename="figure4.tif"){
+  direct = aggregate(data.frame(nstu=data$ID), by=list(direct=data$DO, marked=data$marked),length)
+  indirect = aggregate(data.frame(nstu=data$ID),by=list(LT=data$LT,herbarium=data$herbarium, feces=data$feces,ground=data$ground.survey),length)
   
-  marked=length(which(data$marked=="marked"))
-  unmarked=length(which(data$marked=="unmarked"))
-  lt=length(which(data$LT=="yes")) 
+  marked = length(which(data$marked=="marked"))
+  unmarked = length(which(data$marked=="unmarked"))
+  lt = length(which(data$LT=="yes")) 
   mean(data$trapsurface,na.rm=T) #mean surface of seed traps
   sd(data$trapsurface,na.rm=T) #sd surface of seed traps
   range(data$Ntraps,na.rm=T) #range of number of traps
   mean(data$Ntraps,na.rm=T) #range of number of traps
   sd(data$Ntraps,na.rm=T) #range of number of traps
   
-  herbarium=length(which(data$herbarium=="yes"))
-  feces=length(which(data$feces=="yes"))
-  ground=length(which(data$ground.survey=="yes"))
+  herbarium = length(which(data$herbarium=="yes"))
+  feces = length(which(data$feces=="yes"))
+  ground = length(which(data$ground.survey=="yes"))
   
-  summaryvar=matrix(ncol=2,nrow=6, dimnames = list(c("marked","unmarked" ,"traps", "herbarium","feces","ground surveys"),c("direct","indirect")))
-  summaryvar[,1]=c(marked,unmarked,0,0,0,0)
-  summaryvar[,2]=c(0,0,lt, herbarium,feces,ground)
-  percentages=(summaryvar/lengthunique(neolong$ID))*100
+  summaryvar = matrix(ncol=2,nrow=6, dimnames = list(c("marked","unmarked" ,"traps", "herbarium","faeces","ground surveys"), c("direct","indirect")))
+  summaryvar[,1] = c(marked,unmarked,0,0,0,0)
+  summaryvar[,2] = c(0,0,lt, herbarium,feces,ground)
+  percentages = (summaryvar/lengthunique(neolong$ID))*100
   
   tiff(filename=filename,height=700,width=900,pointsize=24)
-  par(mar=c(3,5,3,1), cex=1.25)
-  barplot(summaryvar, las=1, ylim=c(0,200),ylab="number of study sites",col=c("violet","violetred4","darkorange","moccasin","tan","tan4"),width=c(10,10),legend=rownames(summaryvar),args.legend=list(bty="n"))
+  par(mar = c(3,5,3,1), cex=1.25)
+  barplot(summaryvar, las=1, ylim=c(0,200), ylab="number of study sites", col=c("violet","violetred4","darkorange","moccasin","tan","tan4"),width=c(10,10),legend=rownames(summaryvar),args.legend=list(bty="n"))
   
   dev.off()
 }
@@ -301,12 +301,12 @@ figure5=function(data=spjoin,ests=ests,filename="figure5.tif"){
     se$p=se$species/se$sp_wfig
     summary(se$p)
    
-  meanratio=aggregate(data.frame(ratio=se$p), by=list(vegetation=se$vegetation), mean,na.rm=T)
-  meansp=aggregate(data.frame(nbspp=se$species), by=list(vegetation=se$vegetation), median,na.rm=T)
-  sdratio=aggregate(data.frame(ratio=se$species), by=list(vegetation=se$vegetation), sd,na.rm=T)
-  medianratio=aggregate(data.frame(ratio=se$p), by=list(vegetation=se$vegetation), median,na.rm=T)
-  veg=meanratio$vegetatio[order(meanratio$ratio)]
-  veg2=medianratio$vegetatio[order(medianratio$ratio)]
+  meanratio = aggregate(data.frame(ratio=se$p), by=list(vegetation=se$vegetation),mean,na.rm=T)
+  meansp = aggregate(data.frame(nbspp=se$species), by=list(vegetation=se$vegetation), median,na.rm=T)
+  sdratio = aggregate(data.frame(ratio=se$species), by=list(vegetation=se$vegetation), sd,na.rm=T)
+  medianratio = aggregate(data.frame(ratio=se$p), by=list(vegetation=se$vegetation), median,na.rm=T)
+  veg = meanratio$vegetatio[order(meanratio$ratio)]
+  veg2 = medianratio$vegetatio[order(medianratio$ratio)]
   se$newveg=factor(as.character(se$vegetation),levels=as.character(medianratio$vegetation[order(medianratio$ratio)]))
   b=boxplot(se$p~se$newveg,las=1,col=c("deeppink","brown","darkgreen","red","blue1","purple","orange","green1","bisque"),horizontal=T,cex.axis=1)
   mtext(side=1,"sampling effort ratio",line=2.5,cex=1.3)
@@ -319,7 +319,7 @@ figure5=function(data=spjoin,ests=ests,filename="figure5.tif"){
 
 
 
-####Figure S1: What is the length of studies?####
+####Figure S1: What is the monitoring length of datasets?####
 
 #figureS1 plots a barplot with the frequency of studies according to their sampling length
 figureS1=function(data=neolong, filename="figureS1.tif",cex=2,...){
