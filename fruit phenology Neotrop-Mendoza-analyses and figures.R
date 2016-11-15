@@ -77,11 +77,12 @@ load(file)
 #spatial join between polygons (data_projected) and points (loc)
 pts.poly <-over(loc, data_projected)
 spjoin<-data.frame(loc,pts.poly)
-save(spjoin,file=paste(getwd(),localDir,"spjoin.RData",sep="/"))}
+save(spjoin,file=paste(getwd(),localDir,"spjoin.RData",sep="/"))
+}
 load(paste(getwd(),localDir,"spjoin.RData",sep="/"))
 
 #kml file for neolong (used for interactive map)
-file<-paste(getwd(),localDir,"dat.kml",sep="/") 
+file <- paste(getwd(),localDir,"dat.kml",sep="/") 
 if(!file.exists(file)) writeOGR(loc, dsn =paste(getwd(),localDir,"dat.kml" ,sep="/"), layer="neolong", driver = "KML") #kml file created (for interactive map)
 
 
