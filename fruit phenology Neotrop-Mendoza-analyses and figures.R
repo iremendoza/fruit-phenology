@@ -8,9 +8,9 @@ library(mapdata)
 library(spatialEco)
 
 #### DATASETS #####
-neolong <- read.delim("Mendoza_dat_GPC.txt") #dataset including the 214 studies reviewed
-drivers <- read.delim("drivers.txt") #environmental drivers of each site
-ests <- read.delim(file="nb spp kier.txt") ## appendix 2 of Kier et al. 2005 JBiogeograph with the estimated number of spp
+neolong <- read.delim("Mendoza_dat_GPC.txt") #database including the 218 datasets reviewed
+drivers <- read.delim("drivers.txt") #environmental drivers of each dataset
+ests <- read.delim(file = "nb spp kier.txt") ## appendix 2 of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
 ####SPATIAL ANALYSES####
 ##Adding vegetation types from WWF##
@@ -24,10 +24,10 @@ if (!file.exists(localDir)) {
 #Load the Olson's vegetation data from the WWF site (65 Mb)
 url <- "http://assets.worldwildlife.org/publications/15/files/original/official_teow.zip"
 
-file <- paste(localDir,basename(url),sep='/')
+file <- paste(localDir, basename(url), sep='/')
 if (!file.exists(file)) {
   download.file(url, file)
-  unzip(file,exdir=localDir)
+  unzip(file, exdir=localDir)
 }
 
 # Show the unzipped files 
@@ -37,9 +37,9 @@ list.files(localDir)
 layerName <- "wwf_terr_ecos"  
 data_name <- "WWF"
 # Read in the data
-file<-paste(getwd(),localDir,"WWF.RData",sep="/")
+file <- paste(getwd(),localDir,"WWF.RData",sep="/")
 if (!file.exists(file)) {
-  data_projected <- readOGR(dsn=paste(getwd(),localDir,"official",sep="/"), layer=layerName) 
+  data_projected <- readOGR(dsn = paste(getwd(), localDir,"official",sep="/"), layer=layerName) 
   
   # What is this thing and what's in it?
   class(data_projected)
@@ -63,7 +63,7 @@ if (!file.exists(file)) {
   save(list=c(data_name),file=paste(getwd(),localDir,"WWF.RData",sep="/"))
 }
 
-loc=data.frame(x=neolong$long,y=neolong$lat,ID=neolong$ID,locality=neolong$locality,vegetation=neolong$vegetation, biome=neolong$biome,species=neolong$species,Nindiv=neolong$Nindiv,studylength=neolong$studylength)
+loc = data.frame(x = neolong$long, y = neolong$lat, ID = neolong$ID, locality = neolong$locality, vegetation = neolong$vegetation, biome = neolong$biome, species = neolong$species, Nindiv = neolong$Nindiv, studylength = neolong$studylength)
 coordinates(loc)<-c("x","y")
 crs.geo <- CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 ")  # geographical, datum WGS84
 proj4string(loc) <- crs.geo  # define projection system of our study locations
