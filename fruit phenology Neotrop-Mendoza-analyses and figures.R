@@ -96,27 +96,6 @@ uniqueref = lengthunique(neolong$ref) #177
 tt <-table(sort(neolong$ref))
 length(which(tt>1)) ## not unique references
 
-#bubble plot according to the number of species
-#bubble plot according to the study length
-bubble.map = function(dataset=loc){
-  par(mfrow=c(3,1),mar=c(0,2,0.5,1), bty="o", oma=c(0,1,0,1))
-  pointsmap(dataset,type="p",ylab="",xlab="", axes=F, main="studies' positions")
-  axis(side=1, labels=FALSE)
-  axis(side=2, las=2, cex=1)
-  bubble.plot(xv=dataset$x[which(is.na(dataset$species)==F)], yv=dataset$y[which(is.na(dataset$species)==F)], rv=dataset$species[which(is.na(dataset$species)==F)], maint="number of species",axes=F,ylab="", xlab="")
-  data(coastsCoarse)
-  plot(coastsCoarse, add = T)
-  mtext(text="latitude", side=2, line=3, cex=1.5 )
-  axis(side=1, labels=FALSE)
-  axis(side=2, las=2, cex=1)
-  bubble.plot(xv=dataset$long[which(is.na(dataset$studylength)==F)], yv=dataset$lat[which(is.na(dataset$studylength)==F)], rv=dataset$studylength[which(is.na(dataset$studylength)==F)], maint="study length",ylab="", xlab="",axes=F)
-  plot(coastsCoarse, add = T)
-  axis(side=1, cex=1)
-  axis(side=2, las=2, cex=1)
-  mtext(text="longitude", side=1, line=3.5, cex=1.5 )
-}
-
-
 
 ####what are the censuring frequency times?####
 censtime = function(data = neolong){
@@ -135,6 +114,10 @@ censtime = function(data = neolong){
   return(summaryvar)
   
 }
+
+####vegetation types####
+vegtyp = aggregate(data.frame(nbstu = neolong$ID), by = list(vegetation = neolong$vegetation), lengthunique)
+vegtyp[order(vegtyp $ nbstu, decreasing = T),]
 
 #### which are the long-term datasets?####
 longterm = neolong[which(neolong$studylength >= 120),]
@@ -173,14 +156,17 @@ evapo=driverstest[driverstest$climvar=="evaporation",]
 
 
 #how many drivers were included in each study?
-nbstudies=aggregate(data.frame(nbvar=drivers$climvar), by=list(ID=drivers$ID),lengthunique)
+nbstudies = aggregate(data.frame(nbvar=drivers$climvar), by=list(ID=drivers$ID),lengthunique)
 nbstudies[order(nbstudies$nbvar,decreasing=T),]
 table(nbstudies$nbvar)
 
 #link each study to its vegetation type and explore its seasonality regarding precipitation
-driv<-merge(drivers,neolong, by="ID",all.x=TRUE) #we include vegetation type in the drivers' dataset
-raindriv=driv[driv$climvar=="rainfall",]
-signrain=factor(levels=c("positive","negative","none","ambiguous"))
+driv <- merge(drivers,neolong, by="ID", all.x=TRUE) #we include vegetation type in the drivers' dataset
+table4 <- aggregate (driv$ID, by = list(climvar = driv$climvar, vegetation = driv$vegetation), lengthunique)
+
+raindriv = driv[driv$climvar=="rainfall",]
+signrain = factor(levels=c("positive","negative","none","ambiguous"))
+
 for (i in 1:length(raindriv$signcorr))
 {
   if (raindriv$signcor[i]=="positive"|raindriv$signcorr[i]=="negative"|raindriv$signcorr[i]=="none") signrain[i]=raindriv$signcorr[i]
