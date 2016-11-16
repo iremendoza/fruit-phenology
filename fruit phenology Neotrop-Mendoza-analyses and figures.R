@@ -63,7 +63,7 @@ if (!file.exists(file)) {
   save(list=c(data_name),file=paste(getwd(),localDir,"WWF.RData",sep="/"))
 }
 
-loc = data.frame(x = neolong$long, y = neolong$lat, ID = neolong$ID, locality = neolong$locality, vegetation = neolong$vegetation, biome = neolong$biome, species = neolong$species, Nindiv = neolong$Nindiv, studylength = neolong$studylength)
+loc = data.frame(x = neolong$long, y = neolong$lat, ID = neolong$ID, ref = neolong$ref, locality = neolong$locality, vegetation = neolong$vegetation, biome = neolong$biome, species = neolong$species, Nindiv = neolong$Nindiv, studylength = neolong$studylength)
 coordinates(loc)<-c("x","y")
 crs.geo <- CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 ")  # geographical, datum WGS84
 proj4string(loc) <- crs.geo  # define projection system of our study locations
@@ -84,12 +84,12 @@ load(paste(getwd(),localDir,"spjoin.RData",sep="/"))
 #kml file for neolong (used for interactive map)
 file <- paste(getwd(),localDir,"dat.kml",sep="/") 
 if(!file.exists(file)) writeOGR(loc, dsn =paste(getwd(),localDir,"dat.kml" ,sep="/"), layer="neolong", driver = "KML") #kml file created (for interactive map)
-
+##LACKING:include reference, GPC classification type and biome name in dat.kml
 
 #### SOME STATS ABOUT THE DATABASE####
 
-####How many study sites does our dataset have?####
-uniquestudy = lengthunique(neolong$ID) #214
+####How many datasets does our dataset have?####
+uniquestudy = lengthunique(neolong$ID) #218
 
 ####How many unique references does our dataset have?####
 uniqueref = lengthunique(neolong$ref) #177
