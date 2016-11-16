@@ -119,42 +119,40 @@ bubble.map = function(dataset=loc){
 
 
 ####what are the censuring frequency times?####
-censtime = function(data=neolong){
+censtime = function(data = neolong){
   
-  freqcens=numeric()## we transform the qualitative variable in a quantitative one
-  weekly=length(which(data$frequency=="weekly"|data$frequency=="dayly" )) 
-  biweekly=length(grep("biweekly",data$frequency))
-  monthly=length(grep("monthly",data$frequency))-length(which(data$frequency=="bimonthly")) 
-  day20=length(which(data$frequency=="20-day"|data$frequency=="every six weeks"))
-  bimonthly=length(which(data$frequency=="bimonthly"))
-  sporadic=length(grep("sporadic",data$frequency))+length(grep("irregular",data$frequency))
-  unespecified=length(grep("unespecified",data$frequency))+length(grep("herbarium",data$frequency))
+  freqcens = numeric()## we transform the qualitative variable in a quantitative one
+  weekly = length(which(data$frequency=="weekly"|data$frequency=="dayly" )) 
+  biweekly = length(grep("biweekly",data$frequency))
+  monthly = length(grep("monthly",data$frequency))-length(which(data$frequency == "bimonthly")) 
+  day20 = length(which(data$frequency == "20-day"|data$frequency == "every six weeks"))
+  bimonthly = length(which(data$frequency == "bimonthly"))
+  sporadic = length(grep("sporadic", data$frequency)) + length(grep("irregular", data$frequency))
+  unespecified = length(grep("unespecified",data$frequency))+length(grep("herbarium",data$frequency))
   
-  summaryvar=data.frame(var=c("weekly", "biweekly","monthly", "day20","bimonthly","sporadic","unespecified"),freq=c(weekly,biweekly, monthly, day20,bimonthly,sporadic,unespecified))  
-  summaryvar$per=(summaryvar$freq/sum(summaryvar$freq))*100
+  summaryvar = data.frame(var = c("weekly", "biweekly","monthly", "day20","bimonthly","sporadic","unespecified"),freq = c(weekly, biweekly, monthly, day20, bimonthly, sporadic, unespecified))  
+  summaryvar$per = (summaryvar$freq/sum(summaryvar$freq))*100
+  return(summaryvar)
   
 }
 
-
-
 #### which are the long-term datasets?####
-longterm=neolong[which(neolong$studylength>=120),]
-longtermtable=data.frame(ID=longterm$ID,author=longterm$ref, locality=longterm$locality,length=longterm$studylength, DOI=longterm$DOI)
-
+longterm = neolong[which(neolong$studylength >= 120),]
+(longtermtable = data.frame(ID = longterm$ID, author = longterm$ref, locality = longterm$locality, length = longterm$studylength, DOI = longterm$DOI))
 
 ####CLIMATIC DRIVERS####
 #frequency of studies without statistical test
-perctest=aggregate(data.frame(nstu=drivers$ID),by=list(presencetest=drivers$presencetest),length)
-perctest2=(perctest$nstu[perctest$presencetest=="no"]/sum(perctest$nstu))*100
+(perctest = aggregate(data.frame(nstu = drivers$ID), by = list(presencetest = drivers$presencetest),length))
+(perctest2 = (perctest$nstu[perctest$presencetest=="no"]/sum(perctest$nstu))*100)
 
 #First, I calculate the number of datasets related to each environmental variable
-freqdriv1=aggregate(data.frame(nstu=drivers$ID),by=list(climvar=drivers$climvar),length)
-freqdriv1[order(freqdriv1$nstu,decreasing=T),] #ordering drivers according to their importance
+freqdriv1 = aggregate(data.frame(nstu=drivers$ID),by =list(climvar=drivers$climvar),length)
+(freqdriv1[order(freqdriv1$nstu,decreasing=T),]) #ordering drivers according to their importance
 
 #Second, I explore datasets without statistical analyses
-driversnotest<-drivers[drivers$presencetest=="no",]
-freqdriv2=aggregate(data.frame(nstu=driversnotest$ID),by=list(climvar=driversnotest$climvar),length)
-freqdriv2[order(freqdriv2$nstu,decreasing=T),] #ordering drivers according to their importance
+driversnotest <- drivers[drivers$presencetest=="no",]
+freqdriv2 = aggregate(data.frame(nstu=driversnotest$ID),by = list(climvar=driversnotest$climvar),length)
+(freqdriv2[order(freqdriv2$nstu,decreasing=T),]) #ordering drivers according to their importance
 
 #Third, I explore datasets with statistical analyses
 driverstest<-drivers[drivers$presencetest=="yes",]
@@ -164,7 +162,7 @@ freqdriv3[order(freqdriv3$nstu,decreasing=T),] #ordering drivers according to th
 freqtest=aggregate(data.frame(nstu=driverstest$ID),by=list(test=driverstest$typetest),lengthunique)
 
 #sign of correlations
-signrain=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="rainfall",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="rainfall",]$signcorr),length)
+signrain = aggregate(data.frame(nstu=driverstest[driverstest$climvar=="rainfall",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="rainfall",]$signcorr),length)
 signtemp=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="temperature",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="temperature",]$signcorr),length)
 signdl=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="daylength",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="daylength",]$signcorr),length)
 signflooding=aggregate(data.frame(nstu=driverstest[driverstest$climvar=="flooding"|driverstest$climvar=="tide levels",]$ID),by=list(signcorr=driverstest[driverstest$climvar=="flooding"|driverstest$climvar=="tide levels",]$signcorr),length)
