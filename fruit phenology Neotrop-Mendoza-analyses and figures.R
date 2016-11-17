@@ -163,26 +163,38 @@ table(nbstudies$nbvar)
 
 #link each study to its vegetation type and explore its seasonality regarding precipitation
 driv <- merge(drivers,neolong, by="ID", all.x=TRUE) #we include vegetation type in the drivers' dataset
-table4 <- aggregate (driv$ID, by = list(climvar = driv$climvar, vegetation = driv$vegetation), lengthunique)
+
 
 raindriv = driv[driv$climvar=="rainfall",]
 signrain = factor(levels=c("positive","negative","none","ambiguous"))
 
 for (i in 1:length(raindriv$signcorr))
 {
-  if (raindriv$signcor[i]=="positive"|raindriv$signcorr[i]=="negative"|raindriv$signcorr[i]=="none") signrain[i]=raindriv$signcorr[i]
+  if (raindriv$signcor[i]=="positive"|raindriv$signcorr[i]=="negative"|raindriv$signcorr[i] == "none") signrain[i] = raindriv$signcorr[i]
   else signrain[i]= "ambiguous"
 }
-raindriv=data.frame(raindriv,signrain)
-signrainveg=aggregate(data.frame(nstu=raindriv$ID),by=list(signcorr=raindriv$signcorr,vegtype=raindriv$vegetation),length)
-tt=table(raindriv$vegetation, raindriv$signrain)
-rainforest=chisq.test(c(positive=24, negative=19,none=19))
-#desert=chisq.test(c(positive=6, negative=2,none=1))
-#dry=chisq.test(c(positive=9, negative=5,none=1))
-#cerrado=chisq.test(c(positive=6, negative=2,none=3))
+raindriv = data.frame(raindriv,signrain)
+signrainveg = aggregate(data.frame(nstu=raindriv$ID),by=list(signcorr=raindriv$signcorr,vegtype=raindriv$vegetation),length)
+(tt = table(raindriv$vegetation, raindriv$signrain))
+##include table 3 here
+
+(rainforest = chisq.test(c(rainy = 39,  dry =14, aseasonal = 14, transition = 11))) ##significant
+desert = chisq.test(c(positive=6, negative= 4,none=1)) #not valid
+dry = chisq.test(c(positive=9, negative=5,none=1))
+(cerrado = chisq.test(c(rainy = 11, transition = 6, dry = 0))) ##significant
+flooded =  chisq.test(c(rainy = 10, transition = 5, dry = 5)) ##non-significant
 #grassland=chisq.test(c(positive=4, negative=4,none=3))
 #montane=chisq.test(c(positive=5, negative=3,none=1))
 
+####table 4####
+(table4 <- aggregate (driv$ID, by = list(climvar = driv$climvar, vegetation = driv$vegetation), lengthunique))
+
+##Carlos' graph:
+
+temp <- driv[driv$climvar=="temperature",]
+prec <- driv[driv$climvar=="rainfall",]
+hist(abs(temp$lat))
+hist(abs(prec$lat), breaks = c(0,5,10,15,20,25,30))
 
 #### FIGURES OF THE PAPER #####
 
@@ -308,7 +320,7 @@ figure5=function(data=spjoin,ests=ests,filename="figure5.tif"){
 ####Figure S1: What is the monitoring length of datasets?####
 
 #figureS1 plots a barplot with the frequency of studies according to their sampling length
-figureS1=function(data=neolong, filename="figureS1.tif",cex=2,...){
+figureS1 = function(data=neolong, filename="figureS1.tif",cex=2,...){
   meansampling=mean(data$studylength,na.rm=T)
   oneyear=which(data$studylength<=12)  
   twoyear=which(data$studylength<=24& data$studylength>12)
@@ -326,7 +338,7 @@ figureS1=function(data=neolong, filename="figureS1.tif",cex=2,...){
 
 ####Figure S2:
 #figureS2(data=neolong, filename="figureS2.tif")
-figureS2=function(data=neolong, filename="figureS2.tif",cex=2,...){
+figureS2=function(data = neolong, filename="figureS2.tif",cex=2,...){
   
   tiff(filename=filename,height=700,width=1000,pointsize=12) #
   par(mar=c(4,4,4,4),cex=cex)
