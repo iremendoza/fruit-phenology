@@ -186,8 +186,8 @@ flooded =  chisq.test(c(rainy = 10, transition = 5, dry = 5)) ##non-significant
 #grassland=chisq.test(c(positive=4, negative=4,none=3))
 #montane=chisq.test(c(positive=5, negative=3,none=1))
 
-####table 4####
-(table4 <- aggregate (driv$ID, by = list(climvar = driv$climvar, vegetation = driv$vegetation), lengthunique))
+####Supplementary Table 1####
+(ST1 <- aggregate (driv$ID, by = list(climvar = driv$climvar, vegetation = driv$vegetation), lengthunique))
 
 ##Carlos' graph:
 
