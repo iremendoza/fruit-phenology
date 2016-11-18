@@ -179,7 +179,7 @@ signrainveg = aggregate(data.frame(nstu=raindriv$ID),by=list(signcorr=raindriv$s
 ##include table 3 here
 
 (rainforest = chisq.test(c(rainy = 39,  dry =14, aseasonal = 14, transition = 11))) ##significant
-desert = chisq.test(c(positive=6, negative= 4,none=1)) #not valid
+#desert = chisq.test(c(positive=6, negative= 4,none=1)) #not valid
 dry = chisq.test(c(positive=9, negative=5,none=1))
 (cerrado = chisq.test(c(rainy = 11, transition = 6, dry = 0))) ##significant
 flooded =  chisq.test(c(rainy = 10, transition = 5, dry = 5)) ##non-significant
