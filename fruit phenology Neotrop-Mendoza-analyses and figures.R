@@ -96,6 +96,8 @@ uniqueref = lengthunique(neolong$ref) #177
 tt <-table(sort(neolong$ref))
 length(which(tt>1)) ## not unique references
 
+### surface of the studied polygon: 17700000 km2
+(studyperarea = 17000000/218)
 
 ####what are the censuring frequency times?####
 censtime = function(data = neolong){
