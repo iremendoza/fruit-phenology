@@ -300,6 +300,8 @@ figure5=function(data=spjoin,ests=ests,filename="figure5.tif"){
 
     se=merge(data, ests,by="ECO_ID",all.x=T) 
     se$p=se$species/se$sp_wfig
+    sum(se$sp_wfig) #estimated number of species
+    
     summary(se$p)
    
   meanratio = aggregate(data.frame(ratio=se$p), by=list(vegetation=se$vegetation),mean,na.rm=T)
