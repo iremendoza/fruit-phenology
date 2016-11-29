@@ -1,3 +1,4 @@
+#setwd("C:/Irene/Projects/GPC/fruit-phenology")
 source(".\\fruit phenology Neotrop-Mendoza-functions.R")
 
 library(sp)
@@ -153,7 +154,7 @@ freqdriv3[order(freqdriv3$nstu,decreasing = T),] #ordering drivers according to 
 (signdl = aggregate(data.frame(nstu=driverstest[driverstest$climvar=="daylength",]$ID),by=list(sign_daylength = driverstest[driverstest$climvar=="daylength",]$signcorr),length))
 (signflooding = aggregate(data.frame(nstu = driverstest[driverstest$climvar == "flooding"|driverstest$climvar == "tide levels",]$ID),by=list(sign_flooding = driverstest[driverstest$climvar == "flooding"|driverstest$climvar == "tide levels", ]$signcorr), length))
 (signirradiance = aggregate(data.frame(nstu = driverstest[driverstest$climvar=="irradiance"|driverstest$climvar == "solar radiation", ]$ID), by = list(sign_irrad = driverstest[driverstest$climvar == "irradiance"|driverstest$climvar == "solar radiation",]$signcorr), length))
-#(signENSO = aggregate(data.frame(nstu = driverstest[driverstest$climvar == "ENSO",]$ID), by = list(sign_ENSO = driverstest[driverstest$climvar=="ENSO",]$signcorr),length))
+(signENSO = aggregate(data.frame(nstu = driverstest[driverstest$climvar == "ENSO",]$ID), by = list(sign_ENSO = driverstest[driverstest$climvar=="ENSO",]$signcorr),length))
 (signhumid=aggregate(data.frame(nstu = driverstest[driverstest$climvar == "air humidity", ]$ID), by = list(sign_humid = driverstest[driverstest$climvar == "air humidity",]$signcorr), length))
 (evapo = driverstest[driverstest$climvar == "evaporation",])
 
