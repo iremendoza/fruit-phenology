@@ -136,15 +136,15 @@ freqdriv1 = aggregate(data.frame(nstu=drivers$ID),by =list(climvar=drivers$climv
 
 #Second, I explore datasets without statistical analyses
 driversnotest <- drivers[drivers$presencetest=="no",]
-freqdriv2 = aggregate(data.frame(nstu=driversnotest$ID),by = list(climvar=driversnotest$climvar),length)
+freqdriv2 = aggregate(data.frame(nstu = driversnotest$ID),by = list(climvar = driversnotest$climvar),length)
 (freqdriv2[order(freqdriv2$nstu,decreasing=T),]) #ordering drivers according to their importance ##Table 2 (statistically non-tested)
 
 #Third, I explore datasets with statistical analyses
-driverstest <- drivers[drivers$presencetest=="yes",]
-freqdriv3 = aggregate(data.frame(nstu=driverstest$ID),by=list(climvar=driverstest$climvar),length)
+driverstest <- drivers[drivers$presencetest == "yes",]
+freqdriv3 = aggregate(data.frame(nstu = driverstest$ID),by=list(climvar=driverstest$climvar),length)
 freqdriv3[order(freqdriv3$nstu,decreasing = T),] #ordering drivers according to their importance
 #frequency of each type of statistical test
-freqtest = aggregate(data.frame(nstu=driverstest$ID),by=list(test=driverstest$typetest),lengthunique) 
+(freqtest = aggregate(data.frame(nstu=driverstest$ID),by=list(test=driverstest$typetest),lengthunique)) 
 
 
 #sign of correlations for Table 2
@@ -153,7 +153,7 @@ freqtest = aggregate(data.frame(nstu=driverstest$ID),by=list(test=driverstest$ty
 (signdl = aggregate(data.frame(nstu=driverstest[driverstest$climvar=="daylength",]$ID),by=list(sign_daylength = driverstest[driverstest$climvar=="daylength",]$signcorr),length))
 (signflooding = aggregate(data.frame(nstu = driverstest[driverstest$climvar == "flooding"|driverstest$climvar == "tide levels",]$ID),by=list(sign_flooding = driverstest[driverstest$climvar == "flooding"|driverstest$climvar == "tide levels", ]$signcorr), length))
 (signirradiance = aggregate(data.frame(nstu = driverstest[driverstest$climvar=="irradiance"|driverstest$climvar == "solar radiation", ]$ID), by = list(sign_irrad = driverstest[driverstest$climvar == "irradiance"|driverstest$climvar == "solar radiation",]$signcorr), length))
-(signENSO = aggregate(data.frame(nstu = driverstest[driverstest$climvar == "ENSO",]$ID), by = list(sign_ENSO = driverstest[driverstest$climvar=="ENSO",]$signcorr),length))
+#(signENSO = aggregate(data.frame(nstu = driverstest[driverstest$climvar == "ENSO",]$ID), by = list(sign_ENSO = driverstest[driverstest$climvar=="ENSO",]$signcorr),length))
 (signhumid=aggregate(data.frame(nstu = driverstest[driverstest$climvar == "air humidity", ]$ID), by = list(sign_humid = driverstest[driverstest$climvar == "air humidity",]$signcorr), length))
 (evapo = driverstest[driverstest$climvar == "evaporation",])
 
