@@ -79,7 +79,9 @@ load(file)
 
 #spatial join between polygons (data_projected) and points (loc)
 pts.poly <- over(loc, data_projected)
-spjoin <- data.frame(loc,pts.poly)
+spjoin <- data.frame(loc, pts.poly)
+spjoin$ECO_ID[spjoin$ID == 29] <- 60170
+spjoin$ECO_ID[spjoin$ID == 75] <- 61301
 save(spjoin, file = paste(getwd(), localDir, "spjoin.RData", sep = "/"))
 }
 load(paste(getwd(),localDir,"spjoin.RData",sep="/"))
@@ -303,6 +305,8 @@ figure5 = function(data = spjoin, ests = ests, filename = "figure5.tif"){
     se = merge(data, ests, by="ECO_ID",all.x=T) 
     se$p = se$species/se$sp_wfig
     sum(se$sp_wfig) #estimated number of species
+    sum(se$species, na.rm = T) #total number of studied species
+    sum(se$species, na.rm = T)/sum(se$sp_wfig) #undersampling of plant species (1%)
     
     summary(se$p)
    
