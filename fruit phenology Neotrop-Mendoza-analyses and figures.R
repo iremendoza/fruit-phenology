@@ -10,7 +10,9 @@ library(spatialEco)
 
 #### DATASETS #####
 neolong <- read.delim("Mendoza_dat_GPC.txt") #database including the 218 datasets reviewed
+lengthunique(neolong$ID)
 drivers <- read.delim("drivers.txt") #environmental drivers of each dataset
+lengthunique(drivers$ID)
 ests <- read.delim(file = "nb spp kier.txt") ## appendix 2 of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
 ####SPATIAL ANALYSES####
@@ -76,9 +78,9 @@ if(!file.exists(paste(getwd(),localDir,"spjoin.RData",sep="/"))) {
 load(file)
 
 #spatial join between polygons (data_projected) and points (loc)
-pts.poly <-over(loc, data_projected)
-spjoin<-data.frame(loc,pts.poly)
-save(spjoin,file=paste(getwd(),localDir,"spjoin.RData",sep="/"))
+pts.poly <- over(loc, data_projected)
+spjoin <- data.frame(loc,pts.poly)
+save(spjoin, file = paste(getwd(), localDir, "spjoin.RData", sep = "/"))
 }
 load(paste(getwd(),localDir,"spjoin.RData",sep="/"))
 
@@ -293,13 +295,13 @@ figure4 = function(data=neolong, filename="figure4.tif"){
 
 ####Figure5: how many  species were studied by vegetation type?####
 
-figure5=function(data=spjoin,ests=ests,filename="figure5.tif"){
-  tiff(filename=filename,height=900,width=1100,pointsize=24)
-  par(mar=c(4,16,1,2),mfrow=c(2,1))
+figure5 = function(data = spjoin, ests = ests, filename = "figure5.tif"){
+  tiff(filename = filename, height=900, width=1100, pointsize=24)
+  par(mar = c(4,16,1,2),mfrow = c(2,1))
   ##SAMPLING EFFORT  "se" calculates a ratio p with sampling effort per spp
 
-    se=merge(data, ests,by="ECO_ID",all.x=T) 
-    se$p=se$species/se$sp_wfig
+    se = merge(data, ests, by="ECO_ID",all.x=T) 
+    se$p = se$species/se$sp_wfig
     sum(se$sp_wfig) #estimated number of species
     
     summary(se$p)

@@ -2,8 +2,8 @@
 
 library(rworldmap)
 #some simple functions for internal operations
-lengthunique=function(x) return(length(unique(x)))
-lengthisna=function(x) return(length(which(is.na(x))))
+lengthunique = function(x) return(length(unique(x)))
+lengthisna = function(x) return(length(which(is.na(x))))
 
 ####draw.tropics####
 # draws lines (in the sea only) for the tropic of cancer and capricorn based on units of lat and long

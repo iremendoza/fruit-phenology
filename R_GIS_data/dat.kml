@@ -3,6 +3,7 @@
 <Document id="root_doc">
 <Schema name="neolong" id="neolong">
 	<SimpleField name="ID" type="int"></SimpleField>
+	<SimpleField name="ref" type="string"></SimpleField>
 	<SimpleField name="locality" type="string"></SimpleField>
 	<SimpleField name="vegetation" type="string"></SimpleField>
 	<SimpleField name="biome" type="int"></SimpleField>
@@ -14,6 +15,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">1</SimpleData>
+		<SimpleData name="ref">Alencar 1979</SimpleData>
 		<SimpleData name="locality">Reserva Ducke, AM</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -26,6 +28,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">2</SimpleData>
+		<SimpleData name="ref">Amorim et al 2009</SimpleData>
 		<SimpleData name="locality">Serido Ecological Station</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -38,6 +41,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">3</SimpleData>
+		<SimpleData name="ref">Arbelaez &amp; Parrado-Rosselli 2005</SimpleData>
 		<SimpleData name="locality">Caqueta River </SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -50,6 +54,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">4</SimpleData>
+		<SimpleData name="ref">Ayres 1986</SimpleData>
 		<SimpleData name="locality">Mamiraua</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -62,6 +67,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">5</SimpleData>
+		<SimpleData name="ref">Baider 2002</SimpleData>
 		<SimpleData name="locality">Pinkait?</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -74,6 +80,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">6</SimpleData>
+		<SimpleData name="ref">Barbosa et al.  1989</SimpleData>
 		<SimpleData name="locality">Alagoinha</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -86,6 +93,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">7</SimpleData>
+		<SimpleData name="ref">Barlow &amp; Peres 2006</SimpleData>
 		<SimpleData name="locality">Tapajos, Rio Maro</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -97,6 +105,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">8</SimpleData>
+		<SimpleData name="ref">Barlow et al 2007</SimpleData>
 		<SimpleData name="locality">Jari, primary forest</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -108,6 +117,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">9</SimpleData>
+		<SimpleData name="ref">Barnett 2010</SimpleData>
 		<SimpleData name="locality">Igapo</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -120,6 +130,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">10</SimpleData>
+		<SimpleData name="ref">Barnett 2010</SimpleData>
 		<SimpleData name="locality">Borocoto</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -132,6 +143,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">11</SimpleData>
+		<SimpleData name="ref">Barnett 2010</SimpleData>
 		<SimpleData name="locality">terra firme</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -144,6 +156,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">12</SimpleData>
+		<SimpleData name="ref">Batalha &amp; Mantovani 2000</SimpleData>
 		<SimpleData name="locality">Pe-de-Gigante</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -155,6 +168,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">13</SimpleData>
+		<SimpleData name="ref">Batalha &amp; Martins 2004</SimpleData>
 		<SimpleData name="locality">PN Emas</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -166,6 +180,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">14</SimpleData>
+		<SimpleData name="ref">Batalha et al 1997</SimpleData>
 		<SimpleData name="locality">Pirassunga, Emas</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -177,6 +192,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">15</SimpleData>
+		<SimpleData name="ref">Bendix et al. 2006</SimpleData>
 		<SimpleData name="locality">Reserva Biol?gica San Francisco</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -189,6 +205,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">16</SimpleData>
+		<SimpleData name="ref">Bentos et al 2008</SimpleData>
 		<SimpleData name="locality">Biological Dynamics of Forest Fragments Project, Manaus </SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -201,6 +218,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">17</SimpleData>
+		<SimpleData name="ref">Berg et al 2007</SimpleData>
 		<SimpleData name="locality">Cerro Blanco, Province of Guayas</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -213,6 +231,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">18</SimpleData>
+		<SimpleData name="ref">Borges et al. 2002</SimpleData>
 		<SimpleData name="locality">Potirendaba</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -225,6 +244,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">19</SimpleData>
+		<SimpleData name="ref">Boubli 1997</SimpleData>
 		<SimpleData name="locality">Pico da Neblina</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -237,6 +257,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">20</SimpleData>
+		<SimpleData name="ref">Boyle &amp; Bronstein 2012</SimpleData>
 		<SimpleData name="locality">La Selva, 100 m</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -249,6 +270,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">21</SimpleData>
+		<SimpleData name="ref">Boyle &amp; Bronstein 2012</SimpleData>
 		<SimpleData name="locality">Braulio Carrillo, 300 m</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -261,6 +283,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">22</SimpleData>
+		<SimpleData name="ref">Boyle &amp; Bronstein 2012</SimpleData>
 		<SimpleData name="locality">Rara Avis, 750 m</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -273,6 +296,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">23</SimpleData>
+		<SimpleData name="ref">Brina 1998</SimpleData>
 		<SimpleData name="locality">Matozinhos, Lagoa Santa</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -284,6 +308,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">24</SimpleData>
+		<SimpleData name="ref">Bullock &amp; Solis-Magallanes 1990</SimpleData>
 		<SimpleData name="locality">Chamela</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -296,6 +321,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">25</SimpleData>
+		<SimpleData name="ref">Camacho &amp; Orozco 1998</SimpleData>
 		<SimpleData name="locality">Cordillera de Talamanca</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -308,6 +334,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">26</SimpleData>
+		<SimpleData name="ref">Cara  2006</SimpleData>
 		<SimpleData name="locality">Usina Serra Grande, Alagoas</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -320,6 +347,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">27</SimpleData>
+		<SimpleData name="ref">Carmo &amp; Morellato 2000</SimpleData>
 		<SimpleData name="locality">Rio Tibagi</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -330,6 +358,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">28</SimpleData>
+		<SimpleData name="ref">Carvalho 1980</SimpleData>
 		<SimpleData name="locality">Floresta Nacional de Tapajos</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -342,6 +371,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">29</SimpleData>
+		<SimpleData name="ref">Cattanio et al 2004</SimpleData>
 		<SimpleData name="locality">Combu Island</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -353,6 +383,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">30</SimpleData>
+		<SimpleData name="ref">Cesar 1988</SimpleData>
 		<SimpleData name="locality">Fazenda Barreiro Rico (SP)</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -364,6 +395,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">31</SimpleData>
+		<SimpleData name="ref">Chiarello 1994</SimpleData>
 		<SimpleData name="locality">Santa Genebra</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -375,6 +407,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">32</SimpleData>
+		<SimpleData name="ref">Colonnello  1991</SimpleData>
 		<SimpleData name="locality">V?rzea do rio Orinoco</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -387,6 +420,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">33</SimpleData>
+		<SimpleData name="ref">Concei?ao et al 2007</SimpleData>
 		<SimpleData name="locality">Chapada Diamantina</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -399,6 +433,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">34</SimpleData>
+		<SimpleData name="ref">Cornejo-Tenorio &amp; Manriquez 2007</SimpleData>
 		<SimpleData name="locality">Cerro Altaminaro, Michoac?n</SimpleData>
 		<SimpleData name="vegetation">temperate evergreen forest</SimpleData>
 		<SimpleData name="biome">3</SimpleData>
@@ -410,6 +445,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">35</SimpleData>
+		<SimpleData name="ref">Cortes-Flores et al.  2013</SimpleData>
 		<SimpleData name="locality">Cerro El Aguila, Michoac?n</SimpleData>
 		<SimpleData name="vegetation">temperate evergreen forest</SimpleData>
 		<SimpleData name="biome">3</SimpleData>
@@ -422,6 +458,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">36</SimpleData>
+		<SimpleData name="ref">Costa &amp; Magnusson 2003</SimpleData>
 		<SimpleData name="locality">Experimental Forest Management Station ZF-2, INPA</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -433,6 +470,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">37</SimpleData>
+		<SimpleData name="ref">Costa et al 2004</SimpleData>
 		<SimpleData name="locality">Chapada do Araripe</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -444,6 +482,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">38</SimpleData>
+		<SimpleData name="ref">COTERC unpublished</SimpleData>
 		<SimpleData name="locality">Barra del Colorado</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">14</SimpleData>
@@ -455,6 +494,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">39</SimpleData>
+		<SimpleData name="ref">Croat 1975</SimpleData>
 		<SimpleData name="locality">Barro Colorado Island</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -465,6 +505,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">40</SimpleData>
+		<SimpleData name="ref">Daubenmire 1972</SimpleData>
 		<SimpleData name="locality">Finca la Pacifica, Canas, Guanacaste</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -476,6 +517,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">41</SimpleData>
+		<SimpleData name="ref">de Melo et al.  2013</SimpleData>
 		<SimpleData name="locality">EE Panga</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -488,6 +530,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">42</SimpleData>
+		<SimpleData name="ref">Defler &amp; Defler 1996</SimpleData>
 		<SimpleData name="locality">Capar?</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -500,6 +543,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">43</SimpleData>
+		<SimpleData name="ref">Develey &amp; Peres 2000</SimpleData>
 		<SimpleData name="locality">Jureia-Itatins Ecological Station</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -511,6 +555,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">44</SimpleData>
+		<SimpleData name="ref">Di Fiore 2004</SimpleData>
 		<SimpleData name="locality">Yasuni National Park</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -522,6 +567,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">45</SimpleData>
+		<SimpleData name="ref">Dinerstein 1986</SimpleData>
 		<SimpleData name="locality">Monteverde</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -534,6 +580,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">46</SimpleData>
+		<SimpleData name="ref">Donatti et al. unpublished</SimpleData>
 		<SimpleData name="locality">Pantanal</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">9</SimpleData>
@@ -546,6 +593,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">47</SimpleData>
+		<SimpleData name="ref">Engel &amp; Martins 2005</SimpleData>
 		<SimpleData name="locality">Llinhares Natural Reserve</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">14</SimpleData>
@@ -558,6 +606,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">48</SimpleData>
+		<SimpleData name="ref">Estrada &amp; Coates-Estrada 2001</SimpleData>
 		<SimpleData name="locality">Los Tuxtlas</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -568,6 +617,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">49</SimpleData>
+		<SimpleData name="ref">Ferreira &amp; Consolaro 2013</SimpleData>
 		<SimpleData name="locality">Parque Santa Cruz</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -579,6 +629,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">50</SimpleData>
+		<SimpleData name="ref">Ferreira &amp; Parolin 2007</SimpleData>
 		<SimpleData name="locality">Rio Tamura-Mirim, Manaus</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -591,6 +642,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">51</SimpleData>
+		<SimpleData name="ref">Figueiredo 2007</SimpleData>
 		<SimpleData name="locality">Campus Universidade Rio de Janeiro </SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -603,6 +655,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">52</SimpleData>
+		<SimpleData name="ref">Flores 2012</SimpleData>
 		<SimpleData name="locality">Yaxh? Pet?n</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -615,6 +668,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">53</SimpleData>
+		<SimpleData name="ref">Fournier 1976</SimpleData>
 		<SimpleData name="locality">San Pedro de Montes de Oca</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -627,6 +681,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">54</SimpleData>
+		<SimpleData name="ref">Frankie et al 1974</SimpleData>
 		<SimpleData name="locality">La Selva</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -639,6 +694,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">55</SimpleData>
+		<SimpleData name="ref">Frankie et al 1974</SimpleData>
 		<SimpleData name="locality">Comelco Ranch</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -651,6 +707,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">56</SimpleData>
+		<SimpleData name="ref">Freire et al. 2013</SimpleData>
 		<SimpleData name="locality">Itaborai</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -663,6 +720,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">57</SimpleData>
+		<SimpleData name="ref">Frenedozo 2004</SimpleData>
 		<SimpleData name="locality">Rio Claro</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -674,6 +732,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">58</SimpleData>
+		<SimpleData name="ref">Funch et al 2002</SimpleData>
 		<SimpleData name="locality">rio Len?ois montane forest</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -686,6 +745,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">59</SimpleData>
+		<SimpleData name="ref">Galdino unpublished</SimpleData>
 		<SimpleData name="locality">Sao Jose de Lages (Cachoeira fragment)</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -698,6 +758,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">60</SimpleData>
+		<SimpleData name="ref">Garc?a et al. 2013</SimpleData>
 		<SimpleData name="locality">Reserva Biosfera Maya</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -710,6 +771,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">61</SimpleData>
+		<SimpleData name="ref">Gautier &amp; Spichiger 1985</SimpleData>
 		<SimpleData name="locality">Arboretum Jenaro Herrera</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -721,6 +783,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">62</SimpleData>
+		<SimpleData name="ref">Genini et al 2009</SimpleData>
 		<SimpleData name="locality">Ilha Anchieta</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -733,6 +796,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">63</SimpleData>
+		<SimpleData name="ref">Gentry &amp; Emmons 1987</SimpleData>
 		<SimpleData name="locality">Cocha Cashu</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -744,6 +808,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">64</SimpleData>
+		<SimpleData name="ref">Glander 1975</SimpleData>
 		<SimpleData name="locality">Finca la Pacifica, Canas, Guanacaste</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -756,6 +821,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">65</SimpleData>
+		<SimpleData name="ref">Gomes 2001</SimpleData>
 		<SimpleData name="locality">Intervales</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -767,6 +833,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">66</SimpleData>
+		<SimpleData name="ref">Gonzalez-Zamora et al. unpublished</SimpleData>
 		<SimpleData name="locality">Lancadona, CF1</SimpleData>
 		<SimpleData name="vegetation">temperate evergreen forest</SimpleData>
 		<SimpleData name="biome">3</SimpleData>
@@ -778,6 +845,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">67</SimpleData>
+		<SimpleData name="ref">Gonzalez-Zamora et al. unpublished</SimpleData>
 		<SimpleData name="locality">Lancadona, CF2</SimpleData>
 		<SimpleData name="vegetation">temperate evergreen forest</SimpleData>
 		<SimpleData name="biome">3</SimpleData>
@@ -789,6 +857,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">68</SimpleData>
+		<SimpleData name="ref">Gonzalez-Zamora et al. unpublished</SimpleData>
 		<SimpleData name="locality">Lancadona, FF1</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -800,6 +869,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">69</SimpleData>
+		<SimpleData name="ref">Gonzalez-Zamora et al. unpublished</SimpleData>
 		<SimpleData name="locality">Lancadona, FF2</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -811,6 +881,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">70</SimpleData>
+		<SimpleData name="ref">Gonzalez-Zamora et al. unpublished</SimpleData>
 		<SimpleData name="locality">Lancadona, FF3</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -822,6 +893,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">71</SimpleData>
+		<SimpleData name="ref">Gottsberger &amp; Silberbauer-Gottsberger 1983</SimpleData>
 		<SimpleData name="locality">Botocatu</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -833,6 +905,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">72</SimpleData>
+		<SimpleData name="ref">Gressler 2010</SimpleData>
 		<SimpleData name="locality">Pinciguaba</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -845,6 +918,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">73</SimpleData>
+		<SimpleData name="ref">Griz &amp; Machado 2001</SimpleData>
 		<SimpleData name="locality">Alagoinha</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -857,6 +931,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">74</SimpleData>
+		<SimpleData name="ref">Guarim Neto et al.  1994</SimpleData>
 		<SimpleData name="locality">Nossa Senhora da Guia</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -869,6 +944,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">75</SimpleData>
+		<SimpleData name="ref">Guevara de Lampe et al 1992</SimpleData>
 		<SimpleData name="locality">Guarapo-Oturo, Araya Peninsule, State of Sucre, plot 2</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -880,6 +956,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">76</SimpleData>
+		<SimpleData name="ref">Guevara de Lampe et al 1992</SimpleData>
 		<SimpleData name="locality">Laguna de Cocos plot2</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -891,6 +968,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">77</SimpleData>
+		<SimpleData name="ref">Hasui et al 2012</SimpleData>
 		<SimpleData name="locality">Intervales, Hilltop</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -902,6 +980,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">78</SimpleData>
+		<SimpleData name="ref">Hasui et al 2012</SimpleData>
 		<SimpleData name="locality">Intervales, Middle Slope</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -913,6 +992,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">79</SimpleData>
+		<SimpleData name="ref">Hasui et al 2012</SimpleData>
 		<SimpleData name="locality">Intervales, Valley Bottom</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -924,6 +1004,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">80</SimpleData>
+		<SimpleData name="ref">Haugaasen &amp; Peres 2005</SimpleData>
 		<SimpleData name="locality">Uaua?u, igapo</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -936,6 +1017,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">81</SimpleData>
+		<SimpleData name="ref">Haugaasen &amp; Peres 2005</SimpleData>
 		<SimpleData name="locality">Uaua?u,terra firme</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -948,6 +1030,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">82</SimpleData>
+		<SimpleData name="ref">Haugaasen &amp; Peres 2005</SimpleData>
 		<SimpleData name="locality">Uaua?u, varzea</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -960,6 +1043,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">83</SimpleData>
+		<SimpleData name="ref">Hawes 2012</SimpleData>
 		<SimpleData name="locality">Jurua, terra firme</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -972,6 +1056,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">84</SimpleData>
+		<SimpleData name="ref">Hawes 2012</SimpleData>
 		<SimpleData name="locality">Jurua, varzea</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -984,6 +1069,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">85</SimpleData>
+		<SimpleData name="ref">Heithaus et al 1975</SimpleData>
 		<SimpleData name="locality">Finca la Pacifica, Canas, Guanacaste</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -995,6 +1081,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">86</SimpleData>
+		<SimpleData name="ref">Hilty 1980</SimpleData>
 		<SimpleData name="locality">Alto Yunda</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1007,6 +1094,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">87</SimpleData>
+		<SimpleData name="ref">Ibarra-Manr?quez et al.  1991</SimpleData>
 		<SimpleData name="locality">Los Tuxtlas</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1018,6 +1106,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">88</SimpleData>
+		<SimpleData name="ref">Ivizi &amp; Araujo 1997</SimpleData>
 		<SimpleData name="locality">Uberlandia</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1029,6 +1118,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">89</SimpleData>
+		<SimpleData name="ref">Janzen 1967</SimpleData>
 		<SimpleData name="locality">Golfito-Palmar Sur</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1040,6 +1130,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">90</SimpleData>
+		<SimpleData name="ref">Jara-Guerrero et al 2011</SimpleData>
 		<SimpleData name="locality">dry forests in Loja and El Oro Provinces, S Ecuador</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1051,6 +1142,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">91</SimpleData>
+		<SimpleData name="ref">Justiniano &amp; Fredericksen 2000</SimpleData>
 		<SimpleData name="locality">Lomerio </SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -1063,6 +1155,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">92</SimpleData>
+		<SimpleData name="ref">Knowles &amp; Parrotta 1997</SimpleData>
 		<SimpleData name="locality">Trombetas</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1074,6 +1167,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">93</SimpleData>
+		<SimpleData name="ref">Koptur et al. 1988</SimpleData>
 		<SimpleData name="locality">Monteverde</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1086,6 +1180,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">94</SimpleData>
+		<SimpleData name="ref">Kubitzki &amp; Ziburski 1994</SimpleData>
 		<SimpleData name="locality">igapo Rio Negro </SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1097,6 +1192,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">95</SimpleData>
+		<SimpleData name="ref">Kubitzki &amp; Ziburski 1994</SimpleData>
 		<SimpleData name="locality">Ilha da Marchaneria</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1108,6 +1204,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">96</SimpleData>
+		<SimpleData name="ref">Lee et al. 2014</SimpleData>
 		<SimpleData name="locality">Tambopata</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1120,6 +1217,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">97</SimpleData>
+		<SimpleData name="ref">Lemus-Jimenez &amp; Ramirez 2002</SimpleData>
 		<SimpleData name="locality">Paraguana Peninsula, mangle</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">14</SimpleData>
@@ -1131,6 +1229,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">98</SimpleData>
+		<SimpleData name="ref">Lemus-Jimenez &amp; Ramirez 2002</SimpleData>
 		<SimpleData name="locality">Paraguana Peninsula, grassland</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -1142,6 +1241,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">99</SimpleData>
+		<SimpleData name="ref">Lenza &amp; Klink 2006</SimpleData>
 		<SimpleData name="locality">IGBE</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1154,6 +1254,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">100</SimpleData>
+		<SimpleData name="ref">Levey 1988</SimpleData>
 		<SimpleData name="locality">La Selva</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1165,6 +1266,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">101</SimpleData>
+		<SimpleData name="ref">Lima &amp; Rodal 2010</SimpleData>
 		<SimpleData name="locality">Mauricio Dantas Private NR,  PE</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -1177,6 +1279,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">102</SimpleData>
+		<SimpleData name="ref">Lima et al 2012</SimpleData>
 		<SimpleData name="locality">Experimental Station Lauro Bezerra, Pernambuco</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -1189,6 +1292,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">103</SimpleData>
+		<SimpleData name="ref">Lobo et al.  2008</SimpleData>
 		<SimpleData name="locality">Peninsula de Osa and  Golfo de Dulce</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1200,6 +1304,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">104</SimpleData>
+		<SimpleData name="ref">Luna et al. unpublished</SimpleData>
 		<SimpleData name="locality">Llano de Ojo de Agua</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -1211,6 +1316,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">105</SimpleData>
+		<SimpleData name="ref">Machado et al 1997</SimpleData>
 		<SimpleData name="locality">Research Station of Empresa Pernambucana de Pesquisa Agropecuaria (IPA), Serra Talhada, PE</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -1223,6 +1329,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">106</SimpleData>
+		<SimpleData name="ref">Marques &amp; Oliveira 2004</SimpleData>
 		<SimpleData name="locality">Ilha do Mel, non-flooded forest</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1234,6 +1341,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">107</SimpleData>
+		<SimpleData name="ref">Marques &amp; Oliveira 2008</SimpleData>
 		<SimpleData name="locality">Ilha do Mel, flooded restinga</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1245,6 +1353,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">108</SimpleData>
+		<SimpleData name="ref">Marques &amp; Oliveira 2008</SimpleData>
 		<SimpleData name="locality">Ilha do Mel, unflooded restinga</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1256,6 +1365,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">109</SimpleData>
+		<SimpleData name="ref">Marques et al 2004</SimpleData>
 		<SimpleData name="locality">Parana</SimpleData>
 		<SimpleData name="vegetation">temperate evergreen forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1268,6 +1378,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">110</SimpleData>
+		<SimpleData name="ref">Mart?nez Sovero &amp; Brightsmith unpublished</SimpleData>
 		<SimpleData name="locality">Tambopata</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1280,6 +1391,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">111</SimpleData>
+		<SimpleData name="ref">Martos et al 2009</SimpleData>
 		<SimpleData name="locality">Reserva Ecol Privada Chaparr?</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -1292,6 +1404,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">112</SimpleData>
+		<SimpleData name="ref">Matthes 1980</SimpleData>
 		<SimpleData name="locality">Bosque dos Jequitib?s</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1303,6 +1416,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">113</SimpleData>
+		<SimpleData name="ref">McLaren &amp; McDonald 2005</SimpleData>
 		<SimpleData name="locality">Hellshire Hills protected area, costa sul da Jamaica</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -1315,6 +1429,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">114</SimpleData>
+		<SimpleData name="ref">Medeiros et al 2007</SimpleData>
 		<SimpleData name="locality">RPPN Nossa Senhora do Outeiro de Maraca?pe PE</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">14</SimpleData>
@@ -1327,6 +1442,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">115</SimpleData>
+		<SimpleData name="ref">Mendoza unpublished</SimpleData>
 		<SimpleData name="locality">Nouragues field station</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1338,6 +1454,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">116</SimpleData>
+		<SimpleData name="ref">Mikich &amp; Silva 2001</SimpleData>
 		<SimpleData name="locality">centro-oeste do Parana</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1349,6 +1466,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">117</SimpleData>
+		<SimpleData name="ref">Miranda 1995</SimpleData>
 		<SimpleData name="locality">Tapajos River, Alter-do-Ch?o</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1361,6 +1479,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">118</SimpleData>
+		<SimpleData name="ref">Morellato &amp; Leitao-Filho 1996</SimpleData>
 		<SimpleData name="locality">Santa Genebra</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1372,6 +1491,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">119</SimpleData>
+		<SimpleData name="ref">Morellato et al 1989</SimpleData>
 		<SimpleData name="locality">Serra do Japi, altitudinal forest</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1384,6 +1504,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">120</SimpleData>
+		<SimpleData name="ref">Morellato et al 1989</SimpleData>
 		<SimpleData name="locality">Serra do Japi, semideciduous forest</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1396,6 +1517,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">121</SimpleData>
+		<SimpleData name="ref">Morellato et al 2000</SimpleData>
 		<SimpleData name="locality">Serra do Mar, site 1</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1408,6 +1530,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">122</SimpleData>
+		<SimpleData name="ref">Morellato et al 2000</SimpleData>
 		<SimpleData name="locality">Serra do Mar, site 2</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1420,6 +1543,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">123</SimpleData>
+		<SimpleData name="ref">Morellato et al 2000</SimpleData>
 		<SimpleData name="locality">Serra do Mar, site 3</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1432,6 +1556,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">124</SimpleData>
+		<SimpleData name="ref">Morellato et al 2000</SimpleData>
 		<SimpleData name="locality">Sabaidela, Site 4</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1444,6 +1569,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">125</SimpleData>
+		<SimpleData name="ref">Morellato unpublished</SimpleData>
 		<SimpleData name="locality">Itirapina</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1455,6 +1581,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">126</SimpleData>
+		<SimpleData name="ref">Mori et al 1982</SimpleData>
 		<SimpleData name="locality">Centro de Pesquisas do Cacau</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1467,6 +1594,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">127</SimpleData>
+		<SimpleData name="ref">Munhoz &amp; Felfili 2005</SimpleData>
 		<SimpleData name="locality">DF, Fazenda Agua Limpa</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1479,6 +1607,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">128</SimpleData>
+		<SimpleData name="ref">Muniz  2008</SimpleData>
 		<SimpleData name="locality">MA, buriticupu</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1490,6 +1619,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">129</SimpleData>
+		<SimpleData name="ref">Neves &amp; Damasceno-Junior 2011</SimpleData>
 		<SimpleData name="locality">Santa Cruz hill</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -1501,6 +1631,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">130</SimpleData>
+		<SimpleData name="ref">Norconk 1996</SimpleData>
 		<SimpleData name="locality">Chiropotes Island</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1512,6 +1643,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">131</SimpleData>
+		<SimpleData name="ref">Norconk 1996</SimpleData>
 		<SimpleData name="locality">Phitecia Island</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1523,6 +1655,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">132</SimpleData>
+		<SimpleData name="ref">Oliveira &amp; Paula 2001</SimpleData>
 		<SimpleData name="locality">Rio On?a</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1534,6 +1667,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">133</SimpleData>
+		<SimpleData name="ref">Oliveira &amp; Paula 2001</SimpleData>
 		<SimpleData name="locality">EE Panga</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1545,6 +1679,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">134</SimpleData>
+		<SimpleData name="ref">Opler et al 1980</SimpleData>
 		<SimpleData name="locality">Comelco Ranch, Hill forest</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -1556,6 +1691,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">135</SimpleData>
+		<SimpleData name="ref">Opler et al 1980</SimpleData>
 		<SimpleData name="locality">La Selva, mature forest</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1567,6 +1703,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">136</SimpleData>
+		<SimpleData name="ref">Opler et al 1980</SimpleData>
 		<SimpleData name="locality">Finca la Pacifica, Riparian forest</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -1578,6 +1715,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">137</SimpleData>
+		<SimpleData name="ref">Opler et al 1980</SimpleData>
 		<SimpleData name="locality">Comelco Ranch, Riparian Forest</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -1589,6 +1727,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">138</SimpleData>
+		<SimpleData name="ref">Opler et al 1980</SimpleData>
 		<SimpleData name="locality">Comelco Ranch, secondary Forest</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">2</SimpleData>
@@ -1600,6 +1739,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">139</SimpleData>
+		<SimpleData name="ref">Opler et al 1980</SimpleData>
 		<SimpleData name="locality">La Selva, secondary forest</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1611,6 +1751,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">140</SimpleData>
+		<SimpleData name="ref">Ortiz 1990</SimpleData>
 		<SimpleData name="locality">Cojedes</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1622,6 +1763,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">141</SimpleData>
+		<SimpleData name="ref">Palma et al.  2011</SimpleData>
 		<SimpleData name="locality">Yotoco Reserve</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1634,6 +1776,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">142</SimpleData>
+		<SimpleData name="ref">Palminteri &amp; Peres 2012</SimpleData>
 		<SimpleData name="locality">Los Amigos Biological Station</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1646,6 +1789,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">143</SimpleData>
+		<SimpleData name="ref">Pedrao &amp; Stranghetti 2001</SimpleData>
 		<SimpleData name="locality">Bora</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1657,6 +1801,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">144</SimpleData>
+		<SimpleData name="ref">Peetz 2001</SimpleData>
 		<SimpleData name="locality">Danto Machado</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1669,6 +1814,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">145</SimpleData>
+		<SimpleData name="ref">Penhalber &amp; Mantovani 1997</SimpleData>
 		<SimpleData name="locality">Fontes do Ipiranga</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1680,6 +1826,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">146</SimpleData>
+		<SimpleData name="ref">Pereira et al. 2008</SimpleData>
 		<SimpleData name="locality">Po?o das Antas (RJ)</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1691,6 +1838,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">147</SimpleData>
+		<SimpleData name="ref">Peres 1994a</SimpleData>
 		<SimpleData name="locality">Urucu River</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1703,6 +1851,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">148</SimpleData>
+		<SimpleData name="ref">Persson 2005</SimpleData>
 		<SimpleData name="locality">Yasuni National Park</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1714,6 +1863,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">149</SimpleData>
+		<SimpleData name="ref">Pessoa 2011</SimpleData>
 		<SimpleData name="locality">Esta?ao Ecol?gica do Caetes</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">14</SimpleData>
@@ -1726,6 +1876,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">150</SimpleData>
+		<SimpleData name="ref">Pirani et al 2009</SimpleData>
 		<SimpleData name="locality">Parque Estadual da Serra Azul</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1738,6 +1889,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">151</SimpleData>
+		<SimpleData name="ref">Putz &amp; Windsor 1987</SimpleData>
 		<SimpleData name="locality">Barro Colorado Island</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1750,6 +1902,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">152</SimpleData>
+		<SimpleData name="ref">Quirino 2006</SimpleData>
 		<SimpleData name="locality">Fazenda Almas</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -1762,6 +1915,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">153</SimpleData>
+		<SimpleData name="ref">Ragusa-Netto 2004</SimpleData>
 		<SimpleData name="locality">Miranda River, Corumba</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">9</SimpleData>
@@ -1774,6 +1928,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">154</SimpleData>
+		<SimpleData name="ref">Ragusa-Netto 2008a</SimpleData>
 		<SimpleData name="locality">Emas National Park</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1786,6 +1941,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">155</SimpleData>
+		<SimpleData name="ref">Ragusa-Netto 2008b</SimpleData>
 		<SimpleData name="locality">Urucum </SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">9</SimpleData>
@@ -1798,6 +1954,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">156</SimpleData>
+		<SimpleData name="ref">Ram?rez  1997</SimpleData>
 		<SimpleData name="locality">Tikal</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1810,6 +1967,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">157</SimpleData>
+		<SimpleData name="ref">Ramirez &amp; Briceno 2011</SimpleData>
 		<SimpleData name="locality">Canaima, brad-leaved meadow</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1821,6 +1979,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">158</SimpleData>
+		<SimpleData name="ref">Ramirez &amp; Briceno 2011</SimpleData>
 		<SimpleData name="locality">Canaima, savanna</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1832,6 +1991,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">159</SimpleData>
+		<SimpleData name="ref">Ramirez &amp; Briceno 2011</SimpleData>
 		<SimpleData name="locality">Canaima, secondary bush</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1843,6 +2003,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">160</SimpleData>
+		<SimpleData name="ref">Ramirez &amp; Briceno 2011</SimpleData>
 		<SimpleData name="locality">Canaima, shrubland</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1854,6 +2015,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">161</SimpleData>
+		<SimpleData name="ref">Ramirez &amp; Brito 1987</SimpleData>
 		<SimpleData name="locality">Los Llanos</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1866,6 +2028,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">162</SimpleData>
+		<SimpleData name="ref">Ramirez 2002</SimpleData>
 		<SimpleData name="locality">Los Llanos</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1877,6 +2040,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">163</SimpleData>
+		<SimpleData name="ref">Reys et al 2005</SimpleData>
 		<SimpleData name="locality">MS, Rio formoso (Serra da Bodoquena)</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1889,6 +2053,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">164</SimpleData>
+		<SimpleData name="ref">Reznik et al.  2012</SimpleData>
 		<SimpleData name="locality">Reserva Biologica da Uni?o</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1900,6 +2065,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">165</SimpleData>
+		<SimpleData name="ref">Ribeiro 2011</SimpleData>
 		<SimpleData name="locality">Len?ois Maranhenses</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1912,6 +2078,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">166</SimpleData>
+		<SimpleData name="ref">Rios et al. 2007</SimpleData>
 		<SimpleData name="locality">Otun-Quimbaya</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1924,6 +2091,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">167</SimpleData>
+		<SimpleData name="ref">Rivas Romero et al. 2008</SimpleData>
 		<SimpleData name="locality">Chuwanimajuyu</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">3</SimpleData>
@@ -1936,6 +2104,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">168</SimpleData>
+		<SimpleData name="ref">Rold?n &amp; Larrea 2003</SimpleData>
 		<SimpleData name="locality">Cotapata</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">10</SimpleData>
@@ -1948,6 +2117,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">169</SimpleData>
+		<SimpleData name="ref">Rubim et al 2010</SimpleData>
 		<SimpleData name="locality">Mata Sao Jose, SP</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1960,6 +2130,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">170</SimpleData>
+		<SimpleData name="ref">Sabatier 1985</SimpleData>
 		<SimpleData name="locality">Piste Saint Elie</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -1972,6 +2143,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">171</SimpleData>
+		<SimpleData name="ref">Salazar et al 2012</SimpleData>
 		<SimpleData name="locality">IBGE, cerrado denso</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1983,6 +2155,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">172</SimpleData>
+		<SimpleData name="ref">Salazar et al 2012</SimpleData>
 		<SimpleData name="locality">IBGE, cerrado sensu stricto</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -1994,6 +2167,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">173</SimpleData>
+		<SimpleData name="ref">Salazar et al 2012</SimpleData>
 		<SimpleData name="locality">IBGE, campo sujo</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2005,6 +2179,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">174</SimpleData>
+		<SimpleData name="ref">Santana et al 2010</SimpleData>
 		<SimpleData name="locality">Dolina da Garapa</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2016,6 +2191,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">175</SimpleData>
+		<SimpleData name="ref">Santos et al.  2013</SimpleData>
 		<SimpleData name="locality">Doralize Farm, Paran?</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2027,6 +2203,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">176</SimpleData>
+		<SimpleData name="ref">Sch?ngart et al 2002</SimpleData>
 		<SimpleData name="locality">Ilha da Marchaneria</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2039,6 +2216,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">177</SimpleData>
+		<SimpleData name="ref">Setz 1993</SimpleData>
 		<SimpleData name="locality">Biological Dynamics of Forest Fragments Project, Manaus </SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2051,6 +2229,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">178</SimpleData>
+		<SimpleData name="ref">Silberbauer-Gottsberger 2001</SimpleData>
 		<SimpleData name="locality">Botucatu</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2062,6 +2241,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">179</SimpleData>
+		<SimpleData name="ref">Silva et al 2009</SimpleData>
 		<SimpleData name="locality">Emas National Park, hyperseasonal cerrado</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2074,6 +2254,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">180</SimpleData>
+		<SimpleData name="ref">Silva et al 2009</SimpleData>
 		<SimpleData name="locality">Emas National Park, seasonal cerrado</SimpleData>
 		<SimpleData name="vegetation">open grassy savanna</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2086,6 +2267,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">181</SimpleData>
+		<SimpleData name="ref">Silva et al 2011</SimpleData>
 		<SimpleData name="locality">Sao Carlos, cerrado</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2097,6 +2279,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">182</SimpleData>
+		<SimpleData name="ref">Silva et al 2011</SimpleData>
 		<SimpleData name="locality">Sao Carlos, swamp</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2108,6 +2291,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">183</SimpleData>
+		<SimpleData name="ref">Silverio &amp; Lenza 2010</SimpleData>
 		<SimpleData name="locality">PM Bacaba</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2119,6 +2303,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">184</SimpleData>
+		<SimpleData name="ref">Snow 1965</SimpleData>
 		<SimpleData name="locality">Arima Valley</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2130,6 +2315,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">185</SimpleData>
+		<SimpleData name="ref">Solorzano et al. 2000</SimpleData>
 		<SimpleData name="locality">El Triunfo</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2141,6 +2327,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">186</SimpleData>
+		<SimpleData name="ref">Souza-Alves et al. 2011</SimpleData>
 		<SimpleData name="locality">Itaporanga d'Ajuda (Sergipe)</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2152,6 +2339,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">187</SimpleData>
+		<SimpleData name="ref">Spina et al 2001</SimpleData>
 		<SimpleData name="locality">Campinas</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2163,6 +2351,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">188</SimpleData>
+		<SimpleData name="ref">Staggemeier &amp; Morellato 2011</SimpleData>
 		<SimpleData name="locality">Parque Estadual da Ilha do Cardoso, foothill</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2175,6 +2364,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">189</SimpleData>
+		<SimpleData name="ref">Stevenson et al 1998</SimpleData>
 		<SimpleData name="locality">Tinigua National Park</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2186,6 +2376,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">190</SimpleData>
+		<SimpleData name="ref">Stutz de Ortega 1986</SimpleData>
 		<SimpleData name="locality">Alto Parana</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2197,6 +2388,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">191</SimpleData>
+		<SimpleData name="ref">Swamy et al. unpublished</SimpleData>
 		<SimpleData name="locality">Cocha Cashu</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2209,6 +2401,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">192</SimpleData>
+		<SimpleData name="ref">Talora &amp; Morellato 2000</SimpleData>
 		<SimpleData name="locality">Picinguaba</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2221,6 +2414,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">193</SimpleData>
+		<SimpleData name="ref">Tannus et al 2006</SimpleData>
 		<SimpleData name="locality">Itirapina Ecological Station</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2233,6 +2427,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">194</SimpleData>
+		<SimpleData name="ref">ter Steege &amp; Persaud 1991</SimpleData>
 		<SimpleData name="locality">entire Guyana</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2244,6 +2439,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">195</SimpleData>
+		<SimpleData name="ref">Terborgh 1983</SimpleData>
 		<SimpleData name="locality">Cocha Cashu</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2255,6 +2451,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">196</SimpleData>
+		<SimpleData name="ref">Thomas 1999</SimpleData>
 		<SimpleData name="locality">Mabura Hill</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2266,6 +2463,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">197</SimpleData>
+		<SimpleData name="ref">Tobler et al 2010</SimpleData>
 		<SimpleData name="locality">Los Amigos Biological Station</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2278,6 +2476,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">198</SimpleData>
+		<SimpleData name="ref">Toriola 1998</SimpleData>
 		<SimpleData name="locality">Piste Saint Elie</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2289,6 +2488,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">199</SimpleData>
+		<SimpleData name="ref">Tugues 1982</SimpleData>
 		<SimpleData name="locality">Charavalle</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -2301,6 +2501,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">200</SimpleData>
+		<SimpleData name="ref">Vasconcelos et al 2010</SimpleData>
 		<SimpleData name="locality">Serra das Almas</SimpleData>
 		<SimpleData name="vegetation">desert and xeric shrublands</SimpleData>
 		<SimpleData name="biome">13</SimpleData>
@@ -2313,6 +2514,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">201</SimpleData>
+		<SimpleData name="ref">Vath 2008</SimpleData>
 		<SimpleData name="locality">Raleighvallen</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2325,6 +2527,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">202</SimpleData>
+		<SimpleData name="ref">V?lchez et al 2007</SimpleData>
 		<SimpleData name="locality">La Selva</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2337,6 +2540,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">203</SimpleData>
+		<SimpleData name="ref">V?lchez et al 2008</SimpleData>
 		<SimpleData name="locality">La Selva</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2349,6 +2553,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">204</SimpleData>
+		<SimpleData name="ref">Villamajo &amp; Menendez 1988</SimpleData>
 		<SimpleData name="locality">Sierra del Rosario, Estaci?n Ecol?gica del Sal?n</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2361,6 +2566,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">205</SimpleData>
+		<SimpleData name="ref">Vreedzaam 2008</SimpleData>
 		<SimpleData name="locality">Brownsberg Nature Park</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2373,6 +2579,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">206</SimpleData>
+		<SimpleData name="ref">Wallace &amp; Painter 2002</SimpleData>
 		<SimpleData name="locality">Lago Caiman,  cerrado</SimpleData>
 		<SimpleData name="vegetation">tropical dry forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2385,6 +2592,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">207</SimpleData>
+		<SimpleData name="ref">Wallace &amp; Painter 2002</SimpleData>
 		<SimpleData name="locality">Lago Caiman,  low vine forest</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2397,6 +2605,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">208</SimpleData>
+		<SimpleData name="ref">Wallace &amp; Painter 2002</SimpleData>
 		<SimpleData name="locality">Lago Caiman,  peid mont forest</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2409,6 +2618,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">209</SimpleData>
+		<SimpleData name="ref">Wallace &amp; Painter 2002</SimpleData>
 		<SimpleData name="locality">Lago Caiman,  swamp forest</SimpleData>
 		<SimpleData name="vegetation">seasonally flooded forests</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2421,6 +2631,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">210</SimpleData>
+		<SimpleData name="ref">Wallace &amp; Painter 2002</SimpleData>
 		<SimpleData name="locality">Lago Caiman,  tall forest</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2433,6 +2644,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">211</SimpleData>
+		<SimpleData name="ref">Weiser 2001</SimpleData>
 		<SimpleData name="locality">Pe de Gigante</SimpleData>
 		<SimpleData name="vegetation">cerrado woodland</SimpleData>
 		<SimpleData name="biome">7</SimpleData>
@@ -2445,6 +2657,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">212</SimpleData>
+		<SimpleData name="ref">Willams-Linera 1997</SimpleData>
 		<SimpleData name="locality">Veracruz</SimpleData>
 		<SimpleData name="vegetation">montane formations</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2457,6 +2670,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">213</SimpleData>
+		<SimpleData name="ref">Wright &amp; Calder?n 2006</SimpleData>
 		<SimpleData name="locality">Barro Colorado Island</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2468,6 +2682,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">214</SimpleData>
+		<SimpleData name="ref">Wright et al 1999</SimpleData>
 		<SimpleData name="locality">Barro Colorado Island</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2479,6 +2694,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">215</SimpleData>
+		<SimpleData name="ref">Z?rate et al 2006</SimpleData>
 		<SimpleData name="locality">Maynas</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2491,6 +2707,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">216</SimpleData>
+		<SimpleData name="ref">Zhang &amp; Wang 1995</SimpleData>
 		<SimpleData name="locality">Nouragues field station</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2502,6 +2719,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">217</SimpleData>
+		<SimpleData name="ref">Zimmerman et al 2007</SimpleData>
 		<SimpleData name="locality">Barro Colorado Island</SimpleData>
 		<SimpleData name="vegetation">seasonal forest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
@@ -2513,6 +2731,7 @@
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
 		<SimpleData name="ID">218</SimpleData>
+		<SimpleData name="ref">Zimmerman et al 2007</SimpleData>
 		<SimpleData name="locality">El Verde</SimpleData>
 		<SimpleData name="vegetation">rainforest</SimpleData>
 		<SimpleData name="biome">1</SimpleData>
