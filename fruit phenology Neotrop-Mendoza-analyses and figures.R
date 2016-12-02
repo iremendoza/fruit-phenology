@@ -187,10 +187,13 @@ table(nbstudies$nbvar)
 
 ####Table 3####
 #link each study to its vegetation type and explore its seasonality regarding precipitation
-driv <- merge(drivers,neolong, by="ID", all.x=TRUE) #we include vegetation type in the drivers' dataset
-
-
+driv <- merge(drivers, neolong, by="ID", all.x=TRUE) #we include vegetation type in the drivers' dataset
 raindriv = driv[driv$climvar=="rainfall",]
+(t3 <- aggregate(raindriv$ID, by = list(peak = raindriv$peak, veg = raindriv$vegetation), length))
+vegtyp2 = aggregate(data.frame(nbstu = driv$ID), by = list(vegetation = driv$vegetation), lengthunique)
+vegtyp2[order(vegtyp $ nbstu, decreasing = T),]
+
+
 signrain = factor(levels=c("positive","negative","none","ambiguous"))
 
 for (i in 1:length(raindriv$signcorr))
