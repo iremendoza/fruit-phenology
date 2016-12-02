@@ -139,6 +139,7 @@ longterm = neolong[which(neolong$studylength >= 120),]
 freqdriv1 = aggregate(data.frame(nstu=drivers$ID),by =list(climvar=drivers$climvar),length)
 (freqdriv1[order(freqdriv1$nstu,decreasing=T),]) #ordering drivers according to their importance
 
+####Table 2####
 #total frequencies for table 2
 (rainfreq = (160/218) *100)
 (tempfreq =  (42/218) *100)
@@ -184,6 +185,7 @@ nbstudies = aggregate(data.frame(nbvar=drivers$climvar), by=list(ID=drivers$ID),
 nbstudies[order(nbstudies$nbvar,decreasing=T),]
 table(nbstudies$nbvar)
 
+####Table 3####
 #link each study to its vegetation type and explore its seasonality regarding precipitation
 driv <- merge(drivers,neolong, by="ID", all.x=TRUE) #we include vegetation type in the drivers' dataset
 
