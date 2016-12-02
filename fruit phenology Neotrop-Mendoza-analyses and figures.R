@@ -179,7 +179,6 @@ freqdriv3[order(freqdriv3$nstu,decreasing = T),] #ordering drivers according to 
 (signhumid=aggregate(data.frame(nstu = driverstest[driverstest$climvar == "air humidity", ]$ID), by = list(sign_humid = driverstest[driverstest$climvar == "air humidity",]$signcorr), length))
 (signevapo = driverstest[driverstest$climvar == "evaporation",])
 
-
 #how many drivers were included in each study?
 nbstudies = aggregate(data.frame(nbvar=drivers$climvar), by=list(ID=drivers$ID),lengthunique)
 nbstudies[order(nbstudies$nbvar,decreasing=T),]
