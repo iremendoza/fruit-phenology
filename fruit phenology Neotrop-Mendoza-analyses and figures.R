@@ -139,18 +139,35 @@ longterm = neolong[which(neolong$studylength >= 120),]
 freqdriv1 = aggregate(data.frame(nstu=drivers$ID),by =list(climvar=drivers$climvar),length)
 (freqdriv1[order(freqdriv1$nstu,decreasing=T),]) #ordering drivers according to their importance
 
-#Second, I explore datasets without statistical analyses
+#total frequencies for table 2
+(rainfreq = (160/218) *100)
+(tempfreq =  (42/218) *100)
+(daylengthfreq =  (20/218) *100)
+(floodingfreq =  (13/218) *100)
+(irradiancefreq =  (7/218) *100)
+(ensofreq =  (3/218) *100)
+(airfreq =  (3/218) *100)
+(evapofreq =  (1/218) *100)
+(nonefreq =  (48/218) *100)
+
+sum(freqdriv1$nstu[freqdriv1$climvar == "biotic"])/lengthunique(drivers$ID) ## percentage of studies addressing a biotic variable
+(lengthunique(drivers$ID) -(freqdriv1$nstu[freqdriv1$climvar == "biotic"] + freqdriv1$nstu[freqdriv1$climvar == "none"]))/lengthunique(drivers$ID) ## percentage of studies addressing a biotic variable
+## percentage of studies addressing an environmental variable
+
+#Second, I explore datasets without statistical analyses (Table 2)
 driversnotest <- drivers[drivers$presencetest=="no",]
 freqdriv2 = aggregate(data.frame(nstu = driversnotest$ID),by = list(climvar = driversnotest$climvar),length)
 (freqdriv2[order(freqdriv2$nstu,decreasing=T),]) #ordering drivers according to their importance ##Table 2 (statistically non-tested)
 
-#Third, I explore datasets with statistical analyses
+#Third, I explore datasets with statistical analyses (Table 2)
 driverstest <- drivers[drivers$presencetest == "yes",]
+(lengthunique(driverstest$ID)/lengthunique(drivers$ID))*100
 freqdriv3 = aggregate(data.frame(nstu = driverstest$ID),by=list(climvar=driverstest$climvar),length)
 freqdriv3[order(freqdriv3$nstu,decreasing = T),] #ordering drivers according to their importance
+
 #frequency of each type of statistical test
 (freqtest = aggregate(data.frame(nstu=driverstest$ID),by=list(test=driverstest$typetest),lengthunique)) 
-
+(3+1)/lengthunique(driverstest$ID) #datasets including cross-correlations or moving correlation
 
 #sign of correlations for Table 2
 (signrain = aggregate(data.frame(nstu = driverstest[driverstest$climvar=="rainfall",]$ID),by = list(signcorr = driverstest[driverstest$climvar=="rainfall",]$signcorr),length))
@@ -160,7 +177,7 @@ freqdriv3[order(freqdriv3$nstu,decreasing = T),] #ordering drivers according to 
 (signirradiance = aggregate(data.frame(nstu = driverstest[driverstest$climvar=="irradiance"|driverstest$climvar == "solar radiation", ]$ID), by = list(sign_irrad = driverstest[driverstest$climvar == "irradiance"|driverstest$climvar == "solar radiation",]$signcorr), length))
 (signENSO = aggregate(data.frame(nstu = driverstest[driverstest$climvar == "ENSO",]$ID), by = list(sign_ENSO = driverstest[driverstest$climvar=="ENSO",]$signcorr),length))
 (signhumid=aggregate(data.frame(nstu = driverstest[driverstest$climvar == "air humidity", ]$ID), by = list(sign_humid = driverstest[driverstest$climvar == "air humidity",]$signcorr), length))
-(evapo = driverstest[driverstest$climvar == "evaporation",])
+(signevapo = driverstest[driverstest$climvar == "evaporation",])
 
 
 #how many drivers were included in each study?
