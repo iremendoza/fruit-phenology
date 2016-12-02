@@ -1,4 +1,4 @@
-#setwd("C:/Irene/Projects/GPC/fruit-phenology")
+setwd("C:/Irene/Projects/GPC/fruit-phenology")
 source(".\\fruit phenology Neotrop-Mendoza-functions.R")
 
 library(sp)
