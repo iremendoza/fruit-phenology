@@ -1,4 +1,4 @@
-setwd("C:/Irene/Projects/GPC/fruit-phenology")
+#setwd("C:/Irene/Projects/GPC/fruit-phenology")
 source(".\\fruit phenology Neotrop-Mendoza-functions.R")
 
 library(sp)
@@ -274,15 +274,15 @@ figure1=function(filename="figure1.tif"){
 
 ####Figure 3: How many countries do we have in our dataset?####
 
-figure3 = function(data=neolong,cex=2, filename="figure3.tif",...){
+figure3 = function(data = neolong, cex=2, filename = "figure3.tif",...){
   
   tiff(filename=filename,height=1600,width=2500,pointsize=24) #
   par(mar=c(12,5,5,1),cex=cex)
    
-  data$country=as.character(data$country)
+  data$country = as.character(data$country)
   lengthunique(data$country) #number of study sites
-  barplot(sort(table(data$country), decreasing=T),names.arg=names(sort(table(data$country), decreasing=T)), las=2, ylim=c(0,120), ylab="") 
-  mtext(side=2,text="number of datasets",line=3,cex=3)
+  barplot(sort(table(data$country), decreasing = T),names.arg = names(sort(table(data$country), decreasing = T)), las = 2, ylim = c(0,120), ylab = "") 
+  mtext(side = 2,text = "number of datasets",line = 3, cex = 3)
   dev.off()
 }
 
