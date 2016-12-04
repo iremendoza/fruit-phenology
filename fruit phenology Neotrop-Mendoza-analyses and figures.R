@@ -271,6 +271,19 @@ figure1=function(filename="figure1.tif"){
   dev.off()
 }
 
+####Figure 2: statistics
+#what is the sampling effort in terms of number of species?
+hsp = hist(neolong$species)
+hsp$counts [1]/ sum(hsp$counts)
+summary(neolong$species)
+
+#what is the sampling effort in terms of monitoring length?
+hlength = hist(neolong$studylength, breaks = c(12, 24, 36, 48, 60, 120, 480), main = "studylength")
+str(hlength)
+hlength$counts[1]/ sum(hlength$counts)
+summary(neolong$studylength)
+
+
 ####Figure 3: How many countries do we have in our dataset?####
 
 figure3 = function(data = neolong, cex=2, filename = "figure3.tif",...){
@@ -290,8 +303,8 @@ figure3 = function(data = neolong, cex=2, filename = "figure3.tif",...){
   dev.off()
 }
 
-####Figure 4: which type of methods did authors use for studying phenology?###
-figure4 = function(data=neolong, filename="figure4.tif"){
+####Figure 4: which type of methods did authors use for studying phenology?####
+figure4 = function(data = neolong, filename="figure4.tif"){
   direct = aggregate(data.frame(nstu=data$ID), by=list(direct=data$DO, marked=data$marked),length)
   indirect = aggregate(data.frame(nstu=data$ID),by=list(LT=data$LT,herbarium=data$herbarium, feces=data$feces,ground=data$ground.survey),length)
   
@@ -315,7 +328,7 @@ figure4 = function(data=neolong, filename="figure4.tif"){
   
   tiff(filename=filename,height=700,width=900,pointsize=24)
   par(mar = c(3,5,3,1), cex=1.25)
-  barplot(summaryvar, las=1, ylim=c(0,200), ylab="number of study sites", col=c("violet","violetred4","darkorange","moccasin","tan","tan4"),width=c(10,10),legend=rownames(summaryvar),args.legend=list(bty="n"))
+  barplot(summaryvar, las=1, ylim=c(0,200), ylab="number of datasets", col=c("violet","violetred4","darkorange","moccasin","tan","tan4"),width=c(10,10),legend=rownames(summaryvar),args.legend=list(bty="n"))
   
   dev.off()
 }
@@ -356,33 +369,34 @@ figure5 = function(data = spjoin, ests = ests, filename = "figure5.tif"){
 ####Figure S1: What is the monitoring length of datasets?####
 
 #figureS1 plots a barplot with the frequency of studies according to their sampling length
-figureS1 = function(data=neolong, filename="figureS1.tif",cex=2,...){
-  meansampling=mean(data$studylength,na.rm=T)
-  oneyear=which(data$studylength<=12)  
-  twoyear=which(data$studylength<=24& data$studylength>12)
-  threeyear=which(data$studylength<=36& data$studylength>24)
-  fouryear=which(data$studylength<=48& data$studylength>36)
-  fiveyear=which(data$studylength<120&data$studylength>48)
-  tenyear=which(data$studylength>=120)
-  summarylength=data.frame(time=c("1 year", "2 years","3 years", "4 years", "5-9 years","10 or more years"),freq=c(length(oneyear),length(twoyear), length(threeyear), length(fouryear), length(fiveyear),length(tenyear)))
-  summarylength$perc=(summarylength$freq/sum(summarylength$freq))*100
-  par(mar=c(10,5,2,2),oma=c(1,4,4,4),cex=cex, ...)
-  tiff(filename=filename,height=900,width=1200,pointsize=24)
-  barplot(summarylength$perc, names.arg=summarylength$time, las=1, ylim=c(0,60),ylab="percentage of studies (%)") 
+figureS1 = function(data = neolong, filename = "figureS1.tif", cex = 2, ...){
+  meansampling = mean(data$studylength,na.rm = T)
+  oneyear = which(data$studylength <= 12)  
+  twoyear = which(data$studylength <= 24 & data$studylength > 12)
+  threeyear = which(data$studylength <= 36 & data$studylength > 24)
+  fouryear = which(data$studylength <= 48& data$studylength > 36)
+  fiveyear = which(data$studylength < 120 & data$studylength > 48)
+  tenyear = which(data$studylength >= 120)
+  summarylength = data.frame(time = c("1 year", "2 years","3 years", "4 years", "5-9 years","10 or more years"), freq = c(length(oneyear),length(twoyear), length(threeyear), length(fouryear), length(fiveyear), length(tenyear)))
+  summarylength$perc = (summarylength$freq/sum(summarylength$freq))*100
+  par(mar = c(12,20,2,2), oma = c(8,25,8,8), cex = cex, ...)
+  tiff(filename = filename, height = 900, width = 1400, pointsize = 24)
+  barplot(summarylength$perc, names.arg = summarylength$time, las = 1, ylim = c(0,60), ylab = "", cex.axis = 1) 
+  mtext (side = 2, text = "percentage of datasets (%)", line = 2.2, cex = 1.25)
   dev.off()  
 }
 
 ####Figure S2:
-#figureS2(data=neolong, filename="figureS2.tif")
-figureS2=function(data = neolong, filename="figureS2.tif",cex=2,...){
+#figureS2(data = neolong, filename="figureS2.tif")
+figureS2 = function(data = neolong, filename="figureS2.tif",cex=2,...){
   
-  tiff(filename=filename,height=700,width=1000,pointsize=12) #
-  par(mar=c(4,4,4,4),cex=cex)
+  tiff(filename = filename,height=700,width=1000,pointsize=12) #
+  par(mar = c(4,4,4,4), cex = cex)
   plot(sort(neolong$Nindiv[which(!is.na(data$Nindiv))]/neolong$species[which(!is.na(data$Nindiv))],decreasing=T),axes=F,ylab="",xlab="",xlim=c(0,120),pch=20)
   #plot(sort(log(neolong$Nindiv[which(!is.na(data$Nindiv))]/sum(neolong$Nindiv[which(!is.na(data$Nindiv))])+1),decreasing=T))
   abline(h=15,lty=2)
   axis(side=1,at=seq(0,120,20),labels=seq(0,120,20))
-  mtext(side=1, text="Studies rank",line=3,cex=cex)
+  mtext(side=1, text="Rank of datasets",line=3,cex=cex)
   axis(side=2,at=seq(0,100,20),labels=seq(0,100,20),las=2)
   mtext(side=2, text="number of individuals/number of species",line=3,cex=cex)
   #proportion of studies with at least 15 individuals sampled per species
