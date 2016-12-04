@@ -13,7 +13,6 @@ neolong <- read.delim("Mendoza_dat_GPC.txt") #database including the 218 dataset
 lengthunique(neolong$ID)
 drivers <- read.delim("drivers.txt") #environmental drivers of each dataset
 lengthunique(drivers$ID)
-ests <- read.delim(file = "nb spp kier.txt") ## appendix 2 of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
 ####SPATIAL ANALYSES####
 ##Adding vegetation types from WWF##
@@ -281,6 +280,11 @@ figure3 = function(data = neolong, cex=2, filename = "figure3.tif",...){
    
   data$country = as.character(data$country)
   lengthunique(data$country) #number of study sites
+  countryfreq = aggregate(data.frame(numb = data$ID), by = list(country = data$country), lengthunique)
+  countryfreq[order(countryfreq$numb, decreasing = T),]
+  (statefreq = aggregate(data.frame(numb = data$ID), by = list(state = data$BrazilState), lengthunique))
+  max(statefreq$numb)/lengthunique(data$ID) #frequency of studies from São Paulo state in Brazil
+  sort(statefreq$numb, decreasing = T) [2]/lengthunique(data$ID) #frequency of studies from Amazonia state in Brazil
   barplot(sort(table(data$country), decreasing = T),names.arg = names(sort(table(data$country), decreasing = T)), las = 2, ylim = c(0,120), ylab = "") 
   mtext(side = 2,text = "number of datasets",line = 3, cex = 3)
   dev.off()
