@@ -333,9 +333,9 @@ figure4 = function(data = neolong, filename="figure4.tif"){
   dev.off()
 }
 
-####Figure5: how many  species were studied by vegetation type?####
+####Figure6: how many  species were studied by vegetation type?####
 
-figure5 = function(data = spjoin, ests = ests, filename = "figure5.tif"){
+figure6 = function(data = spjoin, ests = ests, filename = "figure5.tif"){
   tiff(filename = filename, height=900, width=1100, pointsize=24)
   par(mar = c(4,16,1,2),mfrow = c(2,1))
   ##SAMPLING EFFORT  "se" calculates a ratio p with sampling effort per spp
