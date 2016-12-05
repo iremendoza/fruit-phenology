@@ -1,5 +1,3 @@
-#setwd("C:/Irene/Projects/GPC/fruit-phenology")
-source(".\\fruit phenology Neotrop-Mendoza-functions.R")
 
 library(sp)
 library(raster)
@@ -14,6 +12,9 @@ lengthunique(neolong$ID)
 drivers <- read.delim("drivers.txt") #environmental drivers of each dataset
 lengthunique(drivers$ID)
 ests <- read.delim("nb spp kier.txt") ## appendix of Kier et al. 2005 JBiogeograph with the estimated number of spp
+
+####A SIMPLE FUNCTION (for internal operations)####
+lengthunique = function(x) return(length(unique(x)))
 
 ####SPATIAL ANALYSES####
 ##Adding vegetation types from WWF##
