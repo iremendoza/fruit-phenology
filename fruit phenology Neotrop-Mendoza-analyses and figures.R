@@ -13,6 +13,7 @@ neolong <- read.delim("Mendoza_dat_GPC.txt") #database including the 218 dataset
 lengthunique(neolong$ID)
 drivers <- read.delim("drivers.txt") #environmental drivers of each dataset
 lengthunique(drivers$ID)
+ests <- read.delim("nb spp kier.txt") ## appendix of Kier et al. 2005 JBiogeograph with the estimated number of spp
 
 ####SPATIAL ANALYSES####
 ##Adding vegetation types from WWF##
@@ -188,7 +189,7 @@ table(nbstudies$nbvar)
 #link each study to its vegetation type and explore its seasonality regarding precipitation
 driv <- merge(drivers, neolong, by="ID", all.x=TRUE) #we include vegetation type in the drivers' dataset
 raindriv = driv[driv$climvar=="rainfall",]
-(t3 <- aggregate(raindriv$ID, by = list(peak = raindriv$peak, veg = raindriv$vegetation), length))
+(t3 <- aggregate(data.frame(nstu = neolong$ID), by = list(peak = neolong$peak, veg = neolong$vegetation), length))
 vegtyp2 = aggregate(data.frame(nbstu = driv$ID), by = list(vegetation = driv$vegetation), lengthunique)
 vegtyp2[order(vegtyp $ nbstu, decreasing = T),]
 
@@ -205,7 +206,7 @@ signrainveg = aggregate(data.frame(nstu=raindriv$ID),by=list(signcorr=raindriv$s
 (tt = table(raindriv$vegetation, raindriv$signrain))
 ##include table 3 here
 
-(rainforest = chisq.test(c(rainy = 39,  dry =14, aseasonal = 14, transition = 11))) ##significant
+(rainforest = chisq.test(c(rainy = 42,  dry =17, aseasonal = 16, transition = 11))) ##significant
 #desert = chisq.test(c(positive=6, negative= 4,none=1)) #not valid
 dry = chisq.test(c(positive=9, negative=5,none=1))
 (cerrado = chisq.test(c(rainy = 11, transition = 6, dry = 0))) ##significant
@@ -335,11 +336,14 @@ figure4 = function(data = neolong, filename="figure4.tif"){
 
 ####Figure6: how many  species were studied by vegetation type?####
 
-figure6 = function(data = spjoin, ests = ests, filename = "figure5.tif"){
-  tiff(filename = filename, height=900, width=1100, pointsize=24)
-  par(mar = c(4,16,1,2),mfrow = c(2,1))
+figure6 = function(data = spjoin, ests = ests, filename = "figure6.tif"){
+  tiff(filename = filename, height = 900, width = 1100, pointsize = 24)
+  par(mar = c(4,16,1,2), mfrow = c(2,1))
+  
+  lm1 = lm(data$species ~ data$vegetation)
+  summary (lm1)
+  
   ##SAMPLING EFFORT  "se" calculates a ratio p with sampling effort per spp
-
     se = merge(data, ests, by="ECO_ID",all.x=T) 
     se$p = se$species/se$sp_wfig
     sum(se$sp_wfig) #estimated number of species
@@ -349,7 +353,10 @@ figure6 = function(data = spjoin, ests = ests, filename = "figure5.tif"){
     summary(se$p)
    
   meanratio = aggregate(data.frame(ratio=se$p), by=list(vegetation=se$vegetation),mean,na.rm=T)
-  meansp = aggregate(data.frame(nbspp=se$species), by=list(vegetation=se$vegetation), median,na.rm=T)
+  mediannsp = aggregate(data.frame(nbspp=se$species), by=list(vegetation=se$vegetation), median,na.rm=T)
+  meansp = aggregate(data.frame(nbspp=se$species), by=list(vegetation=se$vegetation), mean,na.rm=T)
+  minsp = aggregate(data.frame(nbspp=se$species), by=list(vegetation=se$vegetation), min,na.rm=T)
+  maxsp = aggregate(data.frame(nbspp=se$species), by=list(vegetation=se$vegetation), max, na.rm=T)
   sdratio = aggregate(data.frame(ratio=se$species), by=list(vegetation=se$vegetation), sd,na.rm=T)
   medianratio = aggregate(data.frame(ratio=se$p), by=list(vegetation=se$vegetation), median,na.rm=T)
   veg = meanratio$vegetatio[order(meanratio$ratio)]
