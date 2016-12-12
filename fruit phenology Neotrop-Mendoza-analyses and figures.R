@@ -7,7 +7,7 @@ library(mapdata)
 library(spatialEco)
 
 #### DATASETS #####
-neolong <- read.delim("Mendoza_dat_GPC.txt") #database including the 218 datasets reviewed
+neolong <- read.delim("Mendoza_dat_GPC.txt") #database including the 218 datasets reviewed: "DO" means Direct Observations
 lengthunique(neolong$ID)
 drivers <- read.delim("drivers.txt") #environmental drivers of each dataset
 lengthunique(drivers$ID)
