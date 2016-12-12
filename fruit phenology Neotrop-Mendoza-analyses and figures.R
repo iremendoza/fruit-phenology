@@ -6,15 +6,15 @@ library(maps)
 library(mapdata)
 library(spatialEco)
 
+####A SIMPLE FUNCTION (for internal operations)####
+lengthunique = function(x) return(length(unique(x)))
+
 #### DATASETS #####
 neolong <- read.delim("Mendoza_dat_GPC.txt") #database including the 218 datasets reviewed: "DO" means Direct Observations
 lengthunique(neolong$ID)
 drivers <- read.delim("drivers.txt") #environmental drivers of each dataset
 lengthunique(drivers$ID)
 ests <- read.delim("nb spp kier.txt") ## appendix of Kier et al. 2005 JBiogeograph with the estimated number of spp
-
-####A SIMPLE FUNCTION (for internal operations)####
-lengthunique = function(x) return(length(unique(x)))
 
 ####SPATIAL ANALYSES####
 ##Adding vegetation types from WWF##
