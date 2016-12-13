@@ -309,30 +309,31 @@ figure3 = function(data = neolong, cex=2, filename = "figure3.tif",...){
 
 ####Figure 4: which type of methods did authors use for studying phenology?####
 figure4 = function(data = neolong, filename="figure4.tif"){
-  direct = aggregate(data.frame(nstu=data$ID), by=list(direct=data$DO, marked=data$marked),length)
-  indirect = aggregate(data.frame(nstu=data$ID),by=list(LT=data$LT,herbarium=data$herbarium, feces=data$feces,ground=data$ground.survey),length)
+  direct = aggregate(data.frame(nstu=data$ID), by = list(direct=data$DO, marked=data$marked),length)
+  indirect = aggregate(data.frame(nstu=data$ID), by = list(LT = data$LT, herbarium = data$herbarium, feces = data$feces, ground = data$ground.survey), length)
   
-  marked = length(which(data$marked=="marked"))
-  unmarked = length(which(data$marked=="unmarked"))
-  lt = length(which(data$LT=="yes")) 
-  mean(data$trapsurface,na.rm=T) #mean surface of seed traps
-  sd(data$trapsurface,na.rm=T) #sd surface of seed traps
-  range(data$Ntraps,na.rm=T) #range of number of traps
-  mean(data$Ntraps,na.rm=T) #range of number of traps
-  sd(data$Ntraps,na.rm=T) #range of number of traps
+  marked = length(which(data$marked == "marked"))
+  unmarked = length(which(data$marked == "unmarked"))
+  lt = length(which(data$LT == "yes")) 
+  mean(data$trapsurface, na.rm = T) #mean surface of seed traps
+  sd(data$trapsurface, na.rm = T) #sd surface of seed traps
+  range(data$Ntraps, na.rm = T) #range of number of traps
+  mean(data$Ntraps, na.rm = T) #range of number of traps
+  sd(data$Ntraps, na.rm = T) #range of number of traps
   
-  herbarium = length(which(data$herbarium=="yes"))
-  feces = length(which(data$feces=="yes"))
-  ground = length(which(data$ground.survey=="yes"))
+  herbarium = length(which(data$herbarium == "yes"))
+  feces = length(which(data$feces == "yes"))
+  ground = length(which(data$ground.survey == "yes"))
   
   summaryvar = matrix(ncol=2,nrow=6, dimnames = list(c("marked","unmarked" ,"traps", "herbarium","faeces","ground surveys"), c("direct","indirect")))
   summaryvar[,1] = c(marked,unmarked,0,0,0,0)
   summaryvar[,2] = c(0,0,lt, herbarium,feces,ground)
   percentages = (summaryvar/lengthunique(neolong$ID))*100
   
-  tiff(filename=filename,height=700,width=900,pointsize=24)
-  par(mar = c(3,5,3,1), cex=1.25)
-  barplot(summaryvar, las=1, ylim=c(0,200), ylab="number of datasets", col=c("violet","violetred4","darkorange","moccasin","tan","tan4"),width=c(10,10),legend=rownames(summaryvar),args.legend=list(bty="n"))
+  tiff(filename = filename, height = 900, width = 1200, pointsize = 30)
+  par(mar = c(3,5,3,1), cex = 1.5)
+  barplot(summaryvar, las = 1, ylim = c(0,200), ylab = "number of datasets", col = c("violet", "violetred4", "darkorange", "moccasin", "tan", "tan4"), width = c(10,10))
+  legend(12, 200, legend = rownames(summaryvar), bty="n", fill = c("violet", "violetred4", "darkorange", "moccasin", "tan", "tan4"))
   
   dev.off()
 }
