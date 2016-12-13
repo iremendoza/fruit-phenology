@@ -5,6 +5,7 @@ library(rgdal)
 library(maps)
 library(mapdata)
 library(spatialEco)
+library (ggplot2)
 
 ####A SIMPLE FUNCTION (for internal operations)####
 lengthunique = function(x) return(length(unique(x)))
@@ -290,9 +291,6 @@ summary(neolong$studylength)
 
 figure3 = function(data = neolong, cex=2, filename = "figure3.tif",...){
   
-  tiff(filename=filename,height=1600,width=2500,pointsize=24) #
-  par(mar=c(12,5,5,1),cex=cex)
-   
   data$country = as.character(data$country)
   lengthunique(data$country) #number of study sites
   countryfreq = aggregate(data.frame(numb = data$ID), by = list(country = data$country), lengthunique)
@@ -300,9 +298,13 @@ figure3 = function(data = neolong, cex=2, filename = "figure3.tif",...){
   (statefreq = aggregate(data.frame(numb = data$ID), by = list(state = data$BrazilState), lengthunique))
   max(statefreq$numb)/lengthunique(data$ID) #frequency of studies from São Paulo state in Brazil
   sort(statefreq$numb, decreasing = T) [2]/lengthunique(data$ID) #frequency of studies from Amazonia state in Brazil
-  barplot(sort(table(data$country), decreasing = T),names.arg = names(sort(table(data$country), decreasing = T)), las = 2, ylim = c(0,120), ylab = "") 
-  mtext(side = 2,text = "number of datasets",line = 3, cex = 3)
-  dev.off()
+
+  reorder_size <- function(x) {
+    factor(x, levels = names(sort(table(data$country), decreasing = T)))
+  }
+  ggplot(data, aes(reorder_size(country))) + geom_bar(fill="grey80", colour="black") + ylab("Number of datasets") + xlab("") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0,  size = 15, colour = "black"), axis.text.y = element_text(size = 15), axis.ticks.x = element_blank(),  panel.background = element_blank(), axis.title.y = element_text(size = 20), plot.margin = unit(c(1, 2, 1, 1), "cm"), panel.margin = unit(c(2,2,2,1), "cm") ) 
+  ggsave(filename, device ="tiff")
 }
 
 ####Figure 4: which type of methods did authors use for studying phenology?####
