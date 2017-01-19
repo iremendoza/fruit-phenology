@@ -76,7 +76,7 @@ proj4string(loc) <- crs.geo  # define projection system of our study locations
 #class(loc)
 
 #Spatial join between our study locations (loc) and the polygons with the vegetation types
-if(!file.exists(paste(getwd(),localDir,"spjoin.RData",sep="/"))) { 
+if(!file.exists(paste(getwd(), localDir, "spjoin.RData", sep = "/"))) { 
 load(file)
 
 #spatial join between polygons (data_projected) and points (loc)
