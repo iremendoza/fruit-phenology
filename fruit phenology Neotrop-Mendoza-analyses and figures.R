@@ -130,7 +130,7 @@ vegtyp[order(vegtyp $ nbstu, decreasing = T),]
 
 #### which are the long-term datasets?####
 longterm = neolong[which(neolong$studylength >= 120),]
-(longtermtable = data.frame(ID = longterm$ID, author = longterm$ref, locality = longterm$locality, length = longterm$studylength, DOI = longterm$DOI))
+(longtermtable = data.frame(ID = longterm$ID, author = longterm$ref_short, locality = longterm$locality, length = longterm$studylength, DOI = longterm$DOI))
 
 ####CLIMATIC DRIVERS####
 #frequency of studies without statistical test
