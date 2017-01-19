@@ -125,7 +125,7 @@
 		<SimpleData name="Nindiv">1416</SimpleData>
 		<SimpleData name="studylength">25</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-61.673333,1.883889</coordinates></Point>
+      <Point><coordinates>-61.673333,-1.883889</coordinates></Point>
   </Placemark>
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
@@ -138,7 +138,7 @@
 		<SimpleData name="Nindiv">214</SimpleData>
 		<SimpleData name="studylength">25</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-61.673333,1.883889</coordinates></Point>
+      <Point><coordinates>-61.673333,-1.883889</coordinates></Point>
   </Placemark>
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
@@ -151,7 +151,7 @@
 		<SimpleData name="Nindiv">114</SimpleData>
 		<SimpleData name="studylength">25</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-61.673333,1.883889</coordinates></Point>
+      <Point><coordinates>-61.673333,-1.883889</coordinates></Point>
   </Placemark>
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
@@ -951,7 +951,7 @@
 		<SimpleData name="species">59</SimpleData>
 		<SimpleData name="studylength">12</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-63.6975,10.646944</coordinates></Point>
+      <Point><coordinates>-63.697672,10.646383</coordinates></Point>
   </Placemark>
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
@@ -1224,7 +1224,7 @@
 		<SimpleData name="species">19</SimpleData>
 		<SimpleData name="studylength">36</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-69.816667,11.666667</coordinates></Point>
+      <Point><coordinates>-69.813408,11.689683</coordinates></Point>
   </Placemark>
   <Placemark>
 	<ExtendedData><SchemaData schemaUrl="#neolong">
